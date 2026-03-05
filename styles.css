@@ -155,9 +155,37 @@ h4 {
   padding: 1.15rem;
 }
 
+.site-nav {
+  background: #0b3a54;
+  display: flex;
+  gap: 0;
+  padding: 0 1.15rem;
+  max-width: 100%;
+}
+
+.site-nav-link {
+  display: inline-block;
+  padding: 0.52rem 1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #a8cfe0;
+  text-decoration: none;
+  border-bottom: 3px solid transparent;
+  transition: color 120ms ease, border-color 120ms ease;
+}
+
+.site-nav-link:hover {
+  color: #f0f8ff;
+}
+
+.site-nav-link--active {
+  color: #f0f8ff;
+  border-bottom-color: var(--accent);
+}
+
 .metrics {
   max-width: 1320px;
-  margin: -0.4rem auto 0.5rem;
+  margin: 0.5rem auto 0.5rem;
   padding: 0 1.15rem;
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -520,6 +548,19 @@ tbody tr:hover {
   background: #fff;
 }
 
+.lecturer-checks .lesson-card {
+  margin-bottom: 0.65rem;
+}
+
+.teacher-check-list {
+  margin: 0.55rem 0 0;
+  padding-left: 1.1rem;
+}
+
+.teacher-check-list li {
+  margin-bottom: 0.3rem;
+}
+
 .muted {
   color: var(--muted);
 }
@@ -642,6 +683,10 @@ tbody tr:hover {
   }
 
   .lesson-card {
+    page-break-before: always;
+  }
+
+  .lecturer-checks-section {
     page-break-before: always;
   }
 
