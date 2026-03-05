@@ -8,7 +8,8 @@
       "power_calculation"
     ],
     "learners_per_kit": 4,
-    "notes": "Core bench setup for foundational DC circuit work."
+    "notes": "Core bench setup for foundational DC circuit work.",
+    "image": "assets/hardware/LK0000.png"
   },
   {
     "sku": "LK5250",
@@ -18,7 +19,8 @@
       "fault_finding"
     ],
     "learners_per_kit": 4,
-    "notes": "Extension pack for advanced network and fault tasks."
+    "notes": "Extension pack for advanced network and fault tasks.",
+    "image": "assets/hardware/LK0000.png"
   },
   {
     "sku": "LK8101",
@@ -29,7 +31,8 @@
       "fault_finding"
     ],
     "learners_per_kit": 2,
-    "notes": "Provides multimeter and measurement accessories."
+    "notes": "Provides multimeter and measurement accessories.",
+    "image": "assets/hardware/LK0000.png"
   },
   {
     "sku": "LK7005",
@@ -39,7 +42,8 @@
       "protection_devices"
     ],
     "learners_per_kit": 6,
-    "notes": "Safety and protection demonstration equipment."
+    "notes": "Safety and protection demonstration equipment.",
+    "image": "assets/hardware/LK0000.png"
   },
   {
     "sku": "LK6102",
@@ -49,7 +53,8 @@
       "protection_devices"
     ],
     "learners_per_kit": 4,
-    "notes": "Control and relay practical board."
+    "notes": "Control and relay practical board.",
+    "image": "assets/hardware/LK0000.png"
   },
   {
     "sku": "MK2100",
@@ -59,7 +64,8 @@
       "quality_inspection"
     ],
     "learners_per_kit": 4,
-    "notes": "Calipers, micrometers, and gauge blocks for measurement labs."
+    "notes": "Calipers, micrometers, and gauge blocks for measurement labs.",
+    "image": "assets/hardware/FM5653.png"
   },
   {
     "sku": "MK2200",
@@ -69,7 +75,8 @@
       "torque_control"
     ],
     "learners_per_kit": 4,
-    "notes": "Threaded fixtures and torque tools for assembly lessons."
+    "notes": "Threaded fixtures and torque tools for assembly lessons.",
+    "image": "assets/hardware/FM5653.png"
   },
   {
     "sku": "MK2300",
@@ -79,7 +86,8 @@
       "alignment_setup"
     ],
     "learners_per_kit": 6,
-    "notes": "Gear, belt, and coupling setup platform."
+    "notes": "Gear, belt, and coupling setup platform.",
+    "image": "assets/hardware/FM5653.png"
   },
   {
     "sku": "FM1000",
@@ -100,7 +108,8 @@
       "condition_monitoring"
     ],
     "learners_per_kit": 8,
-    "notes": "Inspection routes, logging sheets, and basic condition monitoring tools."
+    "notes": "Inspection routes, logging sheets, and basic condition monitoring tools.",
+    "image": "assets/hardware/FM5653.png"
   },
   {
     "sku": "MK2600",
@@ -110,7 +119,8 @@
       "cnc_basics"
     ],
     "learners_per_kit": 10,
-    "notes": "Entry-level design-to-manufacture training resources."
+    "notes": "Entry-level design-to-manufacture training resources.",
+    "image": "assets/hardware/FM5653.png"
   },
   {
     "sku": "MK2700",
@@ -119,6 +129,7 @@
       "materials_testing"
     ],
     "learners_per_kit": 8,
-    "notes": "Sample sets and test materials for properties comparison work."
+    "notes": "Sample sets and test materials for properties comparison work.",
+    "image": "assets/hardware/FM5653.png"
   }
 ]

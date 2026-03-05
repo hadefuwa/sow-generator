@@ -358,6 +358,7 @@ function computeHardwareRows() {
       return {
         sku: item.sku,
         name: item.name,
+        image: item.image || "",
         matchedTags: matched,
         required,
         owned: 0,
@@ -378,6 +379,7 @@ function renderHardware() {
   table.innerHTML = `
     <thead>
       <tr>
+        <th>Image</th>
         <th>SKU</th>
         <th>Item</th>
         <th>Matched Tags</th>
@@ -393,6 +395,7 @@ function renderHardware() {
   state.hardwareRows.forEach((row) => {
     const tr = document.createElement("tr");
     tr.innerHTML = `
+      <td class="hardware-image-cell"></td>
       <td>${escapeHtml(row.sku)}</td>
       <td>${escapeHtml(row.name)}</td>
       <td>${escapeHtml(row.matchedTags.join(", "))}</td>
@@ -400,6 +403,17 @@ function renderHardware() {
       <td></td>
       <td class="to-buy">${row.toBuy}</td>
     `;
+
+    if (row.image) {
+      const img = document.createElement("img");
+      img.src = row.image;
+      img.alt = `${row.name} image`;
+      img.className = "hardware-image";
+      img.loading = "lazy";
+      tr.children[0].appendChild(img);
+    } else {
+      tr.children[0].textContent = "-";
+    }
 
     const ownInput = document.createElement("input");
     ownInput.type = "number";
@@ -412,7 +426,7 @@ function renderHardware() {
       persistSession();
     });
 
-    tr.children[4].appendChild(ownInput);
+    tr.children[5].appendChild(ownInput);
     tbody.appendChild(tr);
   });
 

@@ -276,6 +276,7 @@
     "estimated_minutes": 60,
     "hardware_tags": [
       "fluid_power",
+      "fluid_mechanics",
       "safety_practice"
     ],
     "content": {
