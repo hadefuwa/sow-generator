@@ -267,28 +267,19 @@
 </header>
 
 <div class="toolbar">
-  <label class="btn btn-ghost" for="file-input" style="cursor:pointer">
-    Load topics.json
-  </label>
-  <input type="file" id="file-input" accept=".json" style="display:none">
-
-  <button class="btn btn-primary" id="btn-add" disabled>+ Add Topic</button>
-
-  <button class="btn btn-success" id="btn-save" disabled>Save &amp; Download</button>
-
-  <span class="status-bar" id="status-bar">No file loaded</span>
+  <button class="btn btn-primary" id="btn-add">+ Add Topic</button>
+  <button class="btn btn-success" id="btn-save">Save &amp; Download</button>
+  <span class="status-bar" id="status-bar">Loading topics&hellip;</span>
 </div>
 
 <main>
   <section class="workflow">
-    <h2>Boss Demo Workflow</h2>
+    <h2>How to update topics</h2>
     <ol>
-      <li>Open <code>admin.html</code> in a browser.</li>
-      <li>Click <strong>Load topics.json</strong> and choose the file from the repo folder.</li>
-      <li>Add, edit, or delete topics using the form.</li>
+      <li>Topics load automatically from the live data file.</li>
+      <li>Add, edit, or delete topics using the form below.</li>
       <li>Click <strong>Save &amp; Download</strong> to export an updated <code>topics.json</code>.</li>
-      <li>Replace <code>data/topics.json</code> in the repo with the downloaded file.</li>
-      <li>A developer commits and pushes to redeploy via GitHub Actions.</li>
+      <li>Send the downloaded file to your developer to publish the changes.</li>
     </ol>
   </section>
 
@@ -371,7 +362,6 @@
   let topics = [];
   let editingIndex = null;
 
-  const fileInput = document.getElementById('file-input');
   const btnAdd = document.getElementById('btn-add');
   const btnSave = document.getElementById('btn-save');
   const statusBar = document.getElementById('status-bar');
@@ -383,24 +373,17 @@
   const btnConfirm = document.getElementById('btn-confirm');
   const toast = document.getElementById('toast');
 
-  fileInput.addEventListener('change', (e) => {
-    const file = e.target.files[0];
-    if (!file) return;
-    const reader = new FileReader();
-    reader.onload = (ev) => {
-      try {
-        const parsed = JSON.parse(ev.target.result);
-        topics = Array.isArray(parsed) ? parsed : [];
-        unlock();
-        render();
-        showToast(`Loaded ${topics.length} topics`, 'success');
-      } catch {
-        showToast('Invalid JSON file - could not load', 'error');
-      }
-    };
-    reader.readAsText(file);
-    fileInput.value = '';
-  });
+  fetch('data/topics.json')
+    .then((r) => { if (!r.ok) throw new Error('fetch failed'); return r.json(); })
+    .then((parsed) => {
+      topics = Array.isArray(parsed) ? parsed : [];
+      unlock();
+      render();
+    })
+    .catch(() => {
+      statusBar.textContent = 'Could not load topics.json';
+      showToast('Failed to load topics — are you running on a server?', 'error');
+    });
 
   function unlock() {
     btnAdd.disabled = false;
@@ -464,12 +447,8 @@
     editingIndex = null;
     modalTitle.textContent = 'Add Topic';
     clearForm();
-    btnAdd.disabled = false;
-    btnSave.disabled = false;
     openModal();
   });
-
-  document.getElementById('btn-add').disabled = false;
 
   window.editTopic = function(i) {
     editingIndex = i;
@@ -588,7 +567,6 @@
     toastTimer = setTimeout(() => { toast.className = 'toast'; }, 3000);
   }
 
-  btnAdd.disabled = false;
 </script>
 </body>
 </html>
