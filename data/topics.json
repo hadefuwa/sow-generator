@@ -6,7 +6,10 @@
     "domain": "Fundamentals",
     "level": "L3",
     "estimated_minutes": 60,
-    "hardware_tags": ["dc_measurement", "resistive_networks"],
+    "hardware_tags": [
+      "dc_measurement",
+      "resistive_networks"
+    ],
     "content": {
       "outcomes_html": "<p>Define voltage, current, and resistance and apply <strong>V = I x R</strong> to simple circuits.</p>",
       "explain_html": "<p>Use one worked example for each variable rearrangement. Highlight units and decimal conversion.</p>",
@@ -21,7 +24,10 @@
     "domain": "Fundamentals",
     "level": "L3",
     "estimated_minutes": 60,
-    "hardware_tags": ["dc_measurement", "resistive_networks"],
+    "hardware_tags": [
+      "dc_measurement",
+      "resistive_networks"
+    ],
     "content": {
       "outcomes_html": "<p>Explain current flow and total resistance in series circuits.</p>",
       "explain_html": "<p>Demonstrate that current is constant in a series path and resistance adds across components.</p>",
@@ -36,7 +42,10 @@
     "domain": "Fundamentals",
     "level": "L3",
     "estimated_minutes": 60,
-    "hardware_tags": ["dc_measurement", "resistive_networks"],
+    "hardware_tags": [
+      "dc_measurement",
+      "resistive_networks"
+    ],
     "content": {
       "outcomes_html": "<p>Describe voltage and current behaviour in parallel circuits.</p>",
       "explain_html": "<p>Show equal branch voltage and current split across unequal branch resistances.</p>",
@@ -51,7 +60,10 @@
     "domain": "Fundamentals",
     "level": "L3",
     "estimated_minutes": 60,
-    "hardware_tags": ["dc_measurement", "resistive_networks"],
+    "hardware_tags": [
+      "dc_measurement",
+      "resistive_networks"
+    ],
     "content": {
       "outcomes_html": "<p>Apply Kirchhoff's Current Law and Voltage Law to one-loop and two-loop examples.</p>",
       "explain_html": "<p>Use node and loop equations with clear sign convention steps.</p>",
@@ -66,7 +78,10 @@
     "domain": "Fundamentals",
     "level": "L3",
     "estimated_minutes": 60,
-    "hardware_tags": ["power_calculation", "dc_measurement"],
+    "hardware_tags": [
+      "power_calculation",
+      "dc_measurement"
+    ],
     "content": {
       "outcomes_html": "<p>Calculate electrical power and energy usage for simple loads.</p>",
       "explain_html": "<p>Introduce <strong>P = V x I</strong> and <strong>E = P x t</strong> with unit conversions.</p>",
@@ -81,7 +96,10 @@
     "domain": "Measurement",
     "level": "L2",
     "estimated_minutes": 45,
-    "hardware_tags": ["dc_measurement", "instrumentation"],
+    "hardware_tags": [
+      "dc_measurement",
+      "instrumentation"
+    ],
     "content": {
       "outcomes_html": "<p>Use a digital multimeter safely to measure voltage, current, and resistance.</p>",
       "explain_html": "<p>Demonstrate range selection, probe placement, and correct meter mode.</p>",
@@ -96,7 +114,9 @@
     "domain": "Safety",
     "level": "L2",
     "estimated_minutes": 45,
-    "hardware_tags": ["safety_practice"],
+    "hardware_tags": [
+      "safety_practice"
+    ],
     "content": {
       "outcomes_html": "<p>Identify electrical hazards and describe a safe isolation process.</p>",
       "explain_html": "<p>Walk through lockout principles, test-before-touch, and PPE minimums.</p>",
@@ -111,7 +131,10 @@
     "domain": "Protection",
     "level": "L3",
     "estimated_minutes": 60,
-    "hardware_tags": ["protection_devices", "safety_practice"],
+    "hardware_tags": [
+      "protection_devices",
+      "safety_practice"
+    ],
     "content": {
       "outcomes_html": "<p>Differentiate MCB, fuse, and RCD operating principles.</p>",
       "explain_html": "<p>Use fault scenarios to show which protective device should operate first.</p>",
@@ -126,7 +149,10 @@
     "domain": "Maintenance",
     "level": "L3",
     "estimated_minutes": 90,
-    "hardware_tags": ["fault_finding", "instrumentation"],
+    "hardware_tags": [
+      "fault_finding",
+      "instrumentation"
+    ],
     "content": {
       "outcomes_html": "<p>Use a repeatable fault-finding process on low-voltage circuits.</p>",
       "explain_html": "<p>Teach confirm-symptom, isolate-section, test, and verify-fix workflow.</p>",
@@ -141,12 +167,193 @@
     "domain": "Control",
     "level": "L3",
     "estimated_minutes": 60,
-    "hardware_tags": ["switching_logic", "instrumentation"],
+    "hardware_tags": [
+      "switching_logic",
+      "instrumentation"
+    ],
     "content": {
       "outcomes_html": "<p>Explain basic switching logic using relays and contact states.</p>",
       "explain_html": "<p>Compare normally-open and normally-closed contacts in control circuits.</p>",
       "practice_html": "<p>Wire a start-stop relay circuit and test latching behaviour.</p>",
       "assessment_html": "<p>Draw and annotate a simple switching circuit from memory.</p>"
+    }
+  },
+  {
+    "id": "t_mech_materials",
+    "name": "Engineering Materials and Properties",
+    "subject": "Mechanical Engineering",
+    "domain": "Fundamentals",
+    "level": "L2",
+    "estimated_minutes": 60,
+    "hardware_tags": [
+      "materials_testing",
+      "metrology_basics"
+    ],
+    "content": {
+      "outcomes_html": "<p>Classify common engineering materials and relate properties to product selection.</p>",
+      "explain_html": "<p>Compare strength, toughness, hardness, and corrosion resistance for metals, polymers, and composites.</p>",
+      "practice_html": "<p>Match component case studies to suitable material choices with justification.</p>",
+      "assessment_html": "<p>Short written task: select materials for three workshop applications and explain trade-offs.</p>"
+    }
+  },
+  {
+    "id": "t_mech_measurement",
+    "name": "Mechanical Measurement and Tolerancing",
+    "subject": "Mechanical Engineering",
+    "domain": "Metrology",
+    "level": "L2",
+    "estimated_minutes": 60,
+    "hardware_tags": [
+      "metrology_basics",
+      "quality_inspection"
+    ],
+    "content": {
+      "outcomes_html": "<p>Use vernier calipers and micrometers to measure components to tolerance.</p>",
+      "explain_html": "<p>Introduce nominal size, tolerance bands, and basic geometric tolerance interpretation.</p>",
+      "practice_html": "<p>Measure a sample batch of parts and record pass/fail against drawing limits.</p>",
+      "assessment_html": "<p>Practical check: complete a measurement sheet with correct units and tolerances.</p>"
+    }
+  },
+  {
+    "id": "t_mech_fasteners",
+    "name": "Fasteners, Threads, and Torque",
+    "subject": "Mechanical Engineering",
+    "domain": "Assembly",
+    "level": "L2",
+    "estimated_minutes": 45,
+    "hardware_tags": [
+      "assembly_practice",
+      "torque_control"
+    ],
+    "content": {
+      "outcomes_html": "<p>Identify thread forms and apply correct torque methods during assembly.</p>",
+      "explain_html": "<p>Cover bolt grades, thread pitch, and why preload and torque sequence matter.</p>",
+      "practice_html": "<p>Assemble a small jointed fixture using torque settings and sequence instructions.</p>",
+      "assessment_html": "<p>Checklist assessment on correct tool choice, torque value, and tightening pattern.</p>"
+    }
+  },
+  {
+    "id": "t_mech_cad_intro",
+    "name": "2D/3D CAD Fundamentals",
+    "subject": "Mechanical Engineering",
+    "domain": "Design",
+    "level": "L3",
+    "estimated_minutes": 60,
+    "hardware_tags": [
+      "cad_modeling"
+    ],
+    "content": {
+      "outcomes_html": "<p>Create a basic parametric part model and produce a simple engineering drawing.</p>",
+      "explain_html": "<p>Demonstrate sketch constraints, feature creation, and drawing annotation basics.</p>",
+      "practice_html": "<p>Model a bracket from dimensions, then export a drawing with key dimensions.</p>",
+      "assessment_html": "<p>Submit model and drawing for review against feature and dimension criteria.</p>"
+    }
+  },
+  {
+    "id": "t_mech_drives",
+    "name": "Mechanical Power Transmission",
+    "subject": "Mechanical Engineering",
+    "domain": "Mechanisms",
+    "level": "L3",
+    "estimated_minutes": 60,
+    "hardware_tags": [
+      "mechanical_drives",
+      "alignment_setup"
+    ],
+    "content": {
+      "outcomes_html": "<p>Explain speed, torque, and ratio relationships for gears, belts, and chain drives.</p>",
+      "explain_html": "<p>Use ratio equations and efficiency losses to compare transmission options.</p>",
+      "practice_html": "<p>Set up drive combinations and calculate output speed from measured inputs.</p>",
+      "assessment_html": "<p>Problem set: choose suitable drive systems for three machine scenarios.</p>"
+    }
+  },
+  {
+    "id": "t_mech_fluids",
+    "name": "Hydraulics and Pneumatics Basics",
+    "subject": "Mechanical Engineering",
+    "domain": "Fluid Power",
+    "level": "L3",
+    "estimated_minutes": 60,
+    "hardware_tags": [
+      "fluid_power",
+      "safety_practice"
+    ],
+    "content": {
+      "outcomes_html": "<p>Describe core fluid power components and basic control circuit behavior.</p>",
+      "explain_html": "<p>Introduce pressure, flow, actuators, and directional control valve functions.</p>",
+      "practice_html": "<p>Build a simple actuator circuit and document sequence of operation.</p>",
+      "assessment_html": "<p>Fault scenario quiz on leaks, pressure loss, and valve misconfiguration.</p>"
+    }
+  },
+  {
+    "id": "t_mech_maintenance",
+    "name": "Planned Preventive Maintenance",
+    "subject": "Mechanical Engineering",
+    "domain": "Maintenance",
+    "level": "L3",
+    "estimated_minutes": 45,
+    "hardware_tags": [
+      "maintenance_planning",
+      "condition_monitoring"
+    ],
+    "content": {
+      "outcomes_html": "<p>Create a basic preventive maintenance schedule for rotating equipment.</p>",
+      "explain_html": "<p>Cover maintenance intervals, critical assets, and recordkeeping standards.</p>",
+      "practice_html": "<p>Draft a weekly and monthly checklist for bearings, belts, and lubrication points.</p>",
+      "assessment_html": "<p>Review task: identify missing controls in a sample maintenance plan.</p>"
+    }
+  },
+  {
+    "id": "t_mech_quality",
+    "name": "Quality Control in Manufacturing",
+    "subject": "Mechanical Engineering",
+    "domain": "Quality",
+    "level": "L3",
+    "estimated_minutes": 60,
+    "hardware_tags": [
+      "quality_inspection",
+      "metrology_basics"
+    ],
+    "content": {
+      "outcomes_html": "<p>Apply inspection plans and basic SPC concepts to manufactured parts.</p>",
+      "explain_html": "<p>Introduce sampling, control limits, and common defect categorization methods.</p>",
+      "practice_html": "<p>Inspect a sample lot and plot measured values against tolerance limits.</p>",
+      "assessment_html": "<p>Mini report: recommend corrective actions from inspection findings.</p>"
+    }
+  },
+  {
+    "id": "t_mech_cnc_intro",
+    "name": "Introduction to CNC Machining",
+    "subject": "Mechanical Engineering",
+    "domain": "Manufacturing",
+    "level": "L3",
+    "estimated_minutes": 90,
+    "hardware_tags": [
+      "cnc_basics",
+      "safety_practice"
+    ],
+    "content": {
+      "outcomes_html": "<p>Explain CNC workflow from setup to verification and safe machine operation.</p>",
+      "explain_html": "<p>Cover coordinate systems, tool offsets, and dry-run checks before cutting.</p>",
+      "practice_html": "<p>Simulate a simple machining sequence and verify toolpath against drawing.</p>",
+      "assessment_html": "<p>Safety-focused checklist and short test on CNC setup sequence.</p>"
+    }
+  },
+  {
+    "id": "t_mech_health_safety",
+    "name": "Mechanical Workshop Safety",
+    "subject": "Mechanical Engineering",
+    "domain": "Safety",
+    "level": "L2",
+    "estimated_minutes": 45,
+    "hardware_tags": [
+      "safety_practice"
+    ],
+    "content": {
+      "outcomes_html": "<p>Recognize workshop hazards and apply safe working procedures.</p>",
+      "explain_html": "<p>Discuss PPE, machine guarding, isolation procedures, and incident reporting.</p>",
+      "practice_html": "<p>Complete a hazard-spotting walk-through with control measures for each risk.</p>",
+      "assessment_html": "<p>Safety sign-off quiz requiring correct responses to practical scenarios.</p>"
     }
   }
 ]

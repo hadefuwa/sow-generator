@@ -1,10 +1,10 @@
-# SoW Generator Pilot
+# SoW Generator Platform
 
-Static proof of concept for building a Scheme of Work (SoW) from topic data, with no backend and no binary asset dependency.
+Production-ready front-end platform for building a Scheme of Work (SoW) from topic data, with no backend and no binary asset dependency.
 
-The full pilot runs from JSON files in this repo and is suitable for GitHub Pages.
+The full platform runs from JSON files in this repo and is suitable for GitHub Pages.
 
-## What This Pilot Validates
+## Core Capabilities
 
 - Topic selection
 - Lesson ordering (drag and drop)
@@ -96,6 +96,6 @@ What `admin.html` provides:
 3. Wait for workflow `Deploy to GitHub Pages` to complete.
 4. Open the published Pages URL.
 
-## Post-Pilot Direction
+## Platform Roadmap
 
-If the workflow is validated, next step is migrating content to a backend CMS/database while keeping the same front-end flow.
+Future expansion can migrate content management to a backend CMS/database while keeping the same front-end workflow.

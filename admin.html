@@ -260,8 +260,8 @@
 <body>
 
 <header>
+  <img src="assets/matrix%20light.png" alt="Matrix TSL" style="height:32px;display:block;">
   <h1>SoW Admin - Topic Editor</h1>
-  <span>Matrix TSL Internal Tool</span>
 </header>
 
 <div class="toolbar">
@@ -310,6 +310,10 @@
       <div class="form-group">
         <label for="f-subject">Subject</label>
         <input type="text" id="f-subject" placeholder="e.g. Electrical Engineering">
+      </div>
+      <div class="form-group">
+        <label for="f-domain">Domain</label>
+        <input type="text" id="f-domain" placeholder="e.g. Fundamentals">
       </div>
       <div class="form-group">
         <label for="f-level">Level</label>
@@ -420,6 +424,7 @@
         <div class="topic-card-body">
           <div class="form-grid">
             <div class="form-group"><label>Subject</label><div style="font-size:0.9rem">${esc(t.subject || '-')}</div></div>
+            <div class="form-group"><label>Domain</label><div style="font-size:0.9rem">${esc(t.domain || '-')}</div></div>
             <div class="form-group"><label>Level</label><div style="font-size:0.9rem">${esc(t.level || '-')}</div></div>
             <div class="form-group"><label>Duration</label><div style="font-size:0.9rem">${t.estimated_minutes || '-'} min</div></div>
             <div class="form-group"><label>Hardware Tags</label><div style="font-size:0.9rem">${esc((t.hardware_tags || []).join(', ') || '-')}</div></div>
@@ -470,6 +475,7 @@
     const t = topics[i];
     document.getElementById('f-name').value = t.name || '';
     document.getElementById('f-subject').value = t.subject || '';
+    document.getElementById('f-domain').value = t.domain || '';
     document.getElementById('f-level').value = t.level || '';
     document.getElementById('f-minutes').value = t.estimated_minutes || 60;
     document.getElementById('f-tags').value = (t.hardware_tags || []).join(', ');
@@ -503,6 +509,7 @@
       id: editingIndex !== null ? topics[editingIndex].id : generateId(name),
       name,
       subject: document.getElementById('f-subject').value.trim(),
+      domain: document.getElementById('f-domain').value.trim(),
       level: document.getElementById('f-level').value.trim(),
       estimated_minutes: parseInt(document.getElementById('f-minutes').value, 10),
       hardware_tags: tags,
@@ -553,7 +560,7 @@
   }
 
   function clearForm() {
-    ['f-name','f-subject','f-level','f-tags','f-outcomes','f-explain','f-practice','f-assessment'].forEach((id) => {
+    ['f-name','f-subject','f-domain','f-level','f-tags','f-outcomes','f-explain','f-practice','f-assessment'].forEach((id) => {
       document.getElementById(id).value = '';
     });
     document.getElementById('f-minutes').value = 60;

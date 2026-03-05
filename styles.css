@@ -75,13 +75,11 @@ h4 {
   animation: rise-in 480ms ease-out both;
 }
 
-.kicker {
-  margin: 0 0 0.35rem;
-  color: #bde8ff;
-  font-size: 0.83rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  font-weight: 700;
+.hero-logo {
+  height: 36px;
+  width: auto;
+  display: block;
+  margin-bottom: 0.75rem;
 }
 
 .hero h1 {
@@ -122,6 +120,38 @@ h4 {
   max-width: 1320px;
   margin: 0 auto;
   padding: 1.15rem;
+}
+
+.metrics {
+  max-width: 1320px;
+  margin: -0.4rem auto 0.5rem;
+  padding: 0 1.15rem;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.metric-card {
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid #c9dbe6;
+  border-radius: 14px;
+  padding: 0.7rem 0.85rem;
+  box-shadow: 0 8px 20px rgba(12, 53, 75, 0.09);
+}
+
+.metric-label {
+  margin: 0;
+  font-size: 0.77rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #4d697a;
+}
+
+.metric-value {
+  margin: 0.1rem 0 0;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #0d4e74;
 }
 
 .panel {
@@ -228,9 +258,28 @@ button:focus {
   min-height: 220px;
 }
 
+.remove-btn {
+  background: none;
+  border: none;
+  box-shadow: none;
+  color: #94a3b8;
+  font-size: 1.1rem;
+  line-height: 1;
+  padding: 0 0.2rem;
+  cursor: pointer;
+  transition: color 120ms ease;
+}
+
+.remove-btn:hover {
+  color: #dc2626;
+  transform: none;
+  box-shadow: none;
+  filter: none;
+}
+
 .lesson-item {
   display: grid;
-  grid-template-columns: 24px 1fr auto;
+  grid-template-columns: 24px 1fr auto auto;
   gap: 0.6rem;
   align-items: center;
   padding: 0.55rem 0.6rem;
@@ -278,6 +327,10 @@ button {
   background: linear-gradient(135deg, var(--brand), var(--brand-2));
   box-shadow: 0 8px 16px rgba(8, 65, 95, 0.2);
   transition: transform 120ms ease, box-shadow 150ms ease, filter 150ms ease;
+}
+
+#clear-btn {
+  background: linear-gradient(135deg, #556978, #344855);
 }
 
 button:hover {
@@ -402,6 +455,11 @@ tbody tr:hover {
     grid-template-columns: 1fr;
     max-width: 850px;
   }
+
+  .metrics {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-width: 850px;
+  }
 }
 
 @media (max-width: 640px) {
@@ -430,14 +488,44 @@ tbody tr:hover {
   #class-size {
     width: 100%;
   }
+
+  .metrics {
+    grid-template-columns: 1fr;
+    padding: 0 0.85rem;
+  }
+}
+
+.toast {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  background: #0c4869;
+  color: #f2f8fc;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 10px;
+  padding: 0.56rem 0.74rem;
+  box-shadow: var(--shadow-lg);
+  font-size: 0.85rem;
+  transform: translateY(18px);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 180ms ease, opacity 180ms ease;
+  z-index: 1200;
+}
+
+.toast.show {
+  transform: translateY(0);
+  opacity: 1;
 }
 
 @media print {
   .app-header,
   .panel:first-child,
   .panel:nth-child(2),
+  .metrics,
   .output-actions,
   .asset-viewer,
+  .toast,
   button {
     display: none !important;
   }
@@ -460,6 +548,16 @@ tbody tr:hover {
     background: #fff;
     padding: 0;
     animation: none;
+  }
+
+  .viewer-heading,
+  .asset-viewer,
+  .hero-logo {
+    display: none !important;
+  }
+
+  .lesson-card {
+    page-break-before: always;
   }
 
   table,

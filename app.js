@@ -5,7 +5,8 @@ const state = {
   selectedTopicIds: [],
   durationsByTopicId: {},
   generatedLessons: [],
-  hardwareRows: []
+  hardwareRows: [],
+  classSize: 24
 };
 
 const topicsTreeEl = document.getElementById("topics-tree");
@@ -18,7 +19,14 @@ const sowSummaryEl = document.getElementById("sow-summary");
 const hardwareSummaryEl = document.getElementById("hardware-summary");
 const viewerEl = document.getElementById("asset-viewer");
 const printBtn = document.getElementById("print-btn");
+const clearBtn = document.getElementById("clear-btn");
+const toastEl = document.getElementById("toast");
 const lessonItemTemplate = document.getElementById("lesson-item-template");
+const metricTopicsEl = document.getElementById("metric-topics");
+const metricHoursEl = document.getElementById("metric-hours");
+const metricReadinessEl = document.getElementById("metric-readiness");
+const metricHardwareEl = document.getElementById("metric-hardware");
+const STORAGE_KEY = "sow_generator_session_v1";
 
 init().catch((error) => {
   console.error(error);
@@ -35,16 +43,33 @@ async function init() {
   state.topics = topics;
   state.hardware = hardware;
   state.template = templates[0];
+  restoreSession();
+  classSizeEl.value = String(state.classSize);
 
   bindEvents();
   renderTopicsTree();
   renderSelectedLessons();
+  renderKpis();
 }
 
 function bindEvents() {
   topicSearchEl.addEventListener("input", renderTopicsTree);
   generateBtn.addEventListener("click", generateScheme);
   printBtn.addEventListener("click", () => window.print());
+  clearBtn.addEventListener("click", resetSession);
+  classSizeEl.addEventListener("input", () => {
+    state.classSize = Math.max(1, Number(classSizeEl.value) || 1);
+    persistSession();
+    computeHardwareRows();
+    renderHardware();
+    renderKpis();
+  });
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "/" && document.activeElement !== topicSearchEl) {
+      event.preventDefault();
+      topicSearchEl.focus();
+    }
+  });
 }
 
 async function fetchJson(url) {
@@ -127,6 +152,8 @@ function toggleTopic(topicId, checked) {
     state.selectedTopicIds.splice(index, 1);
   }
   renderSelectedLessons();
+  persistSession();
+  renderKpis();
 }
 
 function renderSelectedLessons() {
@@ -139,12 +166,22 @@ function renderSelectedLessons() {
     const title = fragment.querySelector(".lesson-title");
     const durationSelect = fragment.querySelector(".duration-select");
 
+    const removeBtn = fragment.querySelector(".remove-btn");
+
     item.dataset.topicId = topicId;
     title.textContent = topic ? topic.name : topicId;
     durationSelect.value = String(state.durationsByTopicId[topicId] || 60);
 
     durationSelect.addEventListener("change", () => {
       state.durationsByTopicId[topicId] = Number(durationSelect.value);
+      persistSession();
+      renderKpis();
+    });
+
+    removeBtn.addEventListener("click", () => {
+      toggleTopic(topicId, false);
+      renderTopicsTree();
+      showToast("Lesson removed from plan.");
     });
 
     attachDragHandlers(item);
@@ -183,6 +220,8 @@ function attachDragHandlers(item) {
 
 function syncOrderFromDom() {
   state.selectedTopicIds = [...selectedLessonsEl.querySelectorAll(".lesson-item")].map((item) => item.dataset.topicId);
+  persistSession();
+  renderKpis();
 }
 
 function generateScheme() {
@@ -193,6 +232,9 @@ function generateScheme() {
   renderSowSummary();
   computeHardwareRows();
   renderHardware();
+  renderKpis();
+  persistSession();
+  showToast("Scheme generated successfully.");
 }
 
 function generateLesson(topic, index) {
@@ -302,7 +344,7 @@ function renderSowSummary() {
 }
 
 function computeHardwareRows() {
-  const classSize = Math.max(1, Number(classSizeEl.value) || 1);
+  const classSize = Math.max(1, Number(classSizeEl.value) || state.classSize || 1);
   const selectedTopics = state.selectedTopicIds.map(findTopic).filter(Boolean);
   const tagSet = new Set(selectedTopics.flatMap((topic) => topic.hardware_tags || []));
 
@@ -367,6 +409,7 @@ function renderHardware() {
       row.owned = Math.max(0, Number(ownInput.value) || 0);
       row.toBuy = Math.max(0, row.required - row.owned);
       tr.querySelector(".to-buy").textContent = String(row.toBuy);
+      persistSession();
     });
 
     tr.children[4].appendChild(ownInput);
@@ -375,6 +418,97 @@ function renderHardware() {
 
   hardwareSummaryEl.innerHTML = "";
   hardwareSummaryEl.appendChild(table);
+}
+
+function renderKpis() {
+  const selectedCount = state.selectedTopicIds.length;
+  const minutes = state.selectedTopicIds.reduce((sum, topicId) => {
+    const topic = findTopic(topicId);
+    return sum + (state.durationsByTopicId[topicId] || topic?.estimated_minutes || 60);
+  }, 0);
+  const totalBlocks = state.generatedLessons.reduce((sum, lesson) => sum + lesson.blocks.length, 0);
+  const readyBlocks = state.generatedLessons.reduce(
+    (sum, lesson) => sum + lesson.blocks.filter((block) => !block.missing).length,
+    0
+  );
+  const readiness = totalBlocks === 0 ? 0 : Math.round((readyBlocks / totalBlocks) * 100);
+
+  metricTopicsEl.textContent = String(selectedCount);
+  metricHoursEl.textContent = (minutes / 60).toFixed(1);
+  metricReadinessEl.textContent = `${readiness}%`;
+  metricHardwareEl.textContent = String(state.hardwareRows.length);
+}
+
+function persistSession() {
+  const payload = {
+    selectedTopicIds: state.selectedTopicIds,
+    durationsByTopicId: state.durationsByTopicId,
+    classSize: Math.max(1, Number(classSizeEl.value) || state.classSize || 24),
+    generatedLessons: state.generatedLessons
+  };
+  try {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(payload));
+  } catch (error) {
+    console.warn("Could not persist session", error);
+  }
+}
+
+function restoreSession() {
+  try {
+    const raw = localStorage.getItem(STORAGE_KEY);
+    if (!raw) {
+      return;
+    }
+    const parsed = JSON.parse(raw);
+    state.selectedTopicIds = Array.isArray(parsed.selectedTopicIds) ? parsed.selectedTopicIds : [];
+    state.durationsByTopicId = parsed.durationsByTopicId || {};
+    state.classSize = Math.max(1, Number(parsed.classSize) || 24);
+    if (Array.isArray(parsed.generatedLessons)) {
+      state.generatedLessons = parsed.generatedLessons;
+      renderLessonPacks();
+      renderSowSummary();
+      computeHardwareRows();
+      renderHardware();
+    }
+    showToast("Previous session restored.");
+  } catch (error) {
+    console.warn("Could not restore session", error);
+  }
+}
+
+function resetSession() {
+  const confirmed = window.confirm("Reset all selected topics, durations, and generated output?");
+  if (!confirmed) {
+    return;
+  }
+  state.selectedTopicIds = [];
+  state.durationsByTopicId = {};
+  state.generatedLessons = [];
+  state.hardwareRows = [];
+  state.classSize = 24;
+  classSizeEl.value = "24";
+  lessonPacksEl.innerHTML = '<p class="muted">No lessons generated yet.</p>';
+  sowSummaryEl.innerHTML = '<p class="muted">No SoW summary yet.</p>';
+  hardwareSummaryEl.innerHTML = '<p class="muted">No matching hardware recommendations yet.</p>';
+  viewerEl.innerHTML = "<p>Select a lesson block to preview its content here.</p>";
+  renderTopicsTree();
+  renderSelectedLessons();
+  renderKpis();
+  localStorage.removeItem(STORAGE_KEY);
+  showToast("Session reset complete.");
+}
+
+let toastTimer;
+function showToast(message) {
+  if (!toastEl) {
+    return;
+  }
+  clearTimeout(toastTimer);
+  toastEl.textContent = message;
+  toastEl.classList.add("show");
+  toastTimer = setTimeout(() => {
+    toastEl.classList.remove("show");
+  }, 2200);
 }
 
 function findTopic(topicId) {

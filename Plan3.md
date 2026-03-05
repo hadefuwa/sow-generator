@@ -1,23 +1,23 @@
-# Plan 3: Low-Tech Pilot (GitHub Pages First)
+﻿# Plan 3: Production-Ready Frontend Plan (GitHub Pages First)
 
 App description:
-The SoW Generator Pilot is a static GitHub Pages web app that lets lecturers select and order topics, generate a Scheme of Work, view full lesson content rendered from JSON, and produce class-size-aware hardware recommendations. All content is stored in-repo as JSON (no backend, no binary asset hosting), so Matrix TSL can validate workflow and content quality quickly before investing in a CMS/database platform.
+The SoW Generator Platform is a static GitHub Pages web app that lets lecturers select and order topics, generate a Scheme of Work, view full lesson content rendered from JSON, and produce class-size-aware hardware recommendations. All content is stored in-repo as JSON (no backend, no binary asset hosting), so Matrix TSL can validate workflow and content quality quickly before investing in a CMS/database platform.
 
 Future direction beyond GitHub Pages:
-Once the pilot proves value, the same workflow will move to a managed platform with a backend CMS/database, role-based access, content approval/versioning, richer analytics, and more robust export/integration options (for example VLE/LMS packaging and enterprise document outputs). The long-term goal is a production service that scales across subjects, institutions, and larger curated content libraries while keeping the lecturer experience simple and deterministic.
+As the platform scales, the same workflow will move to a managed platform with a backend CMS/database, role-based access, content approval/versioning, richer analytics, and more robust export/integration options (for example VLE/LMS packaging and enterprise document outputs). The long-term goal is a production service that scales across subjects, institutions, and larger curated content libraries while keeping the lecturer experience simple and deterministic.
 
-## 1) Pilot Objective
-Build a usable Scheme of Work (SoW) proof of concept that lecturers can try quickly, with:
+## 1) Product Objective
+Build a usable Scheme of Work (SoW) production-grade solution that lecturers can try quickly, with:
 - topic selection
 - lesson ordering
 - in-app viewing of lesson content
 - generated SoW summary
 - basic hardware recommendation list
 
-No backend is required for the pilot.
+No backend is required for this release.
 
 ## 2) What Changes From Plan 1 + Plan 2
-Both existing plans are solid, but they are too broad for a first pilot.
+Both existing plans are solid, but they are too broad for a first production release.
 
 This merged plan keeps:
 - structured topic + content model
@@ -34,8 +34,8 @@ This merged plan defers:
 - multi-tenant access control
 - advanced exports (ZIP, SCORM, Word)
 
-## 3) Pilot Scope (4 Weeks)
-Pilot domain: Electrical Fundamentals only.
+## 3) Initial Delivery Scope (4 Weeks)
+Primary domain: Electrical Fundamentals only.
 
 Content target:
 - 20-30 topics
@@ -84,7 +84,7 @@ Create simple JSON files:
 - one default 60-minute lesson template
 - ordered blocks (`outcomes`, `explain`, `practice`, `assessment`)
 
-## 6) MVP Features
+## 6) Core Features
 1. Topic picker
 - checkbox list grouped by subject/domain
 - search filter
@@ -128,10 +128,10 @@ Create simple JSON files:
 - Add print-to-PDF layout
 - Implement hardware dedup + scaling + ownership subtraction
 
-### Week 4: Pilot Hardening
+### Week 4: Release Hardening
 - Expand to 20-30 topics
 - Fix usability issues from lecturer feedback
-- Freeze pilot release on GitHub Pages
+- Freeze release on GitHub Pages
 
 ## 8) GitHub Pages Deployment
 Use GitHub Actions for static deploy.
@@ -139,21 +139,22 @@ Use GitHub Actions for static deploy.
 1. Push repo to GitHub
 2. Add workflow `.github/workflows/deploy.yml` to publish root files (or `dist/` if later using a build tool)
 3. Enable Pages: Source = GitHub Actions
-4. Verify public URL and run pilot from that link
+4. Verify public URL and run production frontend from that link
 
 ## 9) Acceptance Criteria
-Pilot is successful if lecturers can:
+Release is successful if lecturers can:
 - select topics and reorder them
 - generate a coherent 6-20 lesson SoW
 - view full lesson content inside the app
 - print/export SoW as PDF
 - view a clear, deduplicated hardware list for class size
 
-## 10) Post-Pilot Upgrade Path
-After pilot validation, then decide if you need:
+## 10) Upgrade Path
+As usage grows, decide when to add:
 - migrate content to a backend CMS/database
 - admin CMS
 - database-backed content model
 - upload/conversion pipeline
 - richer exports (ZIP/VLE)
 - authentication and permissions
+

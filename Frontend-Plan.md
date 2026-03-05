@@ -1,4 +1,4 @@
-﻿# Frontend Plan: SoW Generator Pilot
+﻿# Frontend Plan: SoW Generator Platform
 
 ## 1) Overview
 
@@ -16,7 +16,7 @@ The app has four distinct views navigated via a top tab/step bar:
 3. SoW Preview
 4. Hardware List
 
-State is held in memory (a JS object) for the duration of the session.
+State is managed in memory (a JS object) and persisted to localStorage for restore on refresh.
 
 ---
 
@@ -165,7 +165,7 @@ No other dependencies. All other functionality is vanilla JS.
 - JSON loaded via `fetch('data/topics.json')` on page load. Works on GitHub Pages, not on raw `file://`.
 - Never use `eval()`; only render trusted Matrix-authored JSON content.
 - SoW title is the only user-editable text field; sanitize before print if needed.
-- No localStorage. Session state is in memory only, refreshing resets the app (acceptable for pilot).
+- Session state is stored in localStorage so refreshes preserve user progress.
 
 ---
 
@@ -182,7 +182,7 @@ Print CSS rules:
 
 ---
 
-## 9) Out of Scope for Pilot Frontend
+## 9) Out of Scope for Current Frontend Release
 
 - User authentication
 - Saving/loading SoWs between sessions
@@ -190,3 +190,6 @@ Print CSS rules:
 - Uploading files
 - Exporting to Word, ZIP, or SCORM
 - Any API calls
+
+
+

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SoW Pilot Generator</title>
+  <title>SoW Generator Platform</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,700&display=swap" rel="stylesheet">
@@ -12,16 +12,35 @@
 <body>
   <header class="app-header">
     <div class="hero">
-      <p class="kicker">Matrix TSL Pilot</p>
+      <img src="assets/matrix%20light.png" alt="Matrix TSL" class="hero-logo">
       <h1>Scheme of Work Generator</h1>
-      <p class="hero-copy">A fully front-end proof of concept for lecturer planning, lesson sequencing, and hardware-ready delivery.</p>
+      <p class="hero-copy">A production-grade front-end platform for lecturer planning, lesson sequencing, and hardware-ready course delivery.</p>
       <div class="hero-tags">
-        <span>Static App</span>
-        <span>GitHub Pages</span>
-        <span>JSON Content</span>
+        <span>Production UI</span>
+        <span>Session Autosave</span>
+        <span>JSON Content Engine</span>
       </div>
     </div>
   </header>
+
+  <section class="metrics" aria-label="Live platform metrics">
+    <article class="metric-card">
+      <p class="metric-label">Topics Selected</p>
+      <p class="metric-value" id="metric-topics">0</p>
+    </article>
+    <article class="metric-card">
+      <p class="metric-label">Planned Hours</p>
+      <p class="metric-value" id="metric-hours">0.0</p>
+    </article>
+    <article class="metric-card">
+      <p class="metric-label">Content Readiness</p>
+      <p class="metric-value" id="metric-readiness">0%</p>
+    </article>
+    <article class="metric-card">
+      <p class="metric-label">Hardware Lines</p>
+      <p class="metric-value" id="metric-hardware">0</p>
+    </article>
+  </section>
 
   <main class="layout">
     <section class="panel">
@@ -40,6 +59,7 @@
         <label for="class-size">Class size</label>
         <input id="class-size" type="number" min="1" value="24">
         <button id="generate-btn" type="button">Generate Scheme</button>
+        <button id="clear-btn" type="button">Reset Session</button>
       </div>
     </section>
 
@@ -52,7 +72,7 @@
       <h3>Lesson Packs</h3>
       <div id="lesson-packs" class="lesson-packs"></div>
 
-      <h3>Lesson Content Viewer</h3>
+      <h3 class="viewer-heading">Lesson Content Viewer</h3>
       <div id="asset-viewer" class="asset-viewer">
         <p>Select a lesson block to preview its content here.</p>
       </div>
@@ -64,6 +84,8 @@
       <div id="hardware-summary"></div>
     </section>
   </main>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
 
   <template id="lesson-item-template">
     <li class="lesson-item" draggable="true">
@@ -77,6 +99,7 @@
           <option value="90">90</option>
         </select>
       </label>
+      <button type="button" class="remove-btn" aria-label="Remove lesson">&times;</button>
     </li>
   </template>
 
