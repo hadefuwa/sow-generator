@@ -284,6 +284,11 @@ function renderLessonPacks() {
 
     lesson.blocks.forEach((block) => {
       const li = document.createElement("li");
+      li.className = "block-item";
+
+      const header = document.createElement("div");
+      header.className = "block-item-header";
+
       const left = document.createElement("span");
       left.textContent = block.name;
 
@@ -292,8 +297,15 @@ function renderLessonPacks() {
       right.textContent = block.missing ? "View Missing" : "Open";
       right.addEventListener("click", () => renderViewer(lesson, block));
 
-      li.appendChild(left);
-      li.appendChild(right);
+      header.appendChild(left);
+      header.appendChild(right);
+
+      const contentDiv = document.createElement("div");
+      contentDiv.className = "block-print-content";
+      contentDiv.innerHTML = block.html;
+
+      li.appendChild(header);
+      li.appendChild(contentDiv);
       blockList.appendChild(li);
     });
 
@@ -308,6 +320,7 @@ function renderViewer(lesson, block) {
     <p class="muted">${escapeHtml(block.name)}</p>
     <div class="content-render">${block.html}</div>
   `;
+  viewerEl.scrollIntoView({ behavior: "smooth", block: "nearest" });
 }
 
 function renderSowSummary() {
@@ -375,6 +388,9 @@ function renderHardware() {
     return;
   }
 
+  const tableWrap = document.createElement("div");
+  tableWrap.className = "table-wrap";
+
   const table = document.createElement("table");
   table.innerHTML = `
     <thead>
@@ -417,6 +433,7 @@ function renderHardware() {
 
     const ownInput = document.createElement("input");
     ownInput.type = "number";
+    ownInput.className = "hardware-own-input";
     ownInput.min = "0";
     ownInput.value = "0";
     ownInput.addEventListener("input", () => {
@@ -431,7 +448,8 @@ function renderHardware() {
   });
 
   hardwareSummaryEl.innerHTML = "";
-  hardwareSummaryEl.appendChild(table);
+  tableWrap.appendChild(table);
+  hardwareSummaryEl.appendChild(tableWrap);
 }
 
 function renderKpis() {

@@ -403,10 +403,17 @@ button:active {
 .block-list li {
   border-top: 1px dashed #dde7ee;
   padding: 0.45rem 0;
+}
+
+.block-item-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 0.5rem;
+}
+
+.block-print-content {
+  display: none;
 }
 
 .asset-viewer {
@@ -439,12 +446,44 @@ table {
   font-size: 0.9rem;
 }
 
+#hardware-summary {
+  max-width: 100%;
+}
+
+#hardware-summary .table-wrap {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  border-radius: 12px;
+}
+
+#hardware-summary table {
+  min-width: 920px;
+}
+
 th,
 td {
   border-bottom: 1px solid #e3edf3;
   padding: 0.5rem 0.45rem;
   text-align: left;
   vertical-align: top;
+  overflow-wrap: anywhere;
+}
+
+#hardware-summary th,
+#hardware-summary td {
+  white-space: normal;
+}
+
+#hardware-summary td:nth-child(6) {
+  min-width: 150px;
+}
+
+.hardware-own-input {
+  width: 100%;
+  min-width: 120px;
+  max-width: 160px;
 }
 
 th {
@@ -604,6 +643,17 @@ tbody tr:hover {
 
   .lesson-card {
     page-break-before: always;
+  }
+
+  .block-print-content {
+    display: block !important;
+    margin-top: 0.3rem;
+    font-size: 0.88rem;
+    color: #000;
+  }
+
+  .block-item-header button {
+    display: none !important;
   }
 
   table,
