@@ -392,7 +392,7 @@ function renderTeacherChecks() {
   const section = document.createElement("section");
   section.className = "lecturer-checks-section";
   section.innerHTML = `
-    <p class="muted"><strong>Print note:</strong> Student material appears first. Staff-only checks start in this section.</p>
+    <p class="muted"><strong>Print note:</strong> Staff-only checks appear immediately after the cover page.</p>
   `;
 
   state.teacherChecks.forEach((entry) => {
