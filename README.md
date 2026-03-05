@@ -1,22 +1,84 @@
 # SoW Generator Pilot
 
-Static proof-of-concept for generating a Scheme of Work and hardware recommendations.
+Static proof of concept for building a Scheme of Work (SoW) from topic data, with no backend and no binary asset dependency.
 
-## Local run
-Open `index.html` in a local web server (recommended) so JSON fetch works.
+The full pilot runs from JSON files in this repo and is suitable for GitHub Pages.
 
-Example with PowerShell:
+## What This Pilot Validates
+
+- Topic selection
+- Lesson ordering (drag and drop)
+- SoW generation
+- In-app lesson content rendering (HTML/text from JSON)
+- Hardware recommendations with class-size scaling
+
+## Project Structure
+
+- `index.html` - app shell
+- `styles.css` - UI and print styles
+- `app.js` - generator logic and rendering
+- `data/topics.json` - topic metadata and lesson block content
+- `data/templates.json` - lesson block blueprint
+- `data/hardware.json` - hardware mapping and scaling data
+- `.github/workflows/deploy.yml` - GitHub Pages deploy workflow
+
+## Local Run
+
+Use a local web server so JSON fetch works.
 
 ```powershell
 python -m http.server 8000
 ```
 
-Then visit `http://localhost:8000`.
+Then open `http://localhost:8000`.
 
-## GitHub Pages
-This repo includes `.github/workflows/deploy.yml`.
+## Content Editing Guide (JSON-Only)
 
-To publish:
-1. Push to `main`
-2. In GitHub: Settings -> Pages -> Source = GitHub Actions
-3. Wait for workflow `Deploy to GitHub Pages` to finish
+Matrix content is managed by editing `data/topics.json`.
+
+Each topic should include:
+
+- `id`, `name`, `subject`, `domain`, `level`, `estimated_minutes`
+- `hardware_tags` (array of capability tags)
+- `content` object with:
+- `outcomes_html`
+- `explain_html`
+- `practice_html`
+- `assessment_html`
+
+Example topic entry:
+
+```json
+{
+  "id": "t_ohms_law",
+  "name": "Ohm's Law",
+  "subject": "Electrical Engineering",
+  "domain": "Fundamentals",
+  "level": "L3",
+  "estimated_minutes": 60,
+  "hardware_tags": ["dc_measurement", "resistive_networks"],
+  "content": {
+    "outcomes_html": "<p>Define voltage, current, and resistance.</p>",
+    "explain_html": "<p>Teach V = I x R with one worked example.</p>",
+    "practice_html": "<p>Complete 5 calculation questions.</p>",
+    "assessment_html": "<p>Exit ticket with 3 mixed questions.</p>"
+  }
+}
+```
+
+Rules:
+
+- Keep HTML simple (`<p>`, `<ul>`, `<li>`, `<strong>`).
+- Keep block names and keys aligned with `data/templates.json`.
+- If a block is missing, the app will show a placeholder warning.
+
+## GitHub Pages Deployment
+
+1. Push to `main`.
+2. In GitHub: `Settings -> Pages -> Source = GitHub Actions`.
+3. Wait for workflow `Deploy to GitHub Pages` to complete.
+4. Open the published Pages URL.
+
+## Post-Pilot Direction
+
+If the workflow is validated, next step is migrating content to a backend CMS/database while keeping the same front-end flow.

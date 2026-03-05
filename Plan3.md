@@ -4,7 +4,7 @@
 Build a usable Scheme of Work (SoW) proof of concept that lecturers can try quickly, with:
 - topic selection
 - lesson ordering
-- in-app viewing of lesson assets
+- in-app viewing of lesson content
 - generated SoW summary
 - basic hardware recommendation list
 
@@ -14,7 +14,7 @@ No backend is required for the pilot.
 Both existing plans are solid, but they are too broad for a first pilot.
 
 This merged plan keeps:
-- structured topic + asset model
+- structured topic + content model
 - lecturer-controlled ordering (no forced prerequisite logic)
 - in-app lesson pack viewing
 - deterministic generation rules
@@ -33,7 +33,7 @@ Pilot domain: Electrical Fundamentals only.
 
 Content target:
 - 20-30 topics
-- minimum 3 assets per topic (recommended baseline: teacher notes, worksheet PDF, slides PDF/image set)
+- full lesson block content per topic (outcomes, explain, practice, assessment) as text/HTML
 - optional: short quiz JSON
 
 Users:
@@ -96,7 +96,7 @@ Create simple JSON files:
 - render lesson HTML/text in a content panel (no file embed)
 
 5. SoW summary view
-- lesson number, topic, duration, key assets
+- lesson number, topic, duration, content status
 - browser print stylesheet for "Save as PDF"
 
 6. Hardware recommendations (simple deterministic)
@@ -139,7 +139,7 @@ Use GitHub Actions for static deploy.
 Pilot is successful if lecturers can:
 - select topics and reorder them
 - generate a coherent 6-20 lesson SoW
-- open worksheets/slides inside the app
+- view full lesson content inside the app
 - print/export SoW as PDF
 - view a clear, deduplicated hardware list for class size
 
