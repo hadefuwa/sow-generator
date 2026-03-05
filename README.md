@@ -17,6 +17,7 @@ The full pilot runs from JSON files in this repo and is suitable for GitHub Page
 - `index.html` - app shell
 - `styles.css` - UI and print styles
 - `app.js` - generator logic and rendering
+- `admin.html` - no-code topic editor for `topics.json`
 - `data/topics.json` - topic metadata and lesson block content
 - `data/templates.json` - lesson block blueprint
 - `data/hardware.json` - hardware mapping and scaling data
@@ -71,6 +72,22 @@ Rules:
 - Keep HTML simple (`<p>`, `<ul>`, `<li>`, `<strong>`).
 - Keep block names and keys aligned with `data/templates.json`.
 - If a block is missing, the app will show a placeholder warning.
+
+## Admin Page Workflow (For Non-Developers)
+
+1. Open `admin.html` in a browser (double-click).
+2. Click `Load topics.json` and select the file from this repo.
+3. Add, edit, or delete topics in the form.
+4. Click `Save & Download` to export an updated `topics.json`.
+5. Replace `data/topics.json` in the repo with the downloaded file.
+6. A developer commits and pushes. GitHub Actions redeploys automatically.
+
+What `admin.html` provides:
+- Load existing JSON or start from scratch.
+- Add/edit topic fields (name, subject, level, duration, hardware tags, all 4 content blocks).
+- Expand/collapse topic cards for review.
+- Delete with confirmation.
+- Download a ready-to-use `topics.json`.
 
 ## GitHub Pages Deployment
 

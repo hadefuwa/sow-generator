@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SoW Admin — Topic Editor</title>
+  <title>SoW Admin - Topic Editor</title>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -23,7 +23,7 @@
     }
 
     header h1 { font-size: 1.1rem; font-weight: 600; }
-    header span { font-size: 0.85rem; opacity: 0.6; }
+    header span { font-size: 0.85rem; opacity: 0.7; }
 
     .toolbar {
       background: white;
@@ -41,7 +41,7 @@
       border-radius: 6px;
       font-size: 0.9rem;
       cursor: pointer;
-      font-weight: 500;
+      font-weight: 600;
     }
 
     .btn-primary { background: #2563eb; color: white; }
@@ -60,9 +60,30 @@
       margin-left: auto;
     }
 
-    .status-bar.loaded { color: #16a34a; font-weight: 500; }
+    .status-bar.loaded { color: #16a34a; font-weight: 600; }
 
     main { padding: 24px; max-width: 1100px; margin: 0 auto; }
+
+    .workflow {
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+      padding: 16px 18px;
+      margin-bottom: 16px;
+    }
+
+    .workflow h2 {
+      font-size: 1rem;
+      margin-bottom: 8px;
+      color: #1f2937;
+    }
+
+    .workflow ol {
+      margin-left: 1.1rem;
+      color: #334155;
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
 
     .empty-state {
       text-align: center;
@@ -181,7 +202,6 @@
       justify-content: flex-end;
     }
 
-    /* Modal */
     .modal-overlay {
       display: none;
       position: fixed;
@@ -240,7 +260,7 @@
 <body>
 
 <header>
-  <h1>SoW Admin — Topic Editor</h1>
+  <h1>SoW Admin - Topic Editor</h1>
   <span>Matrix TSL Internal Tool</span>
 </header>
 
@@ -252,21 +272,32 @@
 
   <button class="btn btn-primary" id="btn-add" disabled>+ Add Topic</button>
 
-  <button class="btn btn-success" id="btn-save" disabled>Save & Download</button>
+  <button class="btn btn-success" id="btn-save" disabled>Save &amp; Download</button>
 
   <span class="status-bar" id="status-bar">No file loaded</span>
 </div>
 
 <main>
+  <section class="workflow">
+    <h2>Boss Demo Workflow</h2>
+    <ol>
+      <li>Open <code>admin.html</code> in a browser.</li>
+      <li>Click <strong>Load topics.json</strong> and choose the file from the repo folder.</li>
+      <li>Add, edit, or delete topics using the form.</li>
+      <li>Click <strong>Save &amp; Download</strong> to export an updated <code>topics.json</code>.</li>
+      <li>Replace <code>data/topics.json</code> in the repo with the downloaded file.</li>
+      <li>A developer commits and pushes to redeploy via GitHub Actions.</li>
+    </ol>
+  </section>
+
   <div class="empty-state" id="empty-state">
     <h2>No topics loaded</h2>
-    <p>Click "Load topics.json" above to open your existing data file, or start fresh with "+ Add Topic".</p>
+    <p>Click "Load topics.json" to open an existing file, or start fresh with "+ Add Topic".</p>
   </div>
 
   <div class="topic-list" id="topic-list"></div>
 </main>
 
-<!-- Add / Edit Modal -->
 <div class="modal-overlay" id="modal-overlay">
   <div class="modal">
     <h2 id="modal-title">Add Topic</h2>
@@ -278,11 +309,11 @@
       </div>
       <div class="form-group">
         <label for="f-subject">Subject</label>
-        <input type="text" id="f-subject" placeholder="e.g. Electrical Fundamentals">
+        <input type="text" id="f-subject" placeholder="e.g. Electrical Engineering">
       </div>
       <div class="form-group">
         <label for="f-level">Level</label>
-        <input type="text" id="f-level" placeholder="e.g. Level 2">
+        <input type="text" id="f-level" placeholder="e.g. L3">
       </div>
       <div class="form-group">
         <label for="f-minutes">Estimated Minutes</label>
@@ -294,7 +325,7 @@
       </div>
       <div class="form-group">
         <label for="f-tags">Hardware Tags</label>
-        <input type="text" id="f-tags" placeholder="e.g. multimeter, breadboard">
+        <input type="text" id="f-tags" placeholder="e.g. dc_measurement, instrumentation">
         <span class="hint">Comma-separated</span>
       </div>
     </div>
@@ -304,15 +335,15 @@
       <div class="content-grid">
         <div class="form-group">
           <label for="f-outcomes">Outcomes</label>
-          <textarea id="f-outcomes" class="tall" placeholder="What students will be able to do..."></textarea>
+          <textarea id="f-outcomes" class="tall" placeholder="What learners will be able to do..."></textarea>
         </div>
         <div class="form-group">
           <label for="f-explain">Explain</label>
-          <textarea id="f-explain" class="tall" placeholder="Key concepts and explanations..."></textarea>
+          <textarea id="f-explain" class="tall" placeholder="Key concepts and explanation points..."></textarea>
         </div>
         <div class="form-group">
           <label for="f-practice">Practice</label>
-          <textarea id="f-practice" class="tall" placeholder="Activities and exercises..."></textarea>
+          <textarea id="f-practice" class="tall" placeholder="Activities and tasks..."></textarea>
         </div>
         <div class="form-group">
           <label for="f-assessment">Assessment</label>
@@ -334,24 +365,23 @@
   let topics = [];
   let editingIndex = null;
 
-  const fileInput     = document.getElementById('file-input');
-  const btnAdd        = document.getElementById('btn-add');
-  const btnSave       = document.getElementById('btn-save');
-  const statusBar     = document.getElementById('status-bar');
-  const topicList     = document.getElementById('topic-list');
-  const emptyState    = document.getElementById('empty-state');
-  const modalOverlay  = document.getElementById('modal-overlay');
-  const modalTitle    = document.getElementById('modal-title');
-  const btnCancel     = document.getElementById('btn-cancel');
-  const btnConfirm    = document.getElementById('btn-confirm');
-  const toast         = document.getElementById('toast');
+  const fileInput = document.getElementById('file-input');
+  const btnAdd = document.getElementById('btn-add');
+  const btnSave = document.getElementById('btn-save');
+  const statusBar = document.getElementById('status-bar');
+  const topicList = document.getElementById('topic-list');
+  const emptyState = document.getElementById('empty-state');
+  const modalOverlay = document.getElementById('modal-overlay');
+  const modalTitle = document.getElementById('modal-title');
+  const btnCancel = document.getElementById('btn-cancel');
+  const btnConfirm = document.getElementById('btn-confirm');
+  const toast = document.getElementById('toast');
 
-  // --- File Load ---
-  fileInput.addEventListener('change', e => {
+  fileInput.addEventListener('change', (e) => {
     const file = e.target.files[0];
     if (!file) return;
     const reader = new FileReader();
-    reader.onload = ev => {
+    reader.onload = (ev) => {
       try {
         const parsed = JSON.parse(ev.target.result);
         topics = Array.isArray(parsed) ? parsed : [];
@@ -359,7 +389,7 @@
         render();
         showToast(`Loaded ${topics.length} topics`, 'success');
       } catch {
-        showToast('Invalid JSON file — could not load', 'error');
+        showToast('Invalid JSON file - could not load', 'error');
       }
     };
     reader.readAsText(file);
@@ -373,7 +403,6 @@
     statusBar.className = 'status-bar loaded';
   }
 
-  // --- Render Topic List ---
   function render() {
     emptyState.style.display = topics.length === 0 ? 'block' : 'none';
     topicList.innerHTML = '';
@@ -385,15 +414,15 @@
         <div class="topic-card-header">
           <div class="topic-number">${i + 1}</div>
           <div class="topic-title">${esc(t.name || 'Untitled Topic')}</div>
-          <div class="topic-meta">${esc(t.subject || '')}${t.level ? ' · ' + esc(t.level) : ''}${t.estimated_minutes ? ' · ' + t.estimated_minutes + ' min' : ''}</div>
+          <div class="topic-meta">${esc(t.subject || '')}${t.level ? ' - ' + esc(t.level) : ''}${t.estimated_minutes ? ' - ' + t.estimated_minutes + ' min' : ''}</div>
           <span class="topic-chevron">&#9654;</span>
         </div>
         <div class="topic-card-body">
           <div class="form-grid">
-            <div class="form-group"><label>Subject</label><div style="font-size:0.9rem">${esc(t.subject || '—')}</div></div>
-            <div class="form-group"><label>Level</label><div style="font-size:0.9rem">${esc(t.level || '—')}</div></div>
-            <div class="form-group"><label>Duration</label><div style="font-size:0.9rem">${t.estimated_minutes || '—'} min</div></div>
-            <div class="form-group"><label>Hardware Tags</label><div style="font-size:0.9rem">${esc((t.hardware_tags || []).join(', ') || '—')}</div></div>
+            <div class="form-group"><label>Subject</label><div style="font-size:0.9rem">${esc(t.subject || '-')}</div></div>
+            <div class="form-group"><label>Level</label><div style="font-size:0.9rem">${esc(t.level || '-')}</div></div>
+            <div class="form-group"><label>Duration</label><div style="font-size:0.9rem">${t.estimated_minutes || '-'} min</div></div>
+            <div class="form-group"><label>Hardware Tags</label><div style="font-size:0.9rem">${esc((t.hardware_tags || []).join(', ') || '-')}</div></div>
           </div>
           <div class="content-blocks">
             <h4>Content Blocks</h4>
@@ -424,11 +453,7 @@
     return `<div class="form-group"><label>${label}</label><div style="font-size:0.85rem;color:#4b5563">${text}</div></div>`;
   }
 
-  // --- Add Topic ---
   btnAdd.addEventListener('click', () => {
-    if (topics.length === 0 && btnAdd.disabled === false) {
-      // allow adding even without loading a file — start fresh
-    }
     editingIndex = null;
     modalTitle.textContent = 'Add Topic';
     clearForm();
@@ -437,27 +462,24 @@
     openModal();
   });
 
-  // Override: allow Add even before file loaded
   document.getElementById('btn-add').disabled = false;
 
-  // --- Edit Topic ---
   window.editTopic = function(i) {
     editingIndex = i;
     modalTitle.textContent = 'Edit Topic';
     const t = topics[i];
-    document.getElementById('f-name').value    = t.name || '';
+    document.getElementById('f-name').value = t.name || '';
     document.getElementById('f-subject').value = t.subject || '';
-    document.getElementById('f-level').value   = t.level || '';
+    document.getElementById('f-level').value = t.level || '';
     document.getElementById('f-minutes').value = t.estimated_minutes || 60;
-    document.getElementById('f-tags').value    = (t.hardware_tags || []).join(', ');
-    document.getElementById('f-outcomes').value   = stripTags(t.content?.outcomes_html || '');
-    document.getElementById('f-explain').value    = stripTags(t.content?.explain_html || '');
-    document.getElementById('f-practice').value   = stripTags(t.content?.practice_html || '');
+    document.getElementById('f-tags').value = (t.hardware_tags || []).join(', ');
+    document.getElementById('f-outcomes').value = stripTags(t.content?.outcomes_html || '');
+    document.getElementById('f-explain').value = stripTags(t.content?.explain_html || '');
+    document.getElementById('f-practice').value = stripTags(t.content?.practice_html || '');
     document.getElementById('f-assessment').value = stripTags(t.content?.assessment_html || '');
     openModal();
   };
 
-  // --- Delete Topic ---
   window.deleteTopic = function(i) {
     if (!confirm(`Delete "${topics[i].name}"? This cannot be undone until you reload the file.`)) return;
     topics.splice(i, 1);
@@ -465,7 +487,6 @@
     showToast('Topic deleted');
   };
 
-  // --- Save from Modal ---
   btnConfirm.addEventListener('click', () => {
     const name = document.getElementById('f-name').value.trim();
     if (!name) {
@@ -474,22 +495,22 @@
     }
 
     const tagsRaw = document.getElementById('f-tags').value;
-    const tags = tagsRaw.split(',').map(s => s.trim()).filter(Boolean);
+    const tags = tagsRaw.split(',').map((s) => s.trim()).filter(Boolean);
 
-    const wrapHtml = text => text.trim() ? `<p>${text.trim().replace(/\n/g, '</p><p>')}</p>` : '';
+    const wrapHtml = (text) => text.trim() ? `<p>${text.trim().replace(/\n/g, '</p><p>')}</p>` : '';
 
     const topic = {
       id: editingIndex !== null ? topics[editingIndex].id : generateId(name),
       name,
-      subject:            document.getElementById('f-subject').value.trim(),
-      level:              document.getElementById('f-level').value.trim(),
-      estimated_minutes:  parseInt(document.getElementById('f-minutes').value),
-      hardware_tags:      tags,
+      subject: document.getElementById('f-subject').value.trim(),
+      level: document.getElementById('f-level').value.trim(),
+      estimated_minutes: parseInt(document.getElementById('f-minutes').value, 10),
+      hardware_tags: tags,
       content: {
-        outcomes_html:   wrapHtml(document.getElementById('f-outcomes').value),
-        explain_html:    wrapHtml(document.getElementById('f-explain').value),
-        practice_html:   wrapHtml(document.getElementById('f-practice').value),
-        assessment_html: wrapHtml(document.getElementById('f-assessment').value),
+        outcomes_html: wrapHtml(document.getElementById('f-outcomes').value),
+        explain_html: wrapHtml(document.getElementById('f-explain').value),
+        practice_html: wrapHtml(document.getElementById('f-practice').value),
+        assessment_html: wrapHtml(document.getElementById('f-assessment').value)
       }
     };
 
@@ -506,27 +527,33 @@
   });
 
   btnCancel.addEventListener('click', closeModal);
-  modalOverlay.addEventListener('click', e => { if (e.target === modalOverlay) closeModal(); });
+  modalOverlay.addEventListener('click', (e) => { if (e.target === modalOverlay) closeModal(); });
 
-  // --- Save & Download ---
   btnSave.addEventListener('click', () => {
     const json = JSON.stringify(topics, null, 2);
     const blob = new Blob([json], { type: 'application/json' });
-    const url  = URL.createObjectURL(blob);
-    const a    = document.createElement('a');
-    a.href     = url;
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
     a.download = 'topics.json';
     a.click();
     URL.revokeObjectURL(url);
-    showToast('topics.json downloaded — replace the file in your repo folder', 'success');
+    showToast('topics.json downloaded - replace data/topics.json in your repo', 'success');
   });
 
-  // --- Helpers ---
-  function openModal()  { modalOverlay.classList.add('open'); document.getElementById('f-name').focus(); }
-  function closeModal() { modalOverlay.classList.remove('open'); clearForm(); editingIndex = null; }
+  function openModal() {
+    modalOverlay.classList.add('open');
+    document.getElementById('f-name').focus();
+  }
+
+  function closeModal() {
+    modalOverlay.classList.remove('open');
+    clearForm();
+    editingIndex = null;
+  }
 
   function clearForm() {
-    ['f-name','f-subject','f-level','f-tags','f-outcomes','f-explain','f-practice','f-assessment'].forEach(id => {
+    ['f-name','f-subject','f-level','f-tags','f-outcomes','f-explain','f-practice','f-assessment'].forEach((id) => {
       document.getElementById(id).value = '';
     });
     document.getElementById('f-minutes').value = 60;
@@ -537,11 +564,11 @@
   }
 
   function esc(str) {
-    return String(str).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+    return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
   }
 
   function stripTags(html) {
-    return html.replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim();
+    return String(html).replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim();
   }
 
   let toastTimer;
@@ -552,7 +579,6 @@
     toastTimer = setTimeout(() => { toast.className = 'toast'; }, 3000);
   }
 
-  // Allow Add Topic before any file is loaded (start from scratch)
   btnAdd.disabled = false;
 </script>
 </body>
