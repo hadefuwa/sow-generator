@@ -5,6 +5,7 @@ const state = {
   selectedTopicIds: [],
   durationsByTopicId: {},
   generatedLessons: [],
+  teacherChecks: [],
   hardwareRows: [],
   classSize: 24
 };
@@ -14,9 +15,11 @@ const topicSearchEl = document.getElementById("topic-search");
 const selectedLessonsEl = document.getElementById("selected-lessons");
 const generateBtn = document.getElementById("generate-btn");
 const classSizeEl = document.getElementById("class-size");
+const sowCoverEl = document.getElementById("sow-cover");
 const lessonPacksEl = document.getElementById("lesson-packs");
 const sowSummaryEl = document.getElementById("sow-summary");
 const hardwareSummaryEl = document.getElementById("hardware-summary");
+const teacherChecksEl = document.getElementById("teacher-checks");
 const viewerEl = document.getElementById("asset-viewer");
 const printBtn = document.getElementById("print-btn");
 const clearBtn = document.getElementById("clear-btn");
@@ -26,7 +29,7 @@ const metricTopicsEl = document.getElementById("metric-topics");
 const metricHoursEl = document.getElementById("metric-hours");
 const metricReadinessEl = document.getElementById("metric-readiness");
 const metricHardwareEl = document.getElementById("metric-hardware");
-const STORAGE_KEY = "sow_generator_session_v1";
+const STORAGE_KEY = "sow_generator_session_v2";
 
 init().catch((error) => {
   console.error(error);
@@ -49,6 +52,7 @@ async function init() {
   bindEvents();
   renderTopicsTree();
   renderSelectedLessons();
+  renderTeacherChecks();
   renderKpis();
 }
 
@@ -225,21 +229,31 @@ function syncOrderFromDom() {
 }
 
 function generateScheme() {
+  runGeneration(true);
+}
+
+function runGeneration(notify) {
   const selectedTopics = state.selectedTopicIds.map(findTopic).filter(Boolean);
+  state.teacherChecks = [];
   state.generatedLessons = selectedTopics.map((topic, index) => generateLesson(topic, index));
 
+  renderCover(selectedTopics);
   renderLessonPacks();
   renderSowSummary();
   computeHardwareRows();
   renderHardware();
+  renderTeacherChecks();
   renderKpis();
   persistSession();
-  showToast("Scheme generated successfully.");
+  if (notify) {
+    showToast("Scheme generated successfully.");
+  }
 }
 
 function generateLesson(topic, index) {
   const duration = state.durationsByTopicId[topic.id] || topic.estimated_minutes || 60;
   const content = topic.content || {};
+  const lessonTeacherChecks = [];
   const blocks = state.template.blocks.map((block) => {
     const html = content[block.content_field];
     if (!html || !String(html).trim()) {
@@ -250,13 +264,26 @@ function generateLesson(topic, index) {
         html: `<p>Missing content for ${block.name}.</p>`
       };
     }
+    const extracted = extractTeacherChecks(html);
+    if (extracted.notes.length) {
+      lessonTeacherChecks.push(...extracted.notes.map((note) => `${block.name}: ${note}`));
+    }
     return {
       key: block.key,
       name: block.name,
       missing: false,
-      html
+      html: extracted.studentHtml
     };
   });
+
+  if (lessonTeacherChecks.length) {
+    state.teacherChecks.push({
+      lessonNumber: index + 1,
+      topicName: topic.name,
+      duration,
+      checks: lessonTeacherChecks
+    });
+  }
 
   return {
     lessonNumber: index + 1,
@@ -264,6 +291,45 @@ function generateLesson(topic, index) {
     duration,
     blocks
   };
+}
+
+function renderCover(selectedTopics) {
+  if (!sowCoverEl || !selectedTopics.length) {
+    if (sowCoverEl) sowCoverEl.hidden = true;
+    return;
+  }
+
+  const subjects = [...new Set(selectedTopics.map((t) => t.subject))].join(" / ");
+  const totalMinutes = state.selectedTopicIds.reduce((sum, id) => {
+    return sum + (state.durationsByTopicId[id] || findTopic(id)?.estimated_minutes || 60);
+  }, 0);
+  const totalHours = (totalMinutes / 60).toFixed(1);
+  const classSize = Math.max(1, Number(classSizeEl.value) || state.classSize || 24);
+  const dateStr = new Date().toLocaleDateString("en-GB", { year: "numeric", month: "long", day: "numeric" });
+
+  sowCoverEl.hidden = false;
+  sowCoverEl.innerHTML = `
+    <div class="cover-logo-row">
+      <img src="assets/matrix%20light.png" alt="Matrix TSL" class="cover-logo">
+    </div>
+    <h1 class="cover-title">Scheme of Work</h1>
+    <p class="cover-subject">${escapeHtml(subjects)}</p>
+    <div class="cover-meta">
+      <div class="cover-meta-item"><span class="cover-meta-label">Lessons</span><span class="cover-meta-value">${selectedTopics.length}</span></div>
+      <div class="cover-meta-item"><span class="cover-meta-label">Total Hours</span><span class="cover-meta-value">${totalHours}</span></div>
+      <div class="cover-meta-item"><span class="cover-meta-label">Class Size</span><span class="cover-meta-value">${classSize}</span></div>
+      <div class="cover-meta-item"><span class="cover-meta-label">Date</span><span class="cover-meta-value">${dateStr}</span></div>
+    </div>
+    <div class="cover-about">
+      <h2>About This Scheme of Work</h2>
+      <p>This Scheme of Work has been generated using the Matrix TSL Scheme of Work Generator. It is fully customised to the selected topics, lesson durations, and class size specified by the lecturer.</p>
+      <p>Each lesson pack contains structured content aligned to Matrix TSL engineering curricula, including learning outcomes, teacher-led explanation notes, student practice activities, and assessment tasks.</p>
+      <p>Matrix TSL provides industry-leading engineering education resources, hardware kits, and digital tools for further and higher education providers across the UK and internationally.</p>
+    </div>
+    <div class="cover-footer">
+      <p>Generated by Matrix TSL Scheme of Work Generator &nbsp;&bull;&nbsp; <strong>matrixtsl.com</strong></p>
+    </div>
+  `;
 }
 
 function renderLessonPacks() {
@@ -312,6 +378,40 @@ function renderLessonPacks() {
     card.appendChild(blockList);
     lessonPacksEl.appendChild(card);
   });
+}
+
+function renderTeacherChecks() {
+  if (!teacherChecksEl) {
+    return;
+  }
+  if (!state.teacherChecks.length) {
+    teacherChecksEl.innerHTML = '<p class="muted">No lecturer checks captured yet.</p>';
+    return;
+  }
+
+  const section = document.createElement("section");
+  section.className = "lecturer-checks-section";
+  section.innerHTML = `
+    <p class="muted"><strong>Print note:</strong> Student material appears first. Staff-only checks start in this section.</p>
+  `;
+
+  state.teacherChecks.forEach((entry) => {
+    const card = document.createElement("article");
+    card.className = "lesson-card";
+    card.innerHTML = `<strong>Lesson ${entry.lessonNumber}: ${escapeHtml(entry.topicName)}</strong> (${entry.duration} min)`;
+    const list = document.createElement("ul");
+    list.className = "teacher-check-list";
+    entry.checks.forEach((check) => {
+      const li = document.createElement("li");
+      li.textContent = check;
+      list.appendChild(li);
+    });
+    card.appendChild(list);
+    section.appendChild(card);
+  });
+
+  teacherChecksEl.innerHTML = "";
+  teacherChecksEl.appendChild(section);
 }
 
 function renderViewer(lesson, block) {
@@ -476,7 +576,8 @@ function persistSession() {
     selectedTopicIds: state.selectedTopicIds,
     durationsByTopicId: state.durationsByTopicId,
     classSize: Math.max(1, Number(classSizeEl.value) || state.classSize || 24),
-    generatedLessons: state.generatedLessons
+    generatedLessons: state.generatedLessons,
+    teacherChecks: state.teacherChecks
   };
   try {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(payload));
@@ -495,12 +596,8 @@ function restoreSession() {
     state.selectedTopicIds = Array.isArray(parsed.selectedTopicIds) ? parsed.selectedTopicIds : [];
     state.durationsByTopicId = parsed.durationsByTopicId || {};
     state.classSize = Math.max(1, Number(parsed.classSize) || 24);
-    if (Array.isArray(parsed.generatedLessons)) {
-      state.generatedLessons = parsed.generatedLessons;
-      renderLessonPacks();
-      renderSowSummary();
-      computeHardwareRows();
-      renderHardware();
+    if (state.selectedTopicIds.length) {
+      runGeneration(false);
     }
     showToast("Previous session restored.");
   } catch (error) {
@@ -516,12 +613,16 @@ function resetSession() {
   state.selectedTopicIds = [];
   state.durationsByTopicId = {};
   state.generatedLessons = [];
+  state.teacherChecks = [];
   state.hardwareRows = [];
   state.classSize = 24;
   classSizeEl.value = "24";
   lessonPacksEl.innerHTML = '<p class="muted">No lessons generated yet.</p>';
   sowSummaryEl.innerHTML = '<p class="muted">No SoW summary yet.</p>';
   hardwareSummaryEl.innerHTML = '<p class="muted">No matching hardware recommendations yet.</p>';
+  if (teacherChecksEl) {
+    teacherChecksEl.innerHTML = '<p class="muted">No lecturer checks captured yet.</p>';
+  }
   viewerEl.innerHTML = "<p>Select a lesson block to preview its content here.</p>";
   renderTopicsTree();
   renderSelectedLessons();
@@ -545,6 +646,26 @@ function showToast(message) {
 
 function findTopic(topicId) {
   return state.topics.find((topic) => topic.id === topicId);
+}
+
+function extractTeacherChecks(html) {
+  const source = String(html || "");
+  const notes = [];
+  const regex = /<p>\s*<strong>\s*Teacher check:\s*<\/strong>\s*([\s\S]*?)<\/p>/gi;
+  const studentHtml = source.replace(regex, (_, note) => {
+    const cleaned = stripHtml(note).trim();
+    if (cleaned) {
+      notes.push(cleaned);
+    }
+    return "";
+  });
+  return { studentHtml: studentHtml.trim(), notes };
+}
+
+function stripHtml(value) {
+  return String(value)
+    .replace(/<[^>]*>/g, " ")
+    .replace(/\s+/g, " ");
 }
 
 function escapeHtml(value) {

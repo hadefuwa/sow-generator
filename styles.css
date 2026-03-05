@@ -409,6 +409,96 @@ button:active {
   justify-content: flex-end;
 }
 
+.sow-cover {
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1.25rem 1.4rem;
+  margin-bottom: 1rem;
+  background: linear-gradient(160deg, #f0f7fc, #e8f3f9);
+}
+
+.cover-logo-row {
+  margin-bottom: 0.75rem;
+}
+
+.cover-logo {
+  height: 32px;
+  width: auto;
+  filter: invert(1) sepia(1) saturate(3) hue-rotate(175deg) brightness(0.4);
+}
+
+.cover-title {
+  font-family: "Source Serif 4", Georgia, serif;
+  font-size: 1.6rem;
+  color: #083b59;
+  margin: 0 0 0.15rem;
+}
+
+.cover-subject {
+  font-size: 1rem;
+  color: var(--muted);
+  margin: 0 0 0.9rem;
+}
+
+.cover-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+}
+
+.cover-meta-item {
+  background: #fff;
+  border: 1px solid #cddde8;
+  border-radius: 8px;
+  padding: 0.35rem 0.7rem;
+  display: flex;
+  flex-direction: column;
+  min-width: 80px;
+}
+
+.cover-meta-label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--muted);
+}
+
+.cover-meta-value {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #0d4e74;
+}
+
+.cover-about {
+  font-size: 0.9rem;
+  color: #2d4d61;
+  border-top: 1px solid #ccdde8;
+  padding-top: 0.75rem;
+  margin-top: 0.25rem;
+}
+
+.cover-about h2 {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #1f617e;
+  margin: 0 0 0.4rem;
+}
+
+.cover-about p {
+  margin: 0 0 0.4rem;
+  line-height: 1.55;
+}
+
+.cover-footer {
+  margin-top: 0.75rem;
+  font-size: 0.8rem;
+  color: var(--muted);
+  border-top: 1px solid #cddde8;
+  padding-top: 0.5rem;
+}
+
 .lesson-packs {
   display: grid;
   gap: 0.7rem;
@@ -646,13 +736,16 @@ tbody tr:hover {
 
 @media print {
   .app-header,
+  .site-nav,
   .panel:first-child,
   .panel:nth-child(2),
   .metrics,
   .output-actions,
   .asset-viewer,
   .toast,
-  button {
+  button,
+  h2,
+  h3:not(.cover-about h2) {
     display: none !important;
   }
 
@@ -680,6 +773,52 @@ tbody tr:hover {
   .asset-viewer,
   .hero-logo {
     display: none !important;
+  }
+
+  .sow-cover {
+    border: none;
+    border-radius: 0;
+    background: #fff;
+    padding: 3rem 2.5rem;
+    page-break-after: always;
+    display: flex;
+    flex-direction: column;
+    min-height: 90vh;
+  }
+
+  .cover-logo {
+    filter: none;
+    height: 44px;
+  }
+
+  .cover-title {
+    font-size: 2.4rem;
+    margin-top: 2rem;
+  }
+
+  .cover-subject {
+    font-size: 1.15rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .cover-meta {
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .cover-meta-item {
+    min-width: 110px;
+    padding: 0.5rem 0.9rem;
+  }
+
+  .cover-about {
+    font-size: 0.95rem;
+    max-width: 600px;
+  }
+
+  .cover-footer {
+    margin-top: auto;
+    padding-top: 1rem;
   }
 
   .lesson-card {
