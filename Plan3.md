@@ -1,5 +1,11 @@
 # Plan 3: Low-Tech Pilot (GitHub Pages First)
 
+App description:
+The SoW Generator Pilot is a static GitHub Pages web app that lets lecturers select and order topics, generate a Scheme of Work, view full lesson content rendered from JSON, and produce class-size-aware hardware recommendations. All content is stored in-repo as JSON (no backend, no binary asset hosting), so Matrix TSL can validate workflow and content quality quickly before investing in a CMS/database platform.
+
+Future direction beyond GitHub Pages:
+Once the pilot proves value, the same workflow will move to a managed platform with a backend CMS/database, role-based access, content approval/versioning, richer analytics, and more robust export/integration options (for example VLE/LMS packaging and enterprise document outputs). The long-term goal is a production service that scales across subjects, institutions, and larger curated content libraries while keeping the lecturer experience simple and deterministic.
+
 ## 1) Pilot Objective
 Build a usable Scheme of Work (SoW) proof of concept that lecturers can try quickly, with:
 - topic selection

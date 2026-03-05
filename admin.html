@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SoW Admin — Topic Editor</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: system-ui, sans-serif;
+      background: #f4f6f9;
+      color: #1a1a2e;
+    }
+
+    header {
+      background: #1a1a2e;
+      color: white;
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    header h1 { font-size: 1.1rem; font-weight: 600; }
+    header span { font-size: 0.85rem; opacity: 0.6; }
+
+    .toolbar {
+      background: white;
+      border-bottom: 1px solid #e0e0e0;
+      padding: 12px 24px;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 8px 16px;
+      border: none;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      cursor: pointer;
+      font-weight: 500;
+    }
+
+    .btn-primary { background: #2563eb; color: white; }
+    .btn-primary:hover { background: #1d4ed8; }
+    .btn-success { background: #16a34a; color: white; }
+    .btn-success:hover { background: #15803d; }
+    .btn-danger { background: #dc2626; color: white; }
+    .btn-danger:hover { background: #b91c1c; }
+    .btn-ghost { background: #f1f5f9; color: #374151; border: 1px solid #d1d5db; }
+    .btn-ghost:hover { background: #e2e8f0; }
+    .btn:disabled { opacity: 0.4; cursor: not-allowed; }
+
+    .status-bar {
+      font-size: 0.85rem;
+      color: #6b7280;
+      margin-left: auto;
+    }
+
+    .status-bar.loaded { color: #16a34a; font-weight: 500; }
+
+    main { padding: 24px; max-width: 1100px; margin: 0 auto; }
+
+    .empty-state {
+      text-align: center;
+      padding: 60px 20px;
+      color: #9ca3af;
+    }
+
+    .empty-state h2 { font-size: 1.2rem; margin-bottom: 8px; color: #6b7280; }
+    .empty-state p { font-size: 0.9rem; }
+
+    .topic-list { display: flex; flex-direction: column; gap: 12px; }
+
+    .topic-card {
+      background: white;
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .topic-card-header {
+      padding: 14px 18px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      cursor: pointer;
+      user-select: none;
+      background: white;
+    }
+
+    .topic-card-header:hover { background: #f9fafb; }
+
+    .topic-number {
+      background: #e0e7ff;
+      color: #3730a3;
+      border-radius: 50%;
+      width: 28px;
+      height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .topic-title { font-weight: 600; font-size: 0.95rem; flex: 1; }
+    .topic-meta { font-size: 0.8rem; color: #9ca3af; }
+    .topic-chevron { font-size: 0.75rem; color: #9ca3af; transition: transform 0.2s; }
+    .topic-card.open .topic-chevron { transform: rotate(90deg); }
+
+    .topic-card-body {
+      display: none;
+      padding: 18px;
+      border-top: 1px solid #f3f4f6;
+      background: #fafafa;
+    }
+
+    .topic-card.open .topic-card-body { display: block; }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-bottom: 18px;
+    }
+
+    .form-group { display: flex; flex-direction: column; gap: 5px; }
+    .form-group.full { grid-column: 1 / -1; }
+
+    label { font-size: 0.82rem; font-weight: 600; color: #374151; }
+
+    input[type="text"],
+    input[type="number"],
+    select,
+    textarea {
+      padding: 8px 10px;
+      border: 1px solid #d1d5db;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      font-family: inherit;
+      background: white;
+      width: 100%;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      outline: 2px solid #2563eb;
+      outline-offset: -1px;
+      border-color: transparent;
+    }
+
+    textarea { resize: vertical; min-height: 80px; }
+    textarea.tall { min-height: 120px; }
+
+    .hint { font-size: 0.75rem; color: #9ca3af; }
+
+    .content-blocks { margin-top: 4px; }
+    .content-blocks h4 {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: #374151;
+      margin-bottom: 12px;
+      padding-bottom: 6px;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    .content-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .card-actions {
+      margin-top: 16px;
+      display: flex;
+      gap: 8px;
+      justify-content: flex-end;
+    }
+
+    /* Modal */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.5);
+      z-index: 100;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .modal-overlay.open { display: flex; }
+
+    .modal {
+      background: white;
+      border-radius: 12px;
+      padding: 28px;
+      width: 90%;
+      max-width: 560px;
+      max-height: 90vh;
+      overflow-y: auto;
+    }
+
+    .modal h2 { font-size: 1.1rem; margin-bottom: 20px; }
+
+    .modal-actions {
+      margin-top: 20px;
+      display: flex;
+      gap: 8px;
+      justify-content: flex-end;
+    }
+
+    .toast {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: #1a1a2e;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      opacity: 0;
+      transform: translateY(10px);
+      transition: all 0.3s;
+      z-index: 200;
+    }
+
+    .toast.show { opacity: 1; transform: translateY(0); }
+    .toast.success { background: #16a34a; }
+    .toast.error { background: #dc2626; }
+
+    @media (max-width: 640px) {
+      .form-grid, .content-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>SoW Admin — Topic Editor</h1>
+  <span>Matrix TSL Internal Tool</span>
+</header>
+
+<div class="toolbar">
+  <label class="btn btn-ghost" for="file-input" style="cursor:pointer">
+    Load topics.json
+  </label>
+  <input type="file" id="file-input" accept=".json" style="display:none">
+
+  <button class="btn btn-primary" id="btn-add" disabled>+ Add Topic</button>
+
+  <button class="btn btn-success" id="btn-save" disabled>Save & Download</button>
+
+  <span class="status-bar" id="status-bar">No file loaded</span>
+</div>
+
+<main>
+  <div class="empty-state" id="empty-state">
+    <h2>No topics loaded</h2>
+    <p>Click "Load topics.json" above to open your existing data file, or start fresh with "+ Add Topic".</p>
+  </div>
+
+  <div class="topic-list" id="topic-list"></div>
+</main>
+
+<!-- Add / Edit Modal -->
+<div class="modal-overlay" id="modal-overlay">
+  <div class="modal">
+    <h2 id="modal-title">Add Topic</h2>
+
+    <div class="form-grid">
+      <div class="form-group full">
+        <label for="f-name">Topic Name *</label>
+        <input type="text" id="f-name" placeholder="e.g. Ohm's Law">
+      </div>
+      <div class="form-group">
+        <label for="f-subject">Subject</label>
+        <input type="text" id="f-subject" placeholder="e.g. Electrical Fundamentals">
+      </div>
+      <div class="form-group">
+        <label for="f-level">Level</label>
+        <input type="text" id="f-level" placeholder="e.g. Level 2">
+      </div>
+      <div class="form-group">
+        <label for="f-minutes">Estimated Minutes</label>
+        <select id="f-minutes">
+          <option value="45">45 min</option>
+          <option value="60" selected>60 min</option>
+          <option value="90">90 min</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="f-tags">Hardware Tags</label>
+        <input type="text" id="f-tags" placeholder="e.g. multimeter, breadboard">
+        <span class="hint">Comma-separated</span>
+      </div>
+    </div>
+
+    <div class="content-blocks">
+      <h4>Lesson Content Blocks</h4>
+      <div class="content-grid">
+        <div class="form-group">
+          <label for="f-outcomes">Outcomes</label>
+          <textarea id="f-outcomes" class="tall" placeholder="What students will be able to do..."></textarea>
+        </div>
+        <div class="form-group">
+          <label for="f-explain">Explain</label>
+          <textarea id="f-explain" class="tall" placeholder="Key concepts and explanations..."></textarea>
+        </div>
+        <div class="form-group">
+          <label for="f-practice">Practice</label>
+          <textarea id="f-practice" class="tall" placeholder="Activities and exercises..."></textarea>
+        </div>
+        <div class="form-group">
+          <label for="f-assessment">Assessment</label>
+          <textarea id="f-assessment" class="tall" placeholder="How understanding is checked..."></textarea>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-actions">
+      <button class="btn btn-ghost" id="btn-cancel">Cancel</button>
+      <button class="btn btn-primary" id="btn-confirm">Save Topic</button>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+  let topics = [];
+  let editingIndex = null;
+
+  const fileInput     = document.getElementById('file-input');
+  const btnAdd        = document.getElementById('btn-add');
+  const btnSave       = document.getElementById('btn-save');
+  const statusBar     = document.getElementById('status-bar');
+  const topicList     = document.getElementById('topic-list');
+  const emptyState    = document.getElementById('empty-state');
+  const modalOverlay  = document.getElementById('modal-overlay');
+  const modalTitle    = document.getElementById('modal-title');
+  const btnCancel     = document.getElementById('btn-cancel');
+  const btnConfirm    = document.getElementById('btn-confirm');
+  const toast         = document.getElementById('toast');
+
+  // --- File Load ---
+  fileInput.addEventListener('change', e => {
+    const file = e.target.files[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = ev => {
+      try {
+        const parsed = JSON.parse(ev.target.result);
+        topics = Array.isArray(parsed) ? parsed : [];
+        unlock();
+        render();
+        showToast(`Loaded ${topics.length} topics`, 'success');
+      } catch {
+        showToast('Invalid JSON file — could not load', 'error');
+      }
+    };
+    reader.readAsText(file);
+    fileInput.value = '';
+  });
+
+  function unlock() {
+    btnAdd.disabled = false;
+    btnSave.disabled = false;
+    statusBar.textContent = `${topics.length} topic${topics.length !== 1 ? 's' : ''} loaded`;
+    statusBar.className = 'status-bar loaded';
+  }
+
+  // --- Render Topic List ---
+  function render() {
+    emptyState.style.display = topics.length === 0 ? 'block' : 'none';
+    topicList.innerHTML = '';
+
+    topics.forEach((t, i) => {
+      const card = document.createElement('div');
+      card.className = 'topic-card';
+      card.innerHTML = `
+        <div class="topic-card-header">
+          <div class="topic-number">${i + 1}</div>
+          <div class="topic-title">${esc(t.name || 'Untitled Topic')}</div>
+          <div class="topic-meta">${esc(t.subject || '')}${t.level ? ' · ' + esc(t.level) : ''}${t.estimated_minutes ? ' · ' + t.estimated_minutes + ' min' : ''}</div>
+          <span class="topic-chevron">&#9654;</span>
+        </div>
+        <div class="topic-card-body">
+          <div class="form-grid">
+            <div class="form-group"><label>Subject</label><div style="font-size:0.9rem">${esc(t.subject || '—')}</div></div>
+            <div class="form-group"><label>Level</label><div style="font-size:0.9rem">${esc(t.level || '—')}</div></div>
+            <div class="form-group"><label>Duration</label><div style="font-size:0.9rem">${t.estimated_minutes || '—'} min</div></div>
+            <div class="form-group"><label>Hardware Tags</label><div style="font-size:0.9rem">${esc((t.hardware_tags || []).join(', ') || '—')}</div></div>
+          </div>
+          <div class="content-blocks">
+            <h4>Content Blocks</h4>
+            <div class="content-grid">
+              ${contentPreview('Outcomes', t.content?.outcomes_html)}
+              ${contentPreview('Explain', t.content?.explain_html)}
+              ${contentPreview('Practice', t.content?.practice_html)}
+              ${contentPreview('Assessment', t.content?.assessment_html)}
+            </div>
+          </div>
+          <div class="card-actions">
+            <button class="btn btn-ghost" onclick="editTopic(${i})">Edit</button>
+            <button class="btn btn-danger" onclick="deleteTopic(${i})">Delete</button>
+          </div>
+        </div>
+      `;
+      card.querySelector('.topic-card-header').addEventListener('click', () => {
+        card.classList.toggle('open');
+      });
+      topicList.appendChild(card);
+    });
+
+    statusBar.textContent = `${topics.length} topic${topics.length !== 1 ? 's' : ''} loaded`;
+  }
+
+  function contentPreview(label, html) {
+    const text = html ? stripTags(html).slice(0, 100) + (html.length > 100 ? '...' : '') : '<em style="color:#9ca3af">No content</em>';
+    return `<div class="form-group"><label>${label}</label><div style="font-size:0.85rem;color:#4b5563">${text}</div></div>`;
+  }
+
+  // --- Add Topic ---
+  btnAdd.addEventListener('click', () => {
+    if (topics.length === 0 && btnAdd.disabled === false) {
+      // allow adding even without loading a file — start fresh
+    }
+    editingIndex = null;
+    modalTitle.textContent = 'Add Topic';
+    clearForm();
+    btnAdd.disabled = false;
+    btnSave.disabled = false;
+    openModal();
+  });
+
+  // Override: allow Add even before file loaded
+  document.getElementById('btn-add').disabled = false;
+
+  // --- Edit Topic ---
+  window.editTopic = function(i) {
+    editingIndex = i;
+    modalTitle.textContent = 'Edit Topic';
+    const t = topics[i];
+    document.getElementById('f-name').value    = t.name || '';
+    document.getElementById('f-subject').value = t.subject || '';
+    document.getElementById('f-level').value   = t.level || '';
+    document.getElementById('f-minutes').value = t.estimated_minutes || 60;
+    document.getElementById('f-tags').value    = (t.hardware_tags || []).join(', ');
+    document.getElementById('f-outcomes').value   = stripTags(t.content?.outcomes_html || '');
+    document.getElementById('f-explain').value    = stripTags(t.content?.explain_html || '');
+    document.getElementById('f-practice').value   = stripTags(t.content?.practice_html || '');
+    document.getElementById('f-assessment').value = stripTags(t.content?.assessment_html || '');
+    openModal();
+  };
+
+  // --- Delete Topic ---
+  window.deleteTopic = function(i) {
+    if (!confirm(`Delete "${topics[i].name}"? This cannot be undone until you reload the file.`)) return;
+    topics.splice(i, 1);
+    render();
+    showToast('Topic deleted');
+  };
+
+  // --- Save from Modal ---
+  btnConfirm.addEventListener('click', () => {
+    const name = document.getElementById('f-name').value.trim();
+    if (!name) {
+      showToast('Topic Name is required', 'error');
+      return;
+    }
+
+    const tagsRaw = document.getElementById('f-tags').value;
+    const tags = tagsRaw.split(',').map(s => s.trim()).filter(Boolean);
+
+    const wrapHtml = text => text.trim() ? `<p>${text.trim().replace(/\n/g, '</p><p>')}</p>` : '';
+
+    const topic = {
+      id: editingIndex !== null ? topics[editingIndex].id : generateId(name),
+      name,
+      subject:            document.getElementById('f-subject').value.trim(),
+      level:              document.getElementById('f-level').value.trim(),
+      estimated_minutes:  parseInt(document.getElementById('f-minutes').value),
+      hardware_tags:      tags,
+      content: {
+        outcomes_html:   wrapHtml(document.getElementById('f-outcomes').value),
+        explain_html:    wrapHtml(document.getElementById('f-explain').value),
+        practice_html:   wrapHtml(document.getElementById('f-practice').value),
+        assessment_html: wrapHtml(document.getElementById('f-assessment').value),
+      }
+    };
+
+    if (editingIndex !== null) {
+      topics[editingIndex] = topic;
+      showToast('Topic updated', 'success');
+    } else {
+      topics.push(topic);
+      showToast('Topic added', 'success');
+    }
+
+    closeModal();
+    render();
+  });
+
+  btnCancel.addEventListener('click', closeModal);
+  modalOverlay.addEventListener('click', e => { if (e.target === modalOverlay) closeModal(); });
+
+  // --- Save & Download ---
+  btnSave.addEventListener('click', () => {
+    const json = JSON.stringify(topics, null, 2);
+    const blob = new Blob([json], { type: 'application/json' });
+    const url  = URL.createObjectURL(blob);
+    const a    = document.createElement('a');
+    a.href     = url;
+    a.download = 'topics.json';
+    a.click();
+    URL.revokeObjectURL(url);
+    showToast('topics.json downloaded — replace the file in your repo folder', 'success');
+  });
+
+  // --- Helpers ---
+  function openModal()  { modalOverlay.classList.add('open'); document.getElementById('f-name').focus(); }
+  function closeModal() { modalOverlay.classList.remove('open'); clearForm(); editingIndex = null; }
+
+  function clearForm() {
+    ['f-name','f-subject','f-level','f-tags','f-outcomes','f-explain','f-practice','f-assessment'].forEach(id => {
+      document.getElementById(id).value = '';
+    });
+    document.getElementById('f-minutes').value = 60;
+  }
+
+  function generateId(name) {
+    return name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') + '-' + Date.now();
+  }
+
+  function esc(str) {
+    return String(str).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+  }
+
+  function stripTags(html) {
+    return html.replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim();
+  }
+
+  let toastTimer;
+  function showToast(msg, type = '') {
+    clearTimeout(toastTimer);
+    toast.textContent = msg;
+    toast.className = 'toast show' + (type ? ' ' + type : '');
+    toastTimer = setTimeout(() => { toast.className = 'toast'; }, 3000);
+  }
+
+  // Allow Add Topic before any file is loaded (start from scratch)
+  btnAdd.disabled = false;
+</script>
+</body>
+</html>
