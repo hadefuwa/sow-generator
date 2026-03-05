@@ -6,22 +6,22 @@
     "blocks": [
       {
         "key": "outcomes",
-        "name": "Outcomes",
+        "name": "Introduction",
         "content_field": "outcomes_html"
       },
       {
         "key": "explain",
-        "name": "Explain",
+        "name": "Over To You",
         "content_field": "explain_html"
       },
       {
         "key": "practice",
-        "name": "Practice",
+        "name": "Key Takeaways",
         "content_field": "practice_html"
       },
       {
         "key": "assessment",
-        "name": "Assessment",
+        "name": "Student Questions",
         "content_field": "assessment_html"
       }
     ]
