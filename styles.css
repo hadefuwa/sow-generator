@@ -821,12 +821,23 @@ tbody tr:hover {
     padding-top: 1rem;
   }
 
-  .lesson-card {
+  .student-lesson-card {
     page-break-before: always;
   }
 
   .lecturer-checks-section {
     page-break-before: always;
+  }
+
+  .lecturer-checks-section > .muted {
+    display: none !important;
+  }
+
+  .lecturer-card {
+    page-break-before: auto !important;
+    page-break-inside: avoid;
+    break-inside: avoid;
+    margin-bottom: 0.35rem;
   }
 
   .block-print-content {
@@ -838,6 +849,34 @@ tbody tr:hover {
 
   .block-item-header button {
     display: none !important;
+  }
+
+  #hardware-summary .table-wrap {
+    overflow: visible !important;
+  }
+
+  #hardware-summary table {
+    min-width: 0 !important;
+    width: 100% !important;
+    table-layout: fixed;
+  }
+
+  #hardware-summary th,
+  #hardware-summary td {
+    font-size: 0.72rem;
+    padding: 0.25rem 0.2rem;
+    word-break: break-word;
+  }
+
+  #hardware-summary th:nth-child(6),
+  #hardware-summary td:nth-child(6) {
+    display: none;
+  }
+
+  #hardware-summary .hardware-image {
+    width: 44px;
+    height: 32px;
+    border-radius: 4px;
   }
 
   table,

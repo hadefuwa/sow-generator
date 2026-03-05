@@ -266,13 +266,13 @@ function generateLesson(topic, index) {
     }
     const extracted = extractTeacherChecks(html);
     if (extracted.notes.length) {
-      lessonTeacherChecks.push(...extracted.notes.map((note) => `${block.name}: ${note}`));
+      lessonTeacherChecks.push(...extracted.notes.map((note) => note));
     }
     return {
       key: block.key,
       name: block.name,
       missing: false,
-      html: extracted.studentHtml
+      html: normalizeBlockHtml(block.name, extracted.studentHtml)
     };
   });
 
@@ -342,7 +342,7 @@ function renderLessonPacks() {
 
   state.generatedLessons.forEach((lesson) => {
     const card = document.createElement("article");
-    card.className = "lesson-card";
+    card.className = "lesson-card student-lesson-card";
     card.innerHTML = `<strong>Lesson ${lesson.lessonNumber}: ${escapeHtml(lesson.topic.name)}</strong> (${lesson.duration} min)`;
 
     const blockList = document.createElement("ul");
@@ -397,7 +397,7 @@ function renderTeacherChecks() {
 
   state.teacherChecks.forEach((entry) => {
     const card = document.createElement("article");
-    card.className = "lesson-card";
+    card.className = "lesson-card lecturer-card";
     card.innerHTML = `<strong>Lesson ${entry.lessonNumber}: ${escapeHtml(entry.topicName)}</strong> (${entry.duration} min)`;
     const list = document.createElement("ul");
     list.className = "teacher-check-list";
@@ -666,6 +666,23 @@ function stripHtml(value) {
   return String(value)
     .replace(/<[^>]*>/g, " ")
     .replace(/\s+/g, " ");
+}
+
+function normalizeBlockHtml(blockName, html) {
+  const source = String(html || "").trim();
+  if (!source) {
+    return source;
+  }
+  const escaped = escapeRegex(blockName);
+  const prefixRegex = new RegExp(
+    `^\\s*<p>\\s*<strong>\\s*${escaped}\\s*:?\\s*<\\/strong>\\s*`,
+    "i"
+  );
+  return source.replace(prefixRegex, "<p>");
+}
+
+function escapeRegex(value) {
+  return String(value).replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 }
 
 function escapeHtml(value) {
