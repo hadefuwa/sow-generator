@@ -1,0 +1,29 @@
+[
+  {
+    "id": "tpl_60_standard",
+    "name": "Standard 60-Minute Lesson",
+    "intended_duration": 60,
+    "blocks": [
+      {
+        "key": "outcomes",
+        "name": "Outcomes",
+        "content_field": "outcomes_html"
+      },
+      {
+        "key": "explain",
+        "name": "Explain",
+        "content_field": "explain_html"
+      },
+      {
+        "key": "practice",
+        "name": "Practice",
+        "content_field": "practice_html"
+      },
+      {
+        "key": "assessment",
+        "name": "Assessment",
+        "content_field": "assessment_html"
+      }
+    ]
+  }
+]

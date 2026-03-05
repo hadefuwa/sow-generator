@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SoW Pilot Generator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="app-header">
+    <h1>Scheme of Work Pilot</h1>
+    <p>Low-tech static MVP for GitHub Pages</p>
+  </header>
+
+  <main class="layout">
+    <section class="panel">
+      <h2>1. Select Topics</h2>
+      <label for="topic-search">Search</label>
+      <input id="topic-search" type="search" placeholder="Search topics...">
+      <div id="topics-tree" class="topics-tree"></div>
+    </section>
+
+    <section class="panel">
+      <h2>2. Arrange Lessons</h2>
+      <p class="help">Drag to reorder. Set duration per lesson.</p>
+      <ul id="selected-lessons" class="lesson-list"></ul>
+
+      <div class="controls">
+        <label for="class-size">Class size</label>
+        <input id="class-size" type="number" min="1" value="24">
+        <button id="generate-btn" type="button">Generate Scheme</button>
+      </div>
+    </section>
+
+    <section class="panel panel-wide">
+      <h2>3. Generated Output</h2>
+      <div class="output-actions">
+        <button id="print-btn" type="button">Print / Save PDF</button>
+      </div>
+
+      <h3>Lesson Packs</h3>
+      <div id="lesson-packs" class="lesson-packs"></div>
+
+      <h3>Lesson Content Viewer</h3>
+      <div id="asset-viewer" class="asset-viewer">
+        <p>Select a lesson block to preview its content here.</p>
+      </div>
+
+      <h3>Scheme of Work Summary</h3>
+      <div id="sow-summary"></div>
+
+      <h3>Hardware Recommendations</h3>
+      <div id="hardware-summary"></div>
+    </section>
+  </main>
+
+  <template id="lesson-item-template">
+    <li class="lesson-item" draggable="true">
+      <span class="drag-handle" aria-hidden="true">::</span>
+      <span class="lesson-title"></span>
+      <label>
+        Duration
+        <select class="duration-select">
+          <option value="45">45</option>
+          <option value="60" selected>60</option>
+          <option value="90">90</option>
+        </select>
+      </label>
+    </li>
+  </template>
+
+  <script src="app.js" type="module"></script>
+</body>
+</html>

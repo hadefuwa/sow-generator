@@ -1,0 +1,37 @@
+[
+  {
+    "sku": "LK9329",
+    "name": "Locktronics Base Set",
+    "supports_tags": ["dc_measurement", "resistive_networks", "power_calculation"],
+    "learners_per_kit": 4,
+    "notes": "Core bench setup for foundational DC circuit work."
+  },
+  {
+    "sku": "LK5250",
+    "name": "Resistor and Network Add-On",
+    "supports_tags": ["resistive_networks", "fault_finding"],
+    "learners_per_kit": 4,
+    "notes": "Extension pack for advanced network and fault tasks."
+  },
+  {
+    "sku": "LK8101",
+    "name": "Digital Instrumentation Kit",
+    "supports_tags": ["instrumentation", "dc_measurement", "fault_finding"],
+    "learners_per_kit": 2,
+    "notes": "Provides multimeter and measurement accessories."
+  },
+  {
+    "sku": "LK7005",
+    "name": "Electrical Safety Trainer",
+    "supports_tags": ["safety_practice", "protection_devices"],
+    "learners_per_kit": 6,
+    "notes": "Safety and protection demonstration equipment."
+  },
+  {
+    "sku": "LK6102",
+    "name": "Switching and Relay Panel",
+    "supports_tags": ["switching_logic", "protection_devices"],
+    "learners_per_kit": 4,
+    "notes": "Control and relay practical board."
+  }
+]

@@ -1,0 +1,152 @@
+[
+  {
+    "id": "t_ohms_law",
+    "name": "Ohm's Law",
+    "subject": "Electrical Engineering",
+    "domain": "Fundamentals",
+    "level": "L3",
+    "estimated_minutes": 60,
+    "hardware_tags": ["dc_measurement", "resistive_networks"],
+    "content": {
+      "outcomes_html": "<p>Define voltage, current, and resistance and apply <strong>V = I x R</strong> to simple circuits.</p>",
+      "explain_html": "<p>Use one worked example for each variable rearrangement. Highlight units and decimal conversion.</p>",
+      "practice_html": "<ul><li>Calculate current from voltage and resistance.</li><li>Calculate resistance from voltage and current.</li></ul>",
+      "assessment_html": "<p>Exit ticket: 3 mixed Ohm's Law questions with one real-world appliance context.</p>"
+    }
+  },
+  {
+    "id": "t_series_circuits",
+    "name": "Series Circuits",
+    "subject": "Electrical Engineering",
+    "domain": "Fundamentals",
+    "level": "L3",
+    "estimated_minutes": 60,
+    "hardware_tags": ["dc_measurement", "resistive_networks"],
+    "content": {
+      "outcomes_html": "<p>Explain current flow and total resistance in series circuits.</p>",
+      "explain_html": "<p>Demonstrate that current is constant in a series path and resistance adds across components.</p>",
+      "practice_html": "<p>Build two series circuits and compare measured vs calculated values.</p>",
+      "assessment_html": "<p>Short quiz with 5 series-resistance calculations.</p>"
+    }
+  },
+  {
+    "id": "t_parallel_circuits",
+    "name": "Parallel Circuits",
+    "subject": "Electrical Engineering",
+    "domain": "Fundamentals",
+    "level": "L3",
+    "estimated_minutes": 60,
+    "hardware_tags": ["dc_measurement", "resistive_networks"],
+    "content": {
+      "outcomes_html": "<p>Describe voltage and current behaviour in parallel circuits.</p>",
+      "explain_html": "<p>Show equal branch voltage and current split across unequal branch resistances.</p>",
+      "practice_html": "<p>Construct a two-branch circuit and record branch current readings.</p>",
+      "assessment_html": "<p>Compare two circuit diagrams and justify which has lower equivalent resistance.</p>"
+    }
+  },
+  {
+    "id": "t_kirchhoff",
+    "name": "Kirchhoff's Laws",
+    "subject": "Electrical Engineering",
+    "domain": "Fundamentals",
+    "level": "L3",
+    "estimated_minutes": 60,
+    "hardware_tags": ["dc_measurement", "resistive_networks"],
+    "content": {
+      "outcomes_html": "<p>Apply Kirchhoff's Current Law and Voltage Law to one-loop and two-loop examples.</p>",
+      "explain_html": "<p>Use node and loop equations with clear sign convention steps.</p>",
+      "practice_html": "<p>Solve two guided problems, then check by summing volt drops around each loop.</p>",
+      "assessment_html": "<p>Independent problem: derive unknown branch current using KCL.</p>"
+    }
+  },
+  {
+    "id": "t_power",
+    "name": "Electrical Power and Energy",
+    "subject": "Electrical Engineering",
+    "domain": "Fundamentals",
+    "level": "L3",
+    "estimated_minutes": 60,
+    "hardware_tags": ["power_calculation", "dc_measurement"],
+    "content": {
+      "outcomes_html": "<p>Calculate electrical power and energy usage for simple loads.</p>",
+      "explain_html": "<p>Introduce <strong>P = V x I</strong> and <strong>E = P x t</strong> with unit conversions.</p>",
+      "practice_html": "<p>Estimate daily energy use for three classroom devices.</p>",
+      "assessment_html": "<p>Homework: cost comparison using tariff rates and usage profiles.</p>"
+    }
+  },
+  {
+    "id": "t_meters",
+    "name": "Using a Digital Multimeter",
+    "subject": "Electrical Engineering",
+    "domain": "Measurement",
+    "level": "L2",
+    "estimated_minutes": 45,
+    "hardware_tags": ["dc_measurement", "instrumentation"],
+    "content": {
+      "outcomes_html": "<p>Use a digital multimeter safely to measure voltage, current, and resistance.</p>",
+      "explain_html": "<p>Demonstrate range selection, probe placement, and correct meter mode.</p>",
+      "practice_html": "<p>Practical rotations measuring five pre-wired test points.</p>",
+      "assessment_html": "<p>Observed checklist: each learner completes one safe measurement sequence.</p>"
+    }
+  },
+  {
+    "id": "t_safety",
+    "name": "Electrical Safety and Isolation",
+    "subject": "Electrical Engineering",
+    "domain": "Safety",
+    "level": "L2",
+    "estimated_minutes": 45,
+    "hardware_tags": ["safety_practice"],
+    "content": {
+      "outcomes_html": "<p>Identify electrical hazards and describe a safe isolation process.</p>",
+      "explain_html": "<p>Walk through lockout principles, test-before-touch, and PPE minimums.</p>",
+      "practice_html": "<p>Scenario cards: pick safe actions for each workshop situation.</p>",
+      "assessment_html": "<p>10-question safety check requiring 80 percent pass threshold.</p>"
+    }
+  },
+  {
+    "id": "t_mcb",
+    "name": "Protective Devices (MCB, Fuse, RCD)",
+    "subject": "Electrical Engineering",
+    "domain": "Protection",
+    "level": "L3",
+    "estimated_minutes": 60,
+    "hardware_tags": ["protection_devices", "safety_practice"],
+    "content": {
+      "outcomes_html": "<p>Differentiate MCB, fuse, and RCD operating principles.</p>",
+      "explain_html": "<p>Use fault scenarios to show which protective device should operate first.</p>",
+      "practice_html": "<p>Match circuit faults to appropriate protective devices and ratings.</p>",
+      "assessment_html": "<p>Written response: justify protective selection for a small workshop circuit.</p>"
+    }
+  },
+  {
+    "id": "t_troubleshooting",
+    "name": "Basic Fault Finding",
+    "subject": "Electrical Engineering",
+    "domain": "Maintenance",
+    "level": "L3",
+    "estimated_minutes": 90,
+    "hardware_tags": ["fault_finding", "instrumentation"],
+    "content": {
+      "outcomes_html": "<p>Use a repeatable fault-finding process on low-voltage circuits.</p>",
+      "explain_html": "<p>Teach confirm-symptom, isolate-section, test, and verify-fix workflow.</p>",
+      "practice_html": "<p>Timed diagnostic exercise with one hidden open-circuit and one short-circuit fault.</p>",
+      "assessment_html": "<p>Learners submit fault logs with evidence and final corrective action.</p>"
+    }
+  },
+  {
+    "id": "t_switching",
+    "name": "Switching and Control Basics",
+    "subject": "Electrical Engineering",
+    "domain": "Control",
+    "level": "L3",
+    "estimated_minutes": 60,
+    "hardware_tags": ["switching_logic", "instrumentation"],
+    "content": {
+      "outcomes_html": "<p>Explain basic switching logic using relays and contact states.</p>",
+      "explain_html": "<p>Compare normally-open and normally-closed contacts in control circuits.</p>",
+      "practice_html": "<p>Wire a start-stop relay circuit and test latching behaviour.</p>",
+      "assessment_html": "<p>Draw and annotate a simple switching circuit from memory.</p>"
+    }
+  }
+]
