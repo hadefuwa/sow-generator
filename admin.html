@@ -271,7 +271,7 @@
 
 <div class="toolbar">
   <button class="btn btn-primary" id="btn-add">+ Add Topic</button>
-  <button class="btn btn-success" id="btn-save">Save &amp; Download</button>
+  <button class="btn btn-success" id="btn-save">Save Changes</button>
   <span class="status-bar" id="status-bar">Loading topics&hellip;</span>
 </div>
 
@@ -281,8 +281,8 @@
     <ol>
       <li>Topics load automatically from the live data file.</li>
       <li>Add, edit, or delete topics using the form below.</li>
-      <li>Click <strong>Save &amp; Download</strong> to export an updated <code>topics.json</code>.</li>
-      <li>Send the downloaded file to your developer to publish the changes.</li>
+      <li>Click <strong>Save &amp; Download</strong> to write changes to the backend using your Matrix staff token.</li>
+      <li>Changes are saved server-side for the live app data source.</li>
     </ol>
   </section>
 
@@ -369,6 +369,7 @@
 <script>
   let topics = [];
   let editingIndex = null;
+  const ADMIN_TOKEN_KEY = 'matrix_staff_token';
 
   const btnAdd = document.getElementById('btn-add');
   const btnSave = document.getElementById('btn-save');
@@ -381,8 +382,9 @@
   const btnConfirm = document.getElementById('btn-confirm');
   const toast = document.getElementById('toast');
 
-  fetch('data/topics.json')
+  fetch('/api/topics')
     .then((r) => { if (!r.ok) throw new Error('fetch failed'); return r.json(); })
+    .catch(() => fetch('data/topics.json').then((r) => { if (!r.ok) throw new Error('fetch failed'); return r.json(); }))
     .then((parsed) => {
       topics = Array.isArray(parsed) ? parsed : [];
       unlock();
@@ -527,16 +529,47 @@
   btnCancel.addEventListener('click', closeModal);
   modalOverlay.addEventListener('click', (e) => { if (e.target === modalOverlay) closeModal(); });
 
-  btnSave.addEventListener('click', () => {
+  btnSave.addEventListener('click', async () => {
     const json = JSON.stringify(topics, null, 2);
-    const blob = new Blob([json], { type: 'application/json' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = 'topics.json';
-    a.click();
-    URL.revokeObjectURL(url);
-    showToast('topics.json downloaded - replace data/topics.json in your repo', 'success');
+    const token = await resolveAdminToken();
+    if (!token) {
+      showToast('Matrix staff token required to save changes', 'error');
+      return;
+    }
+
+    let response = await fetch('/api/topics', {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json',
+        'x-admin-token': token
+      },
+      body: json
+    });
+
+    if (response.status === 401 || response.status === 403) {
+      sessionStorage.removeItem(ADMIN_TOKEN_KEY);
+      const retryToken = await resolveAdminToken(true);
+      if (!retryToken) {
+        showToast('Save cancelled', 'error');
+        return;
+      }
+      response = await fetch('/api/topics', {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json',
+          'x-admin-token': retryToken
+        },
+        body: json
+      });
+    }
+
+    if (!response.ok) {
+      const errorText = await response.text();
+      showToast(`Save failed: ${errorText || response.status}`, 'error');
+      return;
+    }
+
+    showToast('Topics saved to server', 'success');
   });
 
   function openModal() {
@@ -567,6 +600,18 @@
 
   function stripTags(html) {
     return String(html).replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim();
+  }
+
+  async function resolveAdminToken(forcePrompt = false) {
+    let token = sessionStorage.getItem(ADMIN_TOKEN_KEY) || '';
+    if (!token || forcePrompt) {
+      const input = window.prompt('Enter Matrix staff token to save Topic Editor changes:');
+      token = (input || '').trim();
+      if (token) {
+        sessionStorage.setItem(ADMIN_TOKEN_KEY, token);
+      }
+    }
+    return token;
   }
 
   let toastTimer;

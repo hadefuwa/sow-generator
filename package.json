@@ -1,9 +1,6 @@
 {
   "scripts": {
-    "start": "serve . -p ${PORT:-3000}"
-  },
-  "dependencies": {
-    "serve": "^14.2.4"
+    "start": "node server.js"
   },
   "devDependencies": {
     "sharp": "^0.34.5"

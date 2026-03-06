@@ -41,9 +41,9 @@ init().catch((error) => {
 
 async function init() {
   const [topics, hardware, templates] = await Promise.all([
-    fetchJson("data/topics.json"),
-    fetchJson("data/hardware.json"),
-    fetchJson("data/templates.json")
+    fetchJsonWithFallback("/api/topics", "data/topics.json"),
+    fetchJsonWithFallback("/api/hardware", "data/hardware.json"),
+    fetchJsonWithFallback("/api/templates", "data/templates.json")
   ]);
 
   state.topics = topics;
@@ -125,6 +125,17 @@ async function fetchJson(url) {
     throw new Error(`Could not fetch ${url}`);
   }
   return response.json();
+}
+
+async function fetchJsonWithFallback(primaryUrl, fallbackUrl) {
+  try {
+    return await fetchJson(primaryUrl);
+  } catch (primaryError) {
+    if (!fallbackUrl) {
+      throw primaryError;
+    }
+    return fetchJson(fallbackUrl);
+  }
 }
 
 function renderTopicsTree() {

@@ -288,7 +288,7 @@
 
 <div class="toolbar">
   <button class="btn btn-primary" id="btn-add" disabled>+ Add Hardware Item</button>
-  <button class="btn btn-success" id="btn-save" disabled>Save &amp; Download</button>
+  <button class="btn btn-success" id="btn-save" disabled>Save Changes</button>
   <span class="status-bar" id="status-bar">Loading hardware...</span>
 </div>
 
@@ -300,8 +300,8 @@
     <ol>
       <li>Hardware loads automatically from the live data file.</li>
       <li>Add, edit, or delete items using the form below.</li>
-      <li>Click <strong>Save &amp; Download</strong> to export an updated <code>hardware.json</code>.</li>
-      <li>Send the downloaded file to your developer to publish the changes.</li>
+      <li>Click <strong>Save Changes</strong> to write updates using your Matrix staff token.</li>
+      <li>Changes are saved server-side for the live app data source.</li>
     </ol>
   </section>
 
@@ -357,6 +357,7 @@
 <script>
   let hardware = [];
   let editingIndex = null;
+  const ADMIN_TOKEN_KEY = 'matrix_staff_token';
 
   const btnAdd = document.getElementById('btn-add');
   const btnSave = document.getElementById('btn-save');
@@ -369,8 +370,9 @@
   const btnConfirm = document.getElementById('btn-confirm');
   const toast = document.getElementById('toast');
 
-  fetch('data/hardware.json')
+  fetch('/api/hardware')
     .then((r) => { if (!r.ok) throw new Error('fetch failed'); return r.json(); })
+    .catch(() => fetch('data/hardware.json').then((r) => { if (!r.ok) throw new Error('fetch failed'); return r.json(); }))
     .then((parsed) => {
       hardware = Array.isArray(parsed) ? parsed : [];
       unlock();
@@ -493,16 +495,47 @@
   btnCancel.addEventListener('click', closeModal);
   modalOverlay.addEventListener('click', (e) => { if (e.target === modalOverlay) closeModal(); });
 
-  btnSave.addEventListener('click', () => {
+  btnSave.addEventListener('click', async () => {
     const json = JSON.stringify(hardware, null, 2);
-    const blob = new Blob([json], { type: 'application/json' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = 'hardware.json';
-    a.click();
-    URL.revokeObjectURL(url);
-    showToast('hardware.json downloaded - replace data/hardware.json in your repo', 'success');
+    const token = await resolveAdminToken();
+    if (!token) {
+      showToast('Matrix staff token required to save changes', 'error');
+      return;
+    }
+
+    let response = await fetch('/api/hardware', {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json',
+        'x-admin-token': token
+      },
+      body: json
+    });
+
+    if (response.status === 401 || response.status === 403) {
+      sessionStorage.removeItem(ADMIN_TOKEN_KEY);
+      const retryToken = await resolveAdminToken(true);
+      if (!retryToken) {
+        showToast('Save cancelled', 'error');
+        return;
+      }
+      response = await fetch('/api/hardware', {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json',
+          'x-admin-token': retryToken
+        },
+        body: json
+      });
+    }
+
+    if (!response.ok) {
+      const errorText = await response.text();
+      showToast(`Save failed: ${errorText || response.status}`, 'error');
+      return;
+    }
+
+    showToast('Hardware saved to server', 'success');
   });
 
   function openModal() {
@@ -529,6 +562,18 @@
       .replace(/</g, '&lt;')
       .replace(/>/g, '&gt;')
       .replace(/"/g, '&quot;');
+  }
+
+  async function resolveAdminToken(forcePrompt = false) {
+    let token = sessionStorage.getItem(ADMIN_TOKEN_KEY) || '';
+    if (!token || forcePrompt) {
+      const input = window.prompt('Enter Matrix staff token to save Hardware Editor changes:');
+      token = (input || '').trim();
+      if (token) {
+        sessionStorage.setItem(ADMIN_TOKEN_KEY, token);
+      }
+    }
+    return token;
   }
 
   let toastTimer;
