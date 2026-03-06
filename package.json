@@ -4,5 +4,8 @@
   },
   "devDependencies": {
     "sharp": "^0.34.5"
+  },
+  "dependencies": {
+    "tinymce": "^8.3.2"
   }
 }

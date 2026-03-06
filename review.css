@@ -1,0 +1,174 @@
+.review-body {
+  min-height: 100vh;
+}
+
+.review-header {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 1.5rem 2rem 0.8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.review-back {
+  color: #0f5f8c;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.88rem;
+}
+
+.review-header h1 {
+  margin: 0.35rem 0 0.3rem;
+  font-family: "Source Serif 4", Georgia, serif;
+  font-size: clamp(1.9rem, 3vw, 2.5rem);
+  color: #083b59;
+}
+
+.review-copy {
+  margin: 0;
+  max-width: none;
+  color: var(--muted);
+}
+
+.review-actions {
+  display: flex;
+  gap: 0.65rem;
+  align-items: center;
+}
+
+.review-layout {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0 2rem 1.2rem;
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  gap: 1rem;
+  align-items: start;
+}
+
+.review-editor-panel,
+.review-preview-panel {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(251, 253, 255, 0.98));
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  box-shadow: none;
+  min-width: 0;
+}
+
+.review-preview-panel {
+  padding: 1rem;
+}
+
+.review-editor-panel {
+  overflow: hidden;
+}
+
+.review-editor-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1rem 0.35rem;
+}
+
+.review-eyebrow {
+  margin: 0 0 0.2rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #4d697a;
+}
+
+.review-editor-head h2 {
+  margin: 0;
+  font-size: 1.04rem;
+}
+
+.tox-tinymce {
+  border: none !important;
+  border-top: 1px solid #d6e0e8 !important;
+  border-radius: 0 0 10px 10px !important;
+}
+
+#document-editor {
+  visibility: hidden;
+}
+
+.review-preview {
+  border: 1px solid #d9e4eb;
+  border-radius: 10px;
+  padding: 1rem;
+  background: #fff;
+  min-height: 70vh;
+  overflow-x: auto;
+}
+
+.review-print-section + .review-print-section {
+  margin-top: 1rem;
+}
+
+.review-preview .block-print-content {
+  display: block;
+  margin-top: 0.3rem;
+}
+
+.review-preview .block-item-header button {
+  display: none;
+}
+
+.review-preview h2:first-child {
+  margin-top: 0;
+}
+
+@media (max-width: 1180px) {
+  .review-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .review-header {
+    padding: 1.2rem 1rem 0.8rem;
+  }
+
+  .review-layout {
+    padding: 0 1rem 1rem;
+  }
+}
+
+@media print {
+  .review-header,
+  .review-editor-panel,
+  .toast {
+    display: none !important;
+  }
+
+  body.review-body {
+    background: #fff;
+    color: #000;
+    font-family: Georgia, "Times New Roman", serif;
+  }
+
+  .review-layout {
+    display: block;
+    padding: 0;
+    max-width: none;
+  }
+
+  .review-preview-panel {
+    border: none;
+    box-shadow: none;
+    background: #fff;
+    padding: 0;
+  }
+
+  .review-preview {
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    min-height: 0;
+  }
+}

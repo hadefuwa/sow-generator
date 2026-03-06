@@ -41,7 +41,10 @@ h4 {
 }
 
 .app-header {
-  padding: 2.2rem 1.25rem 1.5rem;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 2.2rem 2rem 1.5rem;
   position: relative;
   overflow: hidden;
 }
@@ -69,8 +72,9 @@ h4 {
 }
 
 .hero {
-  max-width: 1050px;
-  margin: 0 auto;
+  width: 100%;
+  max-width: none;
+  margin: 0;
   color: #f7fbff;
   animation: rise-in 480ms ease-out both;
 }
@@ -91,7 +95,7 @@ h4 {
 
 .hero-copy {
   margin: 0;
-  max-width: 760px;
+  max-width: none;
   color: #d8edf7;
   font-size: 1.03rem;
 }
@@ -150,19 +154,21 @@ h4 {
   display: grid;
   grid-template-columns: 1fr 1fr 2fr;
   gap: 1rem;
-  max-width: 1320px;
-  margin: 0 auto;
-  padding: 1.15rem;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 1.15rem 2rem 1.5rem;
 }
 
 .site-nav {
+  width: 100%;
   background: #0b3a54;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   gap: 0;
-  padding: 0 1.15rem;
-  max-width: 100%;
+  padding: 0 2rem;
+  max-width: none;
 }
 
 .site-nav-link {
@@ -186,9 +192,10 @@ h4 {
 }
 
 .metrics {
-  max-width: 1320px;
-  margin: 0.5rem auto 0.5rem;
-  padding: 0 1.15rem;
+  width: 100%;
+  max-width: none;
+  margin: 0.5rem 0 0.5rem;
+  padding: 0 2rem;
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 0.75rem;
@@ -197,9 +204,9 @@ h4 {
 .metric-card {
   background: rgba(255, 255, 255, 0.85);
   border: 1px solid #c9dbe6;
-  border-radius: 14px;
+  border-radius: 10px;
   padding: 0.7rem 0.85rem;
-  box-shadow: 0 8px 20px rgba(12, 53, 75, 0.09);
+  box-shadow: none;
 }
 
 .metric-label {
@@ -220,10 +227,9 @@ h4 {
 .panel {
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(251, 253, 255, 0.98));
   border: 1px solid var(--border);
-  border-radius: 18px;
+  border-radius: 10px;
   padding: 1rem 1rem 1.1rem;
-  box-shadow: var(--shadow-md);
-  backdrop-filter: blur(4px);
+  box-shadow: none;
   animation: rise-in 420ms ease-out both;
 }
 
@@ -735,12 +741,10 @@ tbody tr:hover {
 @media (max-width: 1120px) {
   .layout {
     grid-template-columns: 1fr;
-    max-width: 850px;
   }
 
   .metrics {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    max-width: 850px;
   }
 }
 
@@ -773,7 +777,15 @@ tbody tr:hover {
 
   .metrics {
     grid-template-columns: 1fr;
-    padding: 0 0.85rem;
+    padding: 0 1rem;
+  }
+
+  .site-nav {
+    padding: 0 1rem;
+  }
+
+  .layout {
+    padding: 1rem;
   }
 }
 

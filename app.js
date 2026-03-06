@@ -1,3 +1,5 @@
+import { buildReviewPayload, REVIEW_STORAGE_KEY } from "./review-shared.js";
+
 const state = {
   topics: [],
   hardware: [],
@@ -295,7 +297,8 @@ function generateScheme() {
     showToast("Select at least one lesson before generating.");
     return;
   }
-  runGeneration(true);
+  runGeneration(false);
+  openReviewStep();
 }
 
 function runGeneration(notify) {
@@ -772,6 +775,25 @@ function showToast(message) {
   toastTimer = setTimeout(() => {
     toastEl.classList.remove("show");
   }, 2200);
+}
+
+function openReviewStep() {
+  const selectedTopics = state.selectedTopicIds.map(findTopic).filter(Boolean);
+  const payload = buildReviewPayload({
+    selectedTopics,
+    generatedLessons: state.generatedLessons,
+    teacherChecks: state.teacherChecks,
+    hardwareRows: state.hardwareRows,
+    classSize: Math.max(1, Number(classSizeEl.value) || state.classSize || 24)
+  });
+
+  try {
+    sessionStorage.setItem(REVIEW_STORAGE_KEY, JSON.stringify(payload));
+    window.location.href = "review.html";
+  } catch (error) {
+    console.warn("Could not open review step", error);
+    showToast("Could not open review step.");
+  }
 }
 
 function findTopic(topicId) {
