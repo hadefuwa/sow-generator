@@ -20,7 +20,7 @@
     ],
     "learners_per_kit": 4,
     "notes": "Extension pack for advanced network and fault tasks.",
-    "image": "assets/hardware/LK0000.png"
+    "image": "assets/hardware/LK0001.png"
   },
   {
     "sku": "LK8101",
@@ -32,7 +32,7 @@
     ],
     "learners_per_kit": 2,
     "notes": "Provides multimeter and measurement accessories.",
-    "image": "assets/hardware/LK0000.png"
+    "image": "assets/hardware/LK0002.png"
   },
   {
     "sku": "LK7005",
@@ -43,7 +43,7 @@
     ],
     "learners_per_kit": 6,
     "notes": "Safety and protection demonstration equipment.",
-    "image": "assets/hardware/LK0000.png"
+    "image": "assets/hardware/LK0003.png"
   },
   {
     "sku": "LK6102",
@@ -54,7 +54,7 @@
     ],
     "learners_per_kit": 4,
     "notes": "Control and relay practical board.",
-    "image": "assets/hardware/LK0000.png"
+    "image": "assets/hardware/LK0004.png"
   },
   {
     "sku": "MK2100",
@@ -65,7 +65,7 @@
     ],
     "learners_per_kit": 4,
     "notes": "Calipers, micrometers, and gauge blocks for measurement labs.",
-    "image": "assets/hardware/FM5653.png"
+    "image": "assets/hardware/FM5653.jpg"
   },
   {
     "sku": "MK2200",
@@ -76,7 +76,7 @@
     ],
     "learners_per_kit": 4,
     "notes": "Threaded fixtures and torque tools for assembly lessons.",
-    "image": "assets/hardware/FM5653.png"
+    "image": "assets/hardware/FM5653.jpg"
   },
   {
     "sku": "MK2300",
@@ -87,7 +87,7 @@
     ],
     "learners_per_kit": 6,
     "notes": "Gear, belt, and coupling setup platform.",
-    "image": "assets/hardware/FM5653.png"
+    "image": "assets/hardware/FM5653.jpg"
   },
   {
     "sku": "FM1000",
@@ -109,7 +109,7 @@
     ],
     "learners_per_kit": 8,
     "notes": "Inspection routes, logging sheets, and basic condition monitoring tools.",
-    "image": "assets/hardware/FM5653.png"
+    "image": "assets/hardware/FM5653.jpg"
   },
   {
     "sku": "MK2600",
@@ -120,7 +120,7 @@
     ],
     "learners_per_kit": 10,
     "notes": "Entry-level design-to-manufacture training resources.",
-    "image": "assets/hardware/FM5653.png"
+    "image": "assets/hardware/FM5653.jpg"
   },
   {
     "sku": "MK2700",
@@ -130,6 +130,308 @@
     ],
     "learners_per_kit": 8,
     "notes": "Sample sets and test materials for properties comparison work.",
-    "image": "assets/hardware/FM5653.png"
+    "image": "assets/hardware/FM5653.jpg"
+  },
+  {
+    "sku": "LK4400",
+    "name": "AC/DC Power Supply Unit",
+    "supports_tags": [
+      "dc_measurement",
+      "power_calculation",
+      "resistive_networks"
+    ],
+    "learners_per_kit": 2,
+    "notes": "Variable bench PSU for voltage and current experiments up to 30V/5A.",
+    "image": "assets/hardware/LK0000.png"
+  },
+  {
+    "sku": "LK4510",
+    "name": "Fault Injection Training Board",
+    "supports_tags": [
+      "fault_finding",
+      "switching_logic",
+      "instrumentation"
+    ],
+    "learners_per_kit": 3,
+    "notes": "Pre-wired fault board with switchable fault conditions for diagnostic training.",
+    "image": "assets/hardware/LK0000.png"
+  },
+  {
+    "sku": "LK7200",
+    "name": "MCB and RCD Demonstration Panel",
+    "supports_tags": [
+      "protection_devices",
+      "safety_practice"
+    ],
+    "learners_per_kit": 8,
+    "notes": "Live panel showing MCB, fuse, and RCD operation with trip simulation.",
+    "image": "assets/hardware/LK0000.png"
+  },
+  {
+    "sku": "LK8300",
+    "name": "Oscilloscope and Signal Kit",
+    "supports_tags": [
+      "instrumentation",
+      "dc_measurement"
+    ],
+    "learners_per_kit": 2,
+    "notes": "Entry-level oscilloscope with probes and signal generator for waveform analysis.",
+    "image": "assets/hardware/LK0000.png"
+  },
+  {
+    "sku": "MK3100",
+    "name": "Surface Roughness and Inspection Set",
+    "supports_tags": [
+      "quality_inspection",
+      "metrology_basics"
+    ],
+    "learners_per_kit": 6,
+    "notes": "Comparators, surface plates, and roughness standards for quality assessment tasks.",
+    "image": "assets/hardware/FM5653.jpg"
+  },
+  {
+    "sku": "MK3200",
+    "name": "Pneumatic Circuits Training Rig",
+    "supports_tags": [
+      "fluid_power",
+      "safety_practice"
+    ],
+    "learners_per_kit": 4,
+    "notes": "Modular pneumatic trainer with valves, cylinders, and pressure gauges.",
+    "image": "assets/hardware/FM1000.png"
+  },
+  {
+    "sku": "MK3300",
+    "name": "Vibration and Condition Monitoring Kit",
+    "supports_tags": [
+      "condition_monitoring",
+      "maintenance_planning"
+    ],
+    "learners_per_kit": 6,
+    "notes": "Portable vibration analyser and data logger for predictive maintenance labs.",
+    "image": "assets/hardware/FM5653.jpg"
+  },
+  {
+    "sku": "MK3400",
+    "name": "Shaft Alignment and Coupling Set",
+    "supports_tags": [
+      "alignment_setup",
+      "mechanical_drives"
+    ],
+    "learners_per_kit": 4,
+    "notes": "Dial gauge alignment fixtures and flexible couplings for transmission workshops.",
+    "image": "assets/hardware/FM5653.jpg"
+  },
+  {
+    "sku": "MK3500",
+    "name": "CNC Simulation and Programming Station",
+    "supports_tags": [
+      "cnc_basics",
+      "cad_modeling"
+    ],
+    "learners_per_kit": 1,
+    "notes": "PC-based CNC simulation software with G-code editor and virtual lathe/mill.",
+    "image": "assets/hardware/FM5653.jpg"
+  },
+  {
+    "sku": "CK1100",
+    "name": "Process Instrumentation Trainer",
+    "supports_tags": [
+      "fluid_mechanics",
+      "instrumentation"
+    ],
+    "learners_per_kit": 4,
+    "notes": "Flow, pressure, and temperature measurement loops for chemical process lessons.",
+    "image": "assets/hardware/FM1000.png"
+  },
+  {
+    "sku": "CK1200",
+    "name": "Distillation Column Demonstrator",
+    "supports_tags": [
+      "fluid_mechanics",
+      "safety_practice"
+    ],
+    "learners_per_kit": 8,
+    "notes": "Scaled glass distillation column for separation process observation and analysis.",
+    "image": "assets/hardware/FM1000.png"
+  },
+  {
+    "sku": "MK2800",
+    "name": "Workshop Safety and PPE Pack",
+    "supports_tags": [
+      "safety_practice",
+      "assembly_practice"
+    ],
+    "learners_per_kit": 1,
+    "notes": "Full PPE set including gloves, goggles, ear defenders, and safety signage cards.",
+    "image": "assets/hardware/FM5653.jpg"
+  },
+  {
+    "sku": "LK1800",
+    "name": "Automotive ECU Architecture and Logic",
+    "supports_tags": [
+      "automotive_ecus",
+      "switching_logic",
+      "fault_finding"
+    ],
+    "learners_per_kit": 4,
+    "notes": "Hands-on ECU board for exploring automotive control unit architecture, sensor inputs, and logic outputs.",
+    "image": "assets/hardware/LK0000.png"
+  },
+  {
+    "sku": "LK2410",
+    "name": "Automotive Motors, Generators and Charging Systems",
+    "supports_tags": [
+      "automotive_electrical",
+      "dc_measurement",
+      "power_calculation"
+    ],
+    "learners_per_kit": 4,
+    "notes": "Practical trainer covering starter motors, alternators, and vehicle charging circuit analysis.",
+    "image": "assets/hardware/LK0000.png"
+  },
+  {
+    "sku": "LK8170",
+    "name": "Automotive Fault Finding",
+    "supports_tags": [
+      "fault_finding",
+      "automotive_electrical",
+      "instrumentation"
+    ],
+    "learners_per_kit": 3,
+    "notes": "Diagnostic trainer with switchable automotive faults for systematic fault-finding practice.",
+    "image": "assets/hardware/LK0000.png"
+  },
+  {
+    "sku": "LK2240",
+    "name": "Basics of Automotive Electricity",
+    "supports_tags": [
+      "automotive_electrical",
+      "dc_measurement",
+      "resistive_networks"
+    ],
+    "learners_per_kit": 4,
+    "notes": "Introductory automotive electrical trainer covering circuits, components, and basic measurements.",
+    "image": "assets/hardware/LK0000.png"
+  },
+  {
+    "sku": "LK2901",
+    "name": "Electronic Components and Circuits Pack (Level 2)",
+    "supports_tags": [
+      "electronic_components",
+      "resistive_networks",
+      "dc_measurement"
+    ],
+    "learners_per_kit": 4,
+    "notes": "8202 Level 2 component kit covering resistors, capacitors, diodes, and basic circuit assembly.",
+    "image": "assets/hardware/LK0000.png"
+  },
+  {
+    "sku": "LK4562",
+    "name": "Electrical Installation and HVAC Circuit Principles (Level 3)",
+    "supports_tags": [
+      "protection_devices",
+      "safety_practice",
+      "switching_logic"
+    ],
+    "learners_per_kit": 4,
+    "notes": "Level 3 trainer combining electrical installation practices with HVAC circuit principles and protection devices.",
+    "image": "assets/hardware/LK0000.png"
+  },
+  {
+    "sku": "LK2285",
+    "name": "Principles of Lighting (Level 3)",
+    "supports_tags": [
+      "power_calculation",
+      "switching_logic",
+      "protection_devices"
+    ],
+    "learners_per_kit": 6,
+    "notes": "8202 Level 3 lighting principles board covering lamp types, control circuits, and energy calculations.",
+    "image": "assets/hardware/LK0000.png"
+  },
+  {
+    "sku": "LK1989",
+    "name": "Transformer Construction and Operation",
+    "supports_tags": [
+      "power_calculation",
+      "instrumentation",
+      "dc_measurement"
+    ],
+    "learners_per_kit": 4,
+    "notes": "Demountable transformer trainer for exploring core construction, turns ratio, and efficiency measurements.",
+    "image": "assets/hardware/LK0000.png"
+  },
+  {
+    "sku": "LK3568",
+    "name": "Power and Energy Electronics Solution",
+    "supports_tags": [
+      "power_calculation",
+      "electronic_components",
+      "dc_measurement"
+    ],
+    "learners_per_kit": 2,
+    "notes": "Advanced power electronics trainer covering rectification, regulation, and energy conversion circuits.",
+    "image": "assets/hardware/LK0000.png"
+  },
+  {
+    "sku": "LK4063",
+    "name": "Electrical Installation and HVAC 2 Solution",
+    "supports_tags": [
+      "protection_devices",
+      "safety_practice",
+      "fault_finding"
+    ],
+    "learners_per_kit": 4,
+    "notes": "Second-stage HVAC and electrical installation trainer with fault injection and compliance checking exercises.",
+    "image": "assets/hardware/LK0000.png"
+  },
+  {
+    "sku": "LK9435",
+    "name": "Transistor Amplifiers Add-On Pack",
+    "supports_tags": [
+      "electronic_components",
+      "instrumentation",
+      "dc_measurement"
+    ],
+    "learners_per_kit": 3,
+    "notes": "Add-on board for BJT and FET amplifier configuration experiments including gain, bias, and frequency response.",
+    "image": "assets/hardware/LK0000.png"
+  },
+  {
+    "sku": "LK9422",
+    "name": "Principles and Applications of Electronic Devices and Circuits",
+    "supports_tags": [
+      "electronic_components",
+      "resistive_networks",
+      "instrumentation"
+    ],
+    "learners_per_kit": 3,
+    "notes": "Comprehensive electronics trainer covering diodes, transistors, op-amps, and practical circuit applications.",
+    "image": "assets/hardware/LK0000.png"
+  },
+  {
+    "sku": "LK9329-2",
+    "name": "Electrical and Electronic Principles",
+    "supports_tags": [
+      "dc_measurement",
+      "resistive_networks",
+      "power_calculation"
+    ],
+    "learners_per_kit": 4,
+    "notes": "Core principles trainer for electrical and electronic fundamentals including Ohm's Law, power, and network theorems.",
+    "image": "assets/hardware/LK0000.png"
+  },
+  {
+    "sku": "LK9071-2",
+    "name": "Electricity, Magnetism and Materials V2",
+    "supports_tags": [
+      "dc_measurement",
+      "power_calculation",
+      "electronic_components"
+    ],
+    "learners_per_kit": 4,
+    "notes": "Updated V2 trainer exploring electromagnetic principles, material properties, and their electrical applications.",
+    "image": "assets/hardware/LK0000.png"
   }
 ]
