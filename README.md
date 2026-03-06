@@ -1,6 +1,6 @@
 # SoW Generator Platform
 
-Production-ready front-end platform for building a Scheme of Work (SoW) from topic data, with no backend and no binary asset dependency.
+Production-ready platform for building a Scheme of Work (SoW) from topic data, with a lightweight Node backend for live data reads/writes.
 
 The full platform runs from JSON files in this repo and is suitable for GitHub Pages.
 
@@ -14,6 +14,7 @@ The full platform runs from JSON files in this repo and is suitable for GitHub P
 
 ## Project Structure
 
+- `server.js` - Railway-ready backend (static hosting + `/api/*` routes)
 - `index.html` - app shell
 - `styles.css` - UI and print styles
 - `app.js` - generator logic and rendering
@@ -26,13 +27,29 @@ The full platform runs from JSON files in this repo and is suitable for GitHub P
 
 ## Local Run
 
-Use a local web server so JSON fetch works.
-
 ```powershell
-python -m http.server 8000
+npm install
+npm start
 ```
 
-Then open `http://localhost:8000`.
+Then open `http://localhost:3000`.
+
+## Backend API
+
+- `GET /api/topics`
+- `PUT /api/topics` (requires staff token)
+- `GET /api/hardware`
+- `PUT /api/hardware` (requires staff token)
+- `GET /api/templates`
+- `GET /api/health`
+
+Write endpoints require header `x-admin-token: <ADMIN_TOKEN>`.
+
+Environment variables:
+
+- `PORT` (provided by Railway)
+- `ADMIN_TOKEN` (required for Topic/Hardware Editor saves)
+- `DATA_DIR` (optional path for JSON storage; for Railway persistent volume use `/data`)
 
 ## Content Editing Guide (JSON-Only)
 
@@ -78,7 +95,7 @@ Rules:
 
 1. Open `admin.html` in a browser (double-click).
 2. Add, edit, or delete topics in the form.
-3. Click `Save & Download` to export an updated `topics.json`.
+3. Click `Save Changes` and enter Matrix staff token.
 4. Replace `data/topics.json` in the repo with the downloaded file.
 5. A developer commits and pushes. GitHub Actions redeploys automatically.
 
@@ -92,7 +109,7 @@ What `admin.html` provides:
 
 1. Open `hardware.html` in a browser (double-click).
 2. Add, edit, or delete hardware items in the form.
-3. Click `Save & Download` to export an updated `hardware.json`.
+3. Click `Save Changes` and enter Matrix staff token.
 4. Replace `data/hardware.json` in the repo with the downloaded file.
 
 ## GitHub Pages Deployment
