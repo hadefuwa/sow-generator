@@ -1,141 +1,651 @@
 [
   {
-    "id": "t_ohms_law",
-    "name": "Ohm's Law",
-    "subject": "Electrical Engineering",
+    "id": "lk5000_circuit_training",
+    "name": "Introduction to Circuit Training",
+    "subject": "Electrical Installation",
     "domain": "Fundamentals",
-    "level": "L3",
-    "estimated_minutes": 30,
-    "hardware_tags": [
-      "dc_measurement",
-      "resistive_networks"
-    ],
-    "content": {
-      "outcomes_html": "<p><strong>Introduction:</strong> Start with a 5-minute recap of prior knowledge, then introduce today's concept with one worked classroom example and one practical context from industry.</p><p>Clarify lesson success criteria in plain language so learners know exactly what a strong outcome looks like by the end of the session.</p><p><em>Lesson context:</em> Ohm's Law (L3) in Electrical Engineering.</p>",
-      "explain_html": "<p><strong>Over To You:</strong> Run a guided activity first (teacher-led), then move to paired task work. Require learners to write their method before they measure or calculate.</p><ul><li>Step 1: Set up safely and predict the expected result.</li><li>Step 2: Complete the task and record values clearly.</li><li>Step 3: Compare expected vs actual and explain any differences.</li></ul><p>For speed and consistency, this activity pattern is intentionally reused across related electrical lessons.</p><p><em>Topic focus:</em> Ohm's Law.</p>",
-      "practice_html": "<p><strong>Key Takeaways:</strong></p><ul><li>Use the correct equation, unit, and symbol every time.</li><li>Check reasonableness of results before final answer.</li><li>Follow safe setup and isolation process during practical work.</li><li>Explain findings using evidence from measured values.</li></ul><p><em>Consolidation task:</em> Learners produce a short summary card and one worked example from memory.</p>",
-      "assessment_html": "<p><strong>Student Questions:</strong></p><ol><li>What is the key principle used in today's lesson, and where is it applied in practice?</li><li>Show your method step-by-step for one example from class.</li><li>Which value/measurement could introduce error, and how would you reduce that risk?</li><li>What safety check must be completed before practical setup?</li><li>How would you explain this topic to a Year 1 apprentice?</li><li>Extension: adapt today's method for a more complex circuit scenario.</li></ol><p><strong>Teacher check:</strong> Collect responses from at least 3 learners and address misconceptions before closing.</p>"
-    },
-    "image": "assets/placeholder.jpg"
-  },
-  {
-    "id": "t_series_circuits",
-    "name": "Series Circuits",
-    "subject": "Electrical Engineering",
-    "domain": "Fundamentals",
-    "level": "L3",
-    "estimated_minutes": 90,
-    "hardware_tags": [
-      "dc_measurement",
-      "resistive_networks"
-    ],
-    "content": {
-      "outcomes_html": "<p><strong>Introduction:</strong> Start with a 5-minute recap of prior knowledge, then introduce today's concept with one worked classroom example and one practical context from industry.</p><p>Clarify lesson success criteria in plain language so learners know exactly what a strong outcome looks like by the end of the session.</p><p><em>Lesson context:</em> Series Circuits (L3) in Electrical Engineering.</p>",
-      "explain_html": "<p><strong>Over To You:</strong> Run a guided activity first (teacher-led), then move to paired task work. Require learners to write their method before they measure or calculate.</p><ul><li>Step 1: Set up safely and predict the expected result.</li><li>Step 2: Complete the task and record values clearly.</li><li>Step 3: Compare expected vs actual and explain any differences.</li></ul><p>For speed and consistency, this activity pattern is intentionally reused across related electrical lessons.</p><p><em>Topic focus:</em> Series Circuits.</p>",
-      "practice_html": "<p><strong>Key Takeaways:</strong></p><ul><li>Use the correct equation, unit, and symbol every time.</li><li>Check reasonableness of results before final answer.</li><li>Follow safe setup and isolation process during practical work.</li><li>Explain findings using evidence from measured values.</li></ul><p><em>Consolidation task:</em> Learners produce a short summary card and one worked example from memory.</p>",
-      "assessment_html": "<p><strong>Student Questions:</strong></p><ol><li>What is the key principle used in today's lesson, and where is it applied in practice?</li><li>Show your method step-by-step for one example from class.</li><li>Which value/measurement could introduce error, and how would you reduce that risk?</li><li>What safety check must be completed before practical setup?</li><li>How would you explain this topic to a Year 1 apprentice?</li><li>Extension: adapt today's method for a more complex circuit scenario.</li></ol><p><strong>Teacher check:</strong> Collect responses from at least 3 learners and address misconceptions before closing.</p>"
-    },
-    "image": "assets/placeholder1.jpg"
-  },
-  {
-    "id": "t_parallel_circuits",
-    "name": "Parallel Circuits",
-    "subject": "Electrical Engineering",
-    "domain": "Fundamentals",
-    "level": "L3",
+    "level": "L1",
     "estimated_minutes": 60,
     "hardware_tags": [
-      "dc_measurement",
-      "resistive_networks"
-    ],
-    "content": {
-      "outcomes_html": "<p><strong>Introduction:</strong> Start with a 5-minute recap of prior knowledge, then introduce today's concept with one worked classroom example and one practical context from industry.</p><p>Clarify lesson success criteria in plain language so learners know exactly what a strong outcome looks like by the end of the session.</p><p><em>Lesson context:</em> Parallel Circuits (L3) in Electrical Engineering.</p>",
-      "explain_html": "<p><strong>Over To You:</strong> Run a guided activity first (teacher-led), then move to paired task work. Require learners to write their method before they measure or calculate.</p><ul><li>Step 1: Set up safely and predict the expected result.</li><li>Step 2: Complete the task and record values clearly.</li><li>Step 3: Compare expected vs actual and explain any differences.</li></ul><p>For speed and consistency, this activity pattern is intentionally reused across related electrical lessons.</p><p><em>Topic focus:</em> Parallel Circuits.</p>",
-      "practice_html": "<p><strong>Key Takeaways:</strong></p><ul><li>Use the correct equation, unit, and symbol every time.</li><li>Check reasonableness of results before final answer.</li><li>Follow safe setup and isolation process during practical work.</li><li>Explain findings using evidence from measured values.</li></ul><p><em>Consolidation task:</em> Learners produce a short summary card and one worked example from memory.</p>",
-      "assessment_html": "<p><strong>Student Questions:</strong></p><ol><li>What is the key principle used in today's lesson, and where is it applied in practice?</li><li>Show your method step-by-step for one example from class.</li><li>Which value/measurement could introduce error, and how would you reduce that risk?</li><li>What safety check must be completed before practical setup?</li><li>How would you explain this topic to a Year 1 apprentice?</li><li>Extension: adapt today's method for a more complex circuit scenario.</li></ol><p><strong>Teacher check:</strong> Collect responses from at least 3 learners and address misconceptions before closing.</p>"
-    },
-    "image": "assets/placeholder2.jpg"
-  },
-  {
-    "id": "t_kirchhoff",
-    "name": "Kirchhoff's Laws",
-    "subject": "Electrical Engineering",
-    "domain": "Fundamentals",
-    "level": "L3",
-    "estimated_minutes": 45,
-    "hardware_tags": [
-      "dc_measurement",
-      "resistive_networks"
-    ],
-    "content": {
-      "outcomes_html": "<p><strong>Introduction:</strong> Start with a 5-minute recap of prior knowledge, then introduce today's concept with one worked classroom example and one practical context from industry.</p><p>Clarify lesson success criteria in plain language so learners know exactly what a strong outcome looks like by the end of the session.</p><p><em>Lesson context:</em> Kirchhoff's Laws (L3) in Electrical Engineering.</p>",
-      "explain_html": "<p><strong>Over To You:</strong> Run a guided activity first (teacher-led), then move to paired task work. Require learners to write their method before they measure or calculate.</p><ul><li>Step 1: Set up safely and predict the expected result.</li><li>Step 2: Complete the task and record values clearly.</li><li>Step 3: Compare expected vs actual and explain any differences.</li></ul><p>For speed and consistency, this activity pattern is intentionally reused across related electrical lessons.</p><p><em>Topic focus:</em> Kirchhoff's Laws.</p>",
-      "practice_html": "<p><strong>Key Takeaways:</strong></p><ul><li>Use the correct equation, unit, and symbol every time.</li><li>Check reasonableness of results before final answer.</li><li>Follow safe setup and isolation process during practical work.</li><li>Explain findings using evidence from measured values.</li></ul><p><em>Consolidation task:</em> Learners produce a short summary card and one worked example from memory.</p>",
-      "assessment_html": "<p><strong>Student Questions:</strong></p><ol><li>What is the key principle used in today's lesson, and where is it applied in practice?</li><li>Show your method step-by-step for one example from class.</li><li>Which value/measurement could introduce error, and how would you reduce that risk?</li><li>What safety check must be completed before practical setup?</li><li>How would you explain this topic to a Year 1 apprentice?</li><li>Extension: adapt today's method for a more complex circuit scenario.</li></ol><p><strong>Teacher check:</strong> Collect responses from at least 3 learners and address misconceptions before closing.</p>"
-    },
-    "image": "assets/placeholder4.jpg"
-  },
-  {
-    "id": "t_power",
-    "name": "Electrical Power and Energy",
-    "subject": "Electrical Engineering",
-    "domain": "Fundamentals",
-    "level": "L3",
-    "estimated_minutes": 60,
-    "hardware_tags": [
-      "power_calculation",
+      "basic_circuits",
       "dc_measurement"
     ],
     "content": {
-      "outcomes_html": "<p><strong>Introduction:</strong> Start with a 5-minute recap of prior knowledge, then introduce today's concept with one worked classroom example and one practical context from industry.</p><p>Clarify lesson success criteria in plain language so learners know exactly what a strong outcome looks like by the end of the session.</p><p><em>Lesson context:</em> Electrical Power and Energy (L3) in Electrical Engineering.</p>",
-      "explain_html": "<p><strong>Over To You:</strong> Run a guided activity first (teacher-led), then move to paired task work. Require learners to write their method before they measure or calculate.</p><ul><li>Step 1: Set up safely and predict the expected result.</li><li>Step 2: Complete the task and record values clearly.</li><li>Step 3: Compare expected vs actual and explain any differences.</li></ul><p>For speed and consistency, this activity pattern is intentionally reused across related electrical lessons.</p><p><em>Topic focus:</em> Electrical Power and Energy.</p>",
-      "practice_html": "<p><strong>Key Takeaways:</strong></p><ul><li>Use the correct equation, unit, and symbol every time.</li><li>Check reasonableness of results before final answer.</li><li>Follow safe setup and isolation process during practical work.</li><li>Explain findings using evidence from measured values.</li></ul><p><em>Consolidation task:</em> Learners produce a short summary card and one worked example from memory.</p>",
-      "assessment_html": "<p><strong>Student Questions:</strong></p><ol><li>What is the key principle used in today's lesson, and where is it applied in practice?</li><li>Show your method step-by-step for one example from class.</li><li>Which value/measurement could introduce error, and how would you reduce that risk?</li><li>What safety check must be completed before practical setup?</li><li>How would you explain this topic to a Year 1 apprentice?</li><li>Extension: adapt today's method for a more complex circuit scenario.</li></ol><p><strong>Teacher check:</strong> Collect responses from at least 3 learners and address misconceptions before closing.</p>"
+      "outcomes_html": "<ul><li>Identify and name basic circuit components used in the Locktronics system</li><li>Connect a simple series circuit using the training board</li><li>Describe the purpose of the circuit training board and its safety features</li></ul>",
+      "explain_html": "<p>Introduce learners to the Locktronics circuit training board. Show how components snap together safely. Explain that the board simulates real installation wiring in a controlled benchtop environment. Demonstrate how to read component labels and connect a basic lamp circuit.</p>",
+      "practice_html": "<ul><li>Build a single-lamp circuit from a diagram provided</li><li>Label each component used on the worksheet</li><li>Swap components and rebuild the circuit in under 3 minutes</li></ul>",
+      "assessment_html": "<p>Exit ticket: name 5 components from memory and draw the circuit symbol for each. Peer-check against the reference card.</p>"
     },
-    "image": "assets/placeholder5.jpg"
+    "images": [
+      "assets/worksheets/CP4098-Electrical-wiring-1-images/page030-img072.png",
+      "assets/worksheets/CP4098-Electrical-wiring-1-images/page032-img077.png",
+      "assets/worksheets/CP4098-Electrical-wiring-1-images/page024-img065.png",
+      "assets/worksheets/CP4098-Electrical-wiring-1-images/page035-img082.png",
+      "assets/worksheets/CP4098-Electrical-wiring-1-images/page039-img086.png"
+    ]
   },
   {
-    "id": "t_meters",
-    "name": "Using a Digital Multimeter",
-    "subject": "Electrical Engineering",
-    "domain": "Measurement",
-    "level": "L2",
-    "estimated_minutes": 15,
+    "id": "lk5000_power_supplies",
+    "name": "Power Supplies: AC and DC Sources",
+    "subject": "Electrical Installation",
+    "domain": "Fundamentals",
+    "level": "L1",
+    "estimated_minutes": 60,
     "hardware_tags": [
       "dc_measurement",
-      "instrumentation"
+      "ac_theory",
+      "basic_circuits"
     ],
     "content": {
-      "outcomes_html": "<p><strong>Introduction:</strong> Start with a 5-minute recap of prior knowledge, then introduce today's concept with one worked classroom example and one practical context from industry.</p><p>Clarify lesson success criteria in plain language so learners know exactly what a strong outcome looks like by the end of the session.</p><p><em>Lesson context:</em> Using a Digital Multimeter (L2) in Electrical Engineering.</p>",
-      "explain_html": "<p><strong>Over To You:</strong> Run a guided activity first (teacher-led), then move to paired task work. Require learners to write their method before they measure or calculate.</p><ul><li>Step 1: Set up safely and predict the expected result.</li><li>Step 2: Complete the task and record values clearly.</li><li>Step 3: Compare expected vs actual and explain any differences.</li></ul><p>For speed and consistency, this activity pattern is intentionally reused across related electrical lessons.</p><p><em>Topic focus:</em> Using a Digital Multimeter.</p>",
-      "practice_html": "<p><strong>Key Takeaways:</strong></p><ul><li>Use the correct equation, unit, and symbol every time.</li><li>Check reasonableness of results before final answer.</li><li>Follow safe setup and isolation process during practical work.</li><li>Explain findings using evidence from measured values.</li></ul><p><em>Consolidation task:</em> Learners produce a short summary card and one worked example from memory.</p>",
-      "assessment_html": "<p><strong>Student Questions:</strong></p><ol><li>What is the key principle used in today's lesson, and where is it applied in practice?</li><li>Show your method step-by-step for one example from class.</li><li>Which value/measurement could introduce error, and how would you reduce that risk?</li><li>What safety check must be completed before practical setup?</li><li>How would you explain this topic to a Year 1 apprentice?</li><li>Extension: adapt today's method for a more complex circuit scenario.</li></ol><p><strong>Teacher check:</strong> Collect responses from at least 3 learners and address misconceptions before closing.</p>"
+      "outcomes_html": "<ul><li>Distinguish between AC and DC power supplies</li><li>Identify typical voltage ratings for domestic and industrial supplies</li><li>Connect a safe low-voltage DC supply to the training board</li></ul>",
+      "explain_html": "<p>Explain that electrical energy is supplied as either direct current (DC) or alternating current (AC). DC flows in one direction (batteries, PSUs); AC reverses direction at the supply frequency (50 Hz in the UK, 230 V domestic). Demonstrate connecting the bench PSU to the Locktronics board and setting a safe voltage.</p>",
+      "practice_html": "<ul><li>Set the bench PSU to 6 V DC and measure output with a multimeter</li><li>Record the difference between regulated and unregulated supply readings</li><li>Complete the worksheet questions on voltage ratings for different applications</li></ul>",
+      "assessment_html": "<p>Short written question: state two differences between AC and DC and give one application of each. Mark against answer sheet.</p>"
     },
-    "image": "assets/placeholder6.jpg"
+    "images": [
+      "assets/worksheets/CP4098-Electrical-wiring-1-images/page024-img065.png",
+      "assets/worksheets/CP4098-Electrical-wiring-1-images/page035-img082.png",
+      "assets/worksheets/CP4098-Electrical-wiring-1-images/page039-img086.png",
+      "assets/worksheets/CP4098-Electrical-wiring-1-images/page009-img020.png",
+      "assets/worksheets/CP4098-Electrical-wiring-1-images/page012-img026.png"
+    ]
   },
   {
-    "id": "t_safety",
-    "name": "Electrical Safety and Isolation",
-    "subject": "Electrical Engineering",
+    "id": "lk5000_ac_vs_dc",
+    "name": "AC vs DC: Waveforms and Measurements",
+    "subject": "Electrical Installation",
+    "domain": "Fundamentals",
+    "level": "L1",
+    "estimated_minutes": 60,
+    "hardware_tags": [
+      "ac_theory",
+      "dc_measurement"
+    ],
+    "content": {
+      "outcomes_html": "<ul><li>Sketch a sinusoidal AC waveform and label peak, RMS, and frequency</li><li>Explain why RMS values are used for AC measurements</li><li>Use a multimeter to measure AC and DC voltages correctly</li></ul>",
+      "explain_html": "<p>Show a sinusoidal waveform and label: peak voltage (Vpk), period (T), frequency (f = 1/T). Explain that a multimeter reads RMS (root mean square) — the equivalent DC value that delivers the same power. For a sine wave: Vrms = Vpk / sqrt(2) = 0.707 x Vpk.</p>",
+      "practice_html": "<ul><li>Draw and annotate an AC waveform from the oscilloscope display</li><li>Calculate RMS from a given peak voltage (worksheet questions 1-5)</li><li>Measure both AC and DC voltages on the training board and compare readings</li></ul>",
+      "assessment_html": "<p>Given a waveform diagram, learners calculate frequency, period, peak voltage, and RMS. Mark using the answer key.</p>"
+    }
+  },
+  {
+    "id": "lk5000_conductors_insulators",
+    "name": "Conductors, Semiconductors, and Insulators",
+    "subject": "Electrical Installation",
+    "domain": "Fundamentals",
+    "level": "L1",
+    "estimated_minutes": 60,
+    "hardware_tags": [
+      "basic_circuits",
+      "dc_measurement"
+    ],
+    "content": {
+      "outcomes_html": "<ul><li>Classify materials as conductors, semiconductors, or insulators</li><li>Explain the role of free electrons in electrical conduction</li><li>Measure resistance of different materials using a multimeter</li></ul>",
+      "explain_html": "<p>Conductors (copper, aluminium) have many free electrons and low resistance. Insulators (PVC, rubber) have very few free electrons and very high resistance. Semiconductors (silicon, germanium) fall between — their conductivity changes with temperature or doping. Relate to cable construction: conductor core + insulation sheath.</p>",
+      "practice_html": "<ul><li>Use the multimeter on resistance mode to test 6 provided material samples</li><li>Classify each sample and record in the results table</li><li>Explain why copper is preferred over aluminium for domestic wiring</li></ul>",
+      "assessment_html": "<p>Match materials to category (conductor/semiconductor/insulator) and explain one reason for each classification. Self-mark using answer key.</p>"
+    },
+    "images": [
+      "assets/worksheets/CP4098-Electrical-wiring-1-images/page009-img020.png",
+      "assets/worksheets/CP4098-Electrical-wiring-1-images/page041-img089.png",
+      "assets/worksheets/CP4098-Electrical-wiring-1-images/page041-img088.png",
+      "assets/worksheets/CP4098-Electrical-wiring-1-images/page002-img002.png"
+    ]
+  },
+  {
+    "id": "lk5000_circuit_diagrams",
+    "name": "Reading and Drawing Circuit Diagrams",
+    "subject": "Electrical Installation",
+    "domain": "Circuit Theory",
+    "level": "L1",
+    "estimated_minutes": 60,
+    "hardware_tags": [
+      "basic_circuits"
+    ],
+    "content": {
+      "outcomes_html": "<ul><li>Draw standard circuit symbols for common components</li><li>Read a schematic diagram and identify all components</li><li>Build a circuit from a schematic using the Locktronics board</li></ul>",
+      "explain_html": "<p>Introduce BS EN 60617 standard circuit symbols: cell, battery, switch, lamp, resistor, voltmeter, ammeter, fuse. Explain that schematic diagrams show electrical connections, not physical layout. Demonstrate converting a written description into a schematic and then building it on the training board.</p>",
+      "practice_html": "<ul><li>Draw circuit symbols for 10 components on the worksheet</li><li>Interpret a given schematic and list all components needed</li><li>Build the circuit on the training board and verify it works</li></ul>",
+      "assessment_html": "<p>Learners receive an unlabelled schematic and must identify all components, list them, and describe the circuit function. Peer assessment with tutor review.</p>"
+    },
+    "images": [
+      "assets/worksheets/CP4098-Electrical-wiring-1-images/page030-img072.png",
+      "assets/worksheets/CP4098-Electrical-wiring-1-images/page032-img077.png",
+      "assets/worksheets/CP4098-Electrical-wiring-1-images/page024-img065.png",
+      "assets/worksheets/CP4098-Electrical-wiring-1-images/page035-img082.png",
+      "assets/worksheets/CP4098-Electrical-wiring-1-images/page039-img086.png"
+    ]
+  },
+  {
+    "id": "lk5000_current_path",
+    "name": "Current Path and Electron Flow",
+    "subject": "Electrical Installation",
+    "domain": "Circuit Theory",
+    "level": "L1",
+    "estimated_minutes": 60,
+    "hardware_tags": [
+      "basic_circuits",
+      "dc_measurement"
+    ],
+    "content": {
+      "outcomes_html": "<ul><li>Explain conventional current flow versus electron flow</li><li>Trace the current path in a simple circuit</li><li>Measure current at different points in a series circuit</li></ul>",
+      "explain_html": "<p>Conventional current flows from positive to negative terminal (historical convention). Electron flow is opposite — from negative to positive. In a complete circuit, current flows through every component. Demonstrate with an ammeter in series at different positions — the reading is the same everywhere in a series circuit.</p>",
+      "practice_html": "<ul><li>Build a series circuit with two lamps and measure current at three positions</li><li>Record all readings and explain the result</li><li>Draw arrows showing both conventional current and electron flow on the circuit diagram</li></ul>",
+      "assessment_html": "<p>Exit ticket: three multiple-choice questions on current direction and measurement. Mark immediately for feedback.</p>"
+    },
+    "images": [
+      "assets/worksheets/CP4098-Electrical-wiring-1-images/page024-img065.png",
+      "assets/worksheets/CP4098-Electrical-wiring-1-images/page019-img055.png",
+      "assets/worksheets/CP4098-Electrical-wiring-1-images/page039-img086.png",
+      "assets/worksheets/CP4098-Electrical-wiring-1-images/page012-img026.png",
+      "assets/worksheets/CP4098-Electrical-wiring-1-images/page013-img027.png"
+    ]
+  },
+  {
+    "id": "lk5000_effects_of_current",
+    "name": "Effects of Electric Current",
+    "subject": "Electrical Installation",
+    "domain": "Circuit Theory",
+    "level": "L1",
+    "estimated_minutes": 60,
+    "hardware_tags": [
+      "basic_circuits",
+      "dc_measurement"
+    ],
+    "content": {
+      "outcomes_html": "<ul><li>Describe the heating, magnetic, and chemical effects of electric current</li><li>Give a practical application of each effect</li><li>Explain why the heating effect is dangerous in wiring</li></ul>",
+      "explain_html": "<p>Electric current produces three main effects: (1) Heating — resistance converts electrical energy to heat (used in heaters, fuses). (2) Magnetic — current in a conductor creates a magnetic field (used in motors, solenoids). (3) Chemical — electrolysis and electroplating. Focus on heating: overloaded cables overheat, melt insulation, cause fires. This is why fuses and MCBs are essential.</p>",
+      "practice_html": "<ul><li>Demonstrate the heating effect: run increasing current through a resistor and measure temperature rise</li><li>Worksheet: match each effect to its application</li><li>Research task: find a real-world example of each effect in electrical installation</li></ul>",
+      "assessment_html": "<p>Written paragraph: describe the heating effect and explain how overcurrent protection devices use it for safety. Tutor feedback.</p>"
+    },
+    "images": [
+      "assets/worksheets/CP4098-Electrical-wiring-1-images/page024-img065.png",
+      "assets/worksheets/CP4098-Electrical-wiring-1-images/page019-img055.png",
+      "assets/worksheets/CP4098-Electrical-wiring-1-images/page039-img086.png",
+      "assets/worksheets/CP4098-Electrical-wiring-1-images/page015-img031.png",
+      "assets/worksheets/CP4098-Electrical-wiring-1-images/page017-img043.png"
+    ]
+  },
+  {
+    "id": "lk5000_generating_electricity",
+    "name": "Generating Electricity",
+    "subject": "Electrical Installation",
+    "domain": "Fundamentals",
+    "level": "L1",
+    "estimated_minutes": 60,
+    "hardware_tags": [
+      "ac_theory",
+      "basic_circuits"
+    ],
+    "content": {
+      "outcomes_html": "<ul><li>Describe how electricity is generated by electromagnetic induction</li><li>Explain the role of generators and alternators</li><li>State the voltage and frequency of the UK national grid supply</li></ul>",
+      "explain_html": "<p>Electricity is generated by rotating a conductor in a magnetic field (Faraday's law of electromagnetic induction). In power stations, turbines (steam, wind, hydro) rotate generators. The UK national grid distributes power at 400 kV / 275 kV, stepped down via transformers to 230 V / 50 Hz for domestic use.</p>",
+      "practice_html": "<ul><li>Diagram exercise: label the stages from generation to socket (generation, transmission, distribution, consumer)</li><li>Calculate power at different grid voltages using P = V x I</li><li>Discussion: advantages of high-voltage transmission</li></ul>",
+      "assessment_html": "<p>Short answer: what voltage and frequency is the UK domestic supply, and how is this achieved from the national grid? Mark against model answer.</p>"
+    },
+    "images": [
+      "assets/worksheets/CP4098-Electrical-wiring-1-images/page019-img055.png",
+      "assets/worksheets/CP4098-Electrical-wiring-1-images/page009-img020.png",
+      "assets/worksheets/CP4098-Electrical-wiring-1-images/page041-img089.png",
+      "assets/worksheets/CP4098-Electrical-wiring-1-images/page045-img097.png",
+      "assets/worksheets/CP4098-Electrical-wiring-1-images/page018-img053.png"
+    ]
+  },
+  {
+    "id": "lk5000_series_parallel",
+    "name": "Series and Parallel Circuits",
+    "subject": "Electrical Installation",
+    "domain": "Circuit Theory",
+    "level": "L1",
+    "estimated_minutes": 90,
+    "hardware_tags": [
+      "basic_circuits",
+      "dc_measurement"
+    ],
+    "content": {
+      "outcomes_html": "<ul><li>Distinguish between series and parallel circuit configurations</li><li>Calculate total resistance for series and parallel combinations</li><li>Measure voltage and current in both circuit types and compare results</li></ul>",
+      "explain_html": "<p>Series circuit: components connected end-to-end. Same current everywhere; voltages add up. Rtotal = R1 + R2 + ... Parallel circuit: components connected across the same two nodes. Same voltage across all branches; currents add up. 1/Rtotal = 1/R1 + 1/R2 + ... Most real installations use parallel circuits so each load operates at full voltage.</p>",
+      "practice_html": "<ul><li>Build a 2-lamp series circuit, measure V across each lamp and total V; measure I</li><li>Build a 2-lamp parallel circuit, repeat measurements</li><li>Complete the worksheet calculations for series and parallel resistance</li></ul>",
+      "assessment_html": "<p>Given a mixed circuit diagram, learners calculate total resistance, total current, and voltage across each component. Mark using answer key.</p>"
+    },
+    "images": [
+      "assets/worksheets/CP4098-Electrical-wiring-1-images/page024-img065.png",
+      "assets/worksheets/CP4098-Electrical-wiring-1-images/page035-img082.png",
+      "assets/worksheets/CP4098-Electrical-wiring-1-images/page039-img086.png",
+      "assets/worksheets/CP4098-Electrical-wiring-1-images/page025-img066.png",
+      "assets/worksheets/CP4098-Electrical-wiring-1-images/page036-img083.png"
+    ]
+  },
+  {
+    "id": "lk5000_switching_circuits",
+    "name": "Switching Circuits",
+    "subject": "Electrical Installation",
+    "domain": "Circuit Theory",
+    "level": "L1",
+    "estimated_minutes": 60,
+    "hardware_tags": [
+      "basic_circuits",
+      "switching_logic"
+    ],
+    "content": {
+      "outcomes_html": "<ul><li>Build and test one-way, two-way, and intermediate switching circuits</li><li>Explain the wiring principle for each switching arrangement</li><li>Draw the schematic for a two-way switching circuit</li></ul>",
+      "explain_html": "<p>One-way switch: single switch controls one load. Two-way switching: two switches can independently control one load (e.g. top and bottom of stairs). Intermediate switching: adds an intermediate switch between two two-way switches for three-point control (e.g. long corridors). Demonstrate each on the training board, tracing current paths for each switch position.</p>",
+      "practice_html": "<ul><li>Build and test one-way switching — confirm lamp on/off</li><li>Build two-way switching — test both switch positions</li><li>Draw the full schematic for a two-way circuit and label all conductors</li></ul>",
+      "assessment_html": "<p>Practical test: build a two-way switching circuit from memory in 10 minutes. Tutor observation checklist.</p>"
+    },
+    "images": [
+      "assets/worksheets/CP4098-Electrical-wiring-1-images/page030-img072.png",
+      "assets/worksheets/CP4098-Electrical-wiring-1-images/page032-img077.png",
+      "assets/worksheets/CP4098-Electrical-wiring-1-images/page013-img027.png",
+      "assets/worksheets/CP4098-Electrical-wiring-1-images/page025-img066.png",
+      "assets/worksheets/CP4098-Electrical-wiring-1-images/page036-img083.png"
+    ]
+  },
+  {
+    "id": "lk5000_measuring_voltage_current",
+    "name": "Measuring Voltage and Current",
+    "subject": "Electrical Installation",
+    "domain": "Circuit Theory",
+    "level": "L1",
+    "estimated_minutes": 60,
+    "hardware_tags": [
+      "dc_measurement",
+      "basic_circuits"
+    ],
+    "content": {
+      "outcomes_html": "<ul><li>Connect a voltmeter in parallel and an ammeter in series correctly</li><li>Select the correct range on a multimeter for a given measurement</li><li>Record measurements accurately and identify sources of error</li></ul>",
+      "explain_html": "<p>Voltmeter measures potential difference — connected in parallel across the component. Has very high internal resistance so it does not affect the circuit. Ammeter measures current — connected in series in the circuit. Has very low internal resistance. Always start on the highest range and work down to avoid damaging the instrument.</p>",
+      "practice_html": "<ul><li>Measure voltage across each component in a series circuit (3 resistors)</li><li>Measure current at two points in a parallel circuit</li><li>Complete the results table and answer analysis questions on the worksheet</li></ul>",
+      "assessment_html": "<p>Learners identify incorrectly connected meters in a diagram and explain what would happen. Written answer marked against model.</p>"
+    },
+    "images": [
+      "assets/worksheets/CP4098-Electrical-wiring-1-images/page024-img065.png",
+      "assets/worksheets/CP4098-Electrical-wiring-1-images/page019-img055.png",
+      "assets/worksheets/CP4098-Electrical-wiring-1-images/page035-img082.png",
+      "assets/worksheets/CP4098-Electrical-wiring-1-images/page039-img086.png",
+      "assets/worksheets/CP4098-Electrical-wiring-1-images/page034-img081.png"
+    ]
+  },
+  {
+    "id": "lk5000_resistance",
+    "name": "Resistance and Ohm's Law",
+    "subject": "Electrical Installation",
+    "domain": "Circuit Theory",
+    "level": "L1",
+    "estimated_minutes": 60,
+    "hardware_tags": [
+      "dc_measurement",
+      "basic_circuits"
+    ],
+    "content": {
+      "outcomes_html": "<ul><li>State Ohm's Law and use it to calculate V, I, or R</li><li>Measure resistance using a multimeter</li><li>Explain factors that affect resistance in a conductor</li></ul>",
+      "explain_html": "<p>Ohm's Law: V = I x R. Rearranged: I = V/R and R = V/I. Resistance of a conductor depends on: material (resistivity), length (longer = more resistance), cross-sectional area (thicker = less resistance), temperature (for metals, resistance increases with temperature). Unit: ohm.</p>",
+      "practice_html": "<ul><li>Use V = IR to complete the 10 calculation questions on the worksheet</li><li>Measure the resistance of three different resistors and compare to colour-code values</li><li>Plot a V-I graph for a resistor and confirm linearity (Ohm's Law)</li></ul>",
+      "assessment_html": "<p>Given V and R values, calculate I. Given I and R, calculate V. 5 questions, timed at 5 minutes. Self-mark.</p>"
+    },
+    "images": [
+      "assets/worksheets/CP4098-Electrical-wiring-1-images/page041-img089.png",
+      "assets/worksheets/CP4098-Electrical-wiring-1-images/page042-img092.png",
+      "assets/worksheets/CP4098-Electrical-wiring-1-images/page042-img091.png",
+      "assets/worksheets/CP4098-Electrical-wiring-1-images/page044-img095.png",
+      "assets/worksheets/CP4098-Electrical-wiring-1-images/page044-img096.png"
+    ]
+  },
+  {
+    "id": "lk5000_energy_power",
+    "name": "Electrical Energy and Power",
+    "subject": "Electrical Installation",
+    "domain": "Circuit Theory",
+    "level": "L1",
+    "estimated_minutes": 60,
+    "hardware_tags": [
+      "dc_measurement",
+      "basic_circuits"
+    ],
+    "content": {
+      "outcomes_html": "<ul><li>Define electrical power and energy with correct units</li><li>Calculate power using P = V x I and P = I squared x R</li><li>Calculate the cost of running an electrical appliance</li></ul>",
+      "explain_html": "<p>Power (P) is the rate of energy transfer. P = V x I (watts). Also: P = I x I x R and P = V x V / R. Energy = Power x Time (joules or kilowatt-hours). Cost = Energy (kWh) x unit rate (pence/kWh). Example: a 2 kW heater running for 3 hours uses 6 kWh. At 30p/kWh, cost = 1.80 pounds.</p>",
+      "practice_html": "<ul><li>Calculate power for 5 appliances given V and I values</li><li>Calculate running cost of a 100 W lamp left on for 8 hours at 28p/kWh</li><li>Measure power consumed by a lamp on the training board using V and I readings</li></ul>",
+      "assessment_html": "<p>Three-question exit ticket: calculate P, calculate energy used over 4 hours, calculate cost. Mark against answer key.</p>"
+    },
+    "images": [
+      "assets/worksheets/CP4098-Electrical-wiring-1-images/page024-img065.png",
+      "assets/worksheets/CP4098-Electrical-wiring-1-images/page035-img082.png",
+      "assets/worksheets/CP4098-Electrical-wiring-1-images/page039-img086.png",
+      "assets/worksheets/CP4098-Electrical-wiring-1-images/page025-img066.png",
+      "assets/worksheets/CP4098-Electrical-wiring-1-images/page040-img087.png"
+    ]
+  },
+  {
+    "id": "lk4063_oscilloscopes_ac_measurement",
+    "name": "Oscilloscopes and AC Measurement",
+    "subject": "Electrical Installation",
+    "domain": "AC Theory",
+    "level": "L2",
+    "estimated_minutes": 90,
+    "hardware_tags": [
+      "ac_theory",
+      "dc_measurement"
+    ],
+    "content": {
+      "outcomes_html": "<ul><li>Set up and operate a digital oscilloscope to display an AC waveform</li><li>Measure peak voltage, period, and frequency from an oscilloscope trace</li><li>Calculate RMS voltage from peak voltage for a sinusoidal signal</li></ul>",
+      "explain_html": "<p>An oscilloscope displays voltage against time. Controls: VOLTS/DIV (vertical scale), TIME/DIV (horizontal scale), trigger. To measure: peak voltage = (divisions peak-to-peak / 2) x VOLTS/DIV. Period T = divisions per cycle x TIME/DIV. Frequency f = 1/T. RMS = Vpeak / sqrt(2) for a sine wave. Demonstrate on a 50 Hz 6 V AC supply.</p>",
+      "practice_html": "<ul><li>Connect oscilloscope to the AC supply and adjust VOLTS/DIV and TIME/DIV to display 2-3 clear cycles</li><li>Measure Vpeak, T, and f from the trace and record in the results table</li><li>Calculate Vrms and compare to multimeter reading</li></ul>",
+      "assessment_html": "<p>Given an oscilloscope trace diagram with VOLTS/DIV = 2V and TIME/DIV = 5ms, calculate Vpeak, Vrms, T, and f. Mark using answer key.</p>"
+    },
+    "images": [
+      "assets/worksheets/CP8475-Electrical-installation-2-images/page059-img123.png",
+      "assets/worksheets/CP8475-Electrical-installation-2-images/page061-img127.png",
+      "assets/worksheets/CP8475-Electrical-installation-2-images/page005-img008.png",
+      "assets/worksheets/CP8475-Electrical-installation-2-images/page005-img009.png",
+      "assets/worksheets/CP8475-Electrical-installation-2-images/page005-img010.png"
+    ]
+  },
+  {
+    "id": "lk4063_motor_effect",
+    "name": "The Motor Effect and Fleming's Left-Hand Rule",
+    "subject": "Electrical Installation",
+    "domain": "Electromagnetism",
+    "level": "L2",
+    "estimated_minutes": 60,
+    "hardware_tags": [
+      "electromagnetism",
+      "ac_theory"
+    ],
+    "content": {
+      "outcomes_html": "<ul><li>Explain the motor effect using Fleming's Left-Hand Rule</li><li>Identify the directions of current, field, and force in a motor</li><li>Describe the construction and operation of a simple DC motor</li></ul>",
+      "explain_html": "<p>When a current-carrying conductor is placed in a magnetic field, it experiences a force — the motor effect. Fleming's Left-Hand Rule: point the First finger in the direction of the magnetic Field, seCond finger in the direction of Current — the thuMb points in the direction of Motion (force). A DC motor uses a split-ring commutator to maintain rotation by reversing current direction as the coil turns.</p>",
+      "practice_html": "<ul><li>Use Fleming's Left-Hand Rule to determine force direction for 4 diagrams on the worksheet</li><li>Build a simple motor circuit on the training board and observe rotation direction</li><li>Reverse the current and observe the effect on rotation direction</li></ul>",
+      "assessment_html": "<p>Diagram question: given a conductor in a magnetic field with current direction marked, use Fleming's Left-Hand Rule to determine the force direction. Three scenarios. Mark against answers.</p>"
+    },
+    "images": [
+      "assets/worksheets/CP8475-Electrical-installation-2-images/page087-img161.png",
+      "assets/worksheets/CP8475-Electrical-installation-2-images/page087-img160.png",
+      "assets/worksheets/CP8475-Electrical-installation-2-images/page082-img157.png",
+      "assets/worksheets/CP8475-Electrical-installation-2-images/page032-img079.png",
+      "assets/worksheets/CP8475-Electrical-installation-2-images/page024-img066.png"
+    ]
+  },
+  {
+    "id": "lk4063_kirchhoffs_laws",
+    "name": "Kirchhoff's Voltage and Current Laws",
+    "subject": "Electrical Installation",
+    "domain": "Circuit Theory",
+    "level": "L2",
+    "estimated_minutes": 90,
+    "hardware_tags": [
+      "dc_measurement",
+      "basic_circuits"
+    ],
+    "content": {
+      "outcomes_html": "<ul><li>State Kirchhoff's Current Law (KCL) and Voltage Law (KVL)</li><li>Apply KCL and KVL to solve for unknown currents and voltages in a network</li><li>Verify Kirchhoff's Laws experimentally with measurements</li></ul>",
+      "explain_html": "<p>KCL: the sum of currents entering a node equals the sum leaving it (conservation of charge). KVL: the sum of EMFs around any closed loop equals the sum of voltage drops (conservation of energy). Method: label all currents with assumed directions, write KCL equations at nodes, write KVL equations around loops, solve simultaneously.</p>",
+      "practice_html": "<ul><li>Apply KCL to find unknown branch currents in a parallel network (worksheet Q1-4)</li><li>Apply KVL to find unknown voltages in a series circuit (worksheet Q5-8)</li><li>Build the network on the training board and verify with measurements</li></ul>",
+      "assessment_html": "<p>Given a two-loop network with known EMFs and resistances, use KVL and KCL to find all branch currents and verify the results. Tutor marks worked solution.</p>"
+    },
+    "images": [
+      "assets/worksheets/CP8475-Electrical-installation-2-images/page087-img161.png",
+      "assets/worksheets/CP8475-Electrical-installation-2-images/page087-img160.png",
+      "assets/worksheets/CP8475-Electrical-installation-2-images/page082-img157.png",
+      "assets/worksheets/CP8475-Electrical-installation-2-images/page024-img066.png",
+      "assets/worksheets/CP8475-Electrical-installation-2-images/page037-img089.png"
+    ]
+  },
+  {
+    "id": "lk4063_ohms_law_resistivity",
+    "name": "Ohm's Law, Resistivity, and Cable Selection",
+    "subject": "Electrical Installation",
+    "domain": "Circuit Theory",
+    "level": "L2",
+    "estimated_minutes": 60,
+    "hardware_tags": [
+      "dc_measurement",
+      "fault_finding"
+    ],
+    "content": {
+      "outcomes_html": "<ul><li>Apply Ohm's Law to calculate resistance, voltage drop, and current in installation circuits</li><li>Use the resistivity formula R = rho x L / A to calculate conductor resistance</li><li>Explain why cable cross-sectional area is selected to limit voltage drop</li></ul>",
+      "explain_html": "<p>R = rho x L / A where rho is resistivity (ohm metres), L is length (m), A is cross-sectional area (m squared). For copper: rho is approximately 1.72 x 10 to the -8 ohm metres. Larger CSA = lower resistance = less voltage drop. BS 7671 limits voltage drop to 3% for lighting and 5% for other circuits. Demonstrate calculating voltage drop for a 10 m run of 2.5 mm squared cable at 16 A.</p>",
+      "practice_html": "<ul><li>Calculate resistance of a 25 m run of 1.5 mm squared copper cable</li><li>Calculate voltage drop at the end of a 20 m 2.5 mm squared cable carrying 13 A</li><li>Determine minimum CSA to keep voltage drop below 3% for a given load and distance</li></ul>",
+      "assessment_html": "<p>Calculation problem: a 230 V circuit feeds a 3 kW load 15 m away. Calculate the current, the resistance of the cable run (2.5 mm squared), the voltage drop, and the percentage drop. Mark against worked answer.</p>"
+    },
+    "images": [
+      "assets/worksheets/CP8475-Electrical-installation-2-images/page014-img027.png",
+      "assets/worksheets/CP8475-Electrical-installation-2-images/page058-img121.png",
+      "assets/worksheets/CP8475-Electrical-installation-2-images/page093-img167.png",
+      "assets/worksheets/CP8475-Electrical-installation-2-images/page058-img122.png",
+      "assets/worksheets/CP8475-Electrical-installation-2-images/page069-img148.png"
+    ]
+  },
+  {
+    "id": "lk4063_electrical_safety_protection",
+    "name": "Electrical Safety and Protection Devices",
+    "subject": "Electrical Installation",
     "domain": "Safety",
     "level": "L2",
-    "estimated_minutes": 45,
+    "estimated_minutes": 60,
     "hardware_tags": [
-      "safety_practice"
+      "protection_devices",
+      "fault_finding"
     ],
     "content": {
-      "outcomes_html": "<p><strong>Introduction:</strong> Start with a 5-minute recap of prior knowledge, then introduce today's concept with one worked classroom example and one practical context from industry.</p><p>Clarify lesson success criteria in plain language so learners know exactly what a strong outcome looks like by the end of the session.</p><p><em>Lesson context:</em> Electrical Safety and Isolation (L2) in Electrical Engineering.</p>",
-      "explain_html": "<p><strong>Over To You:</strong> Run a guided activity first (teacher-led), then move to paired task work. Require learners to write their method before they measure or calculate.</p><ul><li>Step 1: Set up safely and predict the expected result.</li><li>Step 2: Complete the task and record values clearly.</li><li>Step 3: Compare expected vs actual and explain any differences.</li></ul><p>For speed and consistency, this activity pattern is intentionally reused across related electrical lessons.</p><p><em>Topic focus:</em> Electrical Safety and Isolation.</p>",
-      "practice_html": "<p><strong>Key Takeaways:</strong></p><ul><li>Use the correct equation, unit, and symbol every time.</li><li>Check reasonableness of results before final answer.</li><li>Follow safe setup and isolation process during practical work.</li><li>Explain findings using evidence from measured values.</li></ul><p><em>Consolidation task:</em> Learners produce a short summary card and one worked example from memory.</p>",
-      "assessment_html": "<p><strong>Student Questions:</strong></p><ol><li>What is the key principle used in today's lesson, and where is it applied in practice?</li><li>Show your method step-by-step for one example from class.</li><li>Which value/measurement could introduce error, and how would you reduce that risk?</li><li>What safety check must be completed before practical setup?</li><li>How would you explain this topic to a Year 1 apprentice?</li><li>Extension: adapt today's method for a more complex circuit scenario.</li></ol><p><strong>Teacher check:</strong> Collect responses from at least 3 learners and address misconceptions before closing.</p>"
+      "outcomes_html": "<ul><li>Explain the purpose and operation of fuses, MCBs, and RCDs</li><li>Describe the difference between overcurrent and earth fault protection</li><li>Identify appropriate protection devices for different circuit types</li></ul>",
+      "explain_html": "<p>Fuse: thin wire melts when excess current flows — provides overcurrent protection. MCB (Miniature Circuit Breaker): trips electromagnetically on overload or short circuit — resettable. RCD (Residual Current Device): detects imbalance between live and neutral (30 mA or more) and trips within 40 ms — protects against earth faults and electric shock. RCBO combines MCB and RCD functions. Relate to BS 7671 requirements for socket circuits (RCD mandatory) and lighting circuits.</p>",
+      "practice_html": "<ul><li>Identify protection devices from component samples on the training board</li><li>Simulate an earth fault and observe RCD trip response</li><li>Worksheet: select the correct device (fuse/MCB/RCD) for 5 different circuit scenarios</li></ul>",
+      "assessment_html": "<p>Short answer: explain why an RCD alone does not provide overcurrent protection and what device should be used alongside it. Mark against model answer.</p>"
     },
-    "image": "assets/placeholder7.jpg"
+    "images": [
+      "assets/worksheets/CP8475-Electrical-installation-2-images/page001-img003.png",
+      "assets/worksheets/CP8475-Electrical-installation-2-images/page024-img066.png",
+      "assets/worksheets/CP8475-Electrical-installation-2-images/page057-img120.png",
+      "assets/worksheets/CP8475-Electrical-installation-2-images/page014-img027.png",
+      "assets/worksheets/CP8475-Electrical-installation-2-images/page058-img121.png"
+    ]
   },
   {
-    "id": "t_mcb",
-    "name": "Protective Devices (MCB, Fuse, RCD)",
-    "subject": "Electrical Engineering",
-    "domain": "Protection",
+    "id": "lk4063_electromagnetism_transformers",
+    "name": "Electromagnetism and Transformers",
+    "subject": "Electrical Installation",
+    "domain": "Electromagnetism",
+    "level": "L2",
+    "estimated_minutes": 90,
+    "hardware_tags": [
+      "electromagnetism",
+      "ac_theory"
+    ],
+    "content": {
+      "outcomes_html": "<ul><li>Explain electromagnetic induction and Lenz's Law</li><li>Describe the construction and operating principle of a transformer</li><li>Calculate turns ratio, secondary voltage, and secondary current for a transformer</li></ul>",
+      "explain_html": "<p>A changing magnetic flux induces an EMF in a conductor (Faraday's Law). Lenz's Law: the induced EMF opposes the change that caused it. A transformer uses mutual induction between primary and secondary coils on a shared iron core. Turns ratio: Vp/Vs = Np/Ns. For an ideal transformer: Vp x Ip = Vs x Is (power in = power out). Step-up: more secondary turns. Step-down: fewer secondary turns.</p>",
+      "practice_html": "<ul><li>Calculate secondary voltage for a transformer with Vp = 230 V, Np = 500, Ns = 50</li><li>Calculate secondary current given primary current and turns ratio</li><li>Measure Vp and Vs on the training board transformer and calculate the actual turns ratio</li></ul>",
+      "assessment_html": "<p>Calculation problem: a 230 V / 12 V transformer supplies a 24 W load. Calculate turns ratio, secondary current, and primary current (assuming ideal transformer). Mark against worked answer.</p>"
+    },
+    "images": [
+      "assets/worksheets/CP8475-Electrical-installation-2-images/page062-img132.png",
+      "assets/worksheets/CP8475-Electrical-installation-2-images/page067-img144.png",
+      "assets/worksheets/CP8475-Electrical-installation-2-images/page066-img142.png",
+      "assets/worksheets/CP8475-Electrical-installation-2-images/page066-img143.png",
+      "assets/worksheets/CP8475-Electrical-installation-2-images/page069-img148.png"
+    ]
+  },
+  {
+    "id": "lk4562_impedance_reactance",
+    "name": "Impedance and Reactance in AC Circuits",
+    "subject": "Electrical Installation",
+    "domain": "AC Theory",
+    "level": "L3",
+    "estimated_minutes": 90,
+    "hardware_tags": [
+      "ac_theory",
+      "dc_measurement"
+    ],
+    "content": {
+      "outcomes_html": "<ul><li>Define inductive reactance (XL) and capacitive reactance (XC)</li><li>Calculate XL and XC for given component values and frequencies</li><li>Calculate impedance Z for a series RL or RC circuit</li></ul>",
+      "explain_html": "<p>Inductive reactance: XL = 2 x pi x f x L (ohms), where f is frequency (Hz) and L is inductance (H). Increases with frequency. Capacitive reactance: XC = 1 / (2 x pi x f x C) (ohms), where C is capacitance (F). Decreases with frequency. Impedance Z is the total opposition to AC current: for RL series, Z = sqrt(R squared + XL squared); for RC series, Z = sqrt(R squared + XC squared). Use phasor diagrams to represent phase relationships.</p>",
+      "practice_html": "<ul><li>Calculate XL for a 150 mH inductor at 50 Hz and 100 Hz</li><li>Calculate XC for a 100 uF capacitor at 50 Hz</li><li>Calculate Z for a series circuit with R = 10 ohms and XL = 10 ohms</li><li>Draw the phasor diagram for the series RL circuit</li></ul>",
+      "assessment_html": "<p>Given: R = 20 ohms, L = 100 mH, f = 50 Hz. Calculate XL, Z, phase angle, and draw the impedance triangle. Mark against worked answer.</p>"
+    },
+    "images": [
+      "assets/worksheets/CP0295-Electrical-installation-circuit-principles-level-3-images/page014-img029.png",
+      "assets/worksheets/CP0295-Electrical-installation-circuit-principles-level-3-images/page019-img039.png",
+      "assets/worksheets/CP0295-Electrical-installation-circuit-principles-level-3-images/page012-img025.png",
+      "assets/worksheets/CP0295-Electrical-installation-circuit-principles-level-3-images/page028-img052.png",
+      "assets/worksheets/CP0295-Electrical-installation-circuit-principles-level-3-images/page003-img003.png"
+    ]
+  },
+  {
+    "id": "lk4562_ac_resistors",
+    "name": "AC Circuits with Resistors",
+    "subject": "Electrical Installation",
+    "domain": "AC Theory",
+    "level": "L3",
+    "estimated_minutes": 60,
+    "hardware_tags": [
+      "ac_theory",
+      "dc_measurement"
+    ],
+    "content": {
+      "outcomes_html": "<ul><li>Explain why a pure resistor in an AC circuit has no phase shift</li><li>Calculate current and power in a purely resistive AC circuit</li><li>Verify results experimentally using the training board</li></ul>",
+      "explain_html": "<p>In a purely resistive AC circuit, voltage and current are in phase (phase angle = 0 degrees). Ohm's Law applies directly with RMS values: I = V/R. Power P = V x I = I squared x R = V squared / R (all real power, no reactive component). Power factor = cos(0) = 1. This is the ideal case; real circuits always have some inductance or capacitance.</p>",
+      "practice_html": "<ul><li>Build a resistive AC circuit on the training board</li><li>Measure V and I with a multimeter and calculate R</li><li>Calculate power dissipated and compare to P = I squared x R</li></ul>",
+      "assessment_html": "<p>Calculation: a 230 V AC supply feeds a 46 ohm resistor. Calculate RMS current, power dissipated, and power factor. Short written answer on phase relationship.</p>"
+    },
+    "images": [
+      "assets/worksheets/CP0295-Electrical-installation-circuit-principles-level-3-images/page006-img011.png",
+      "assets/worksheets/CP0295-Electrical-installation-circuit-principles-level-3-images/page008-img015.png",
+      "assets/worksheets/CP0295-Electrical-installation-circuit-principles-level-3-images/page019-img039.png",
+      "assets/worksheets/CP0295-Electrical-installation-circuit-principles-level-3-images/page028-img052.png",
+      "assets/worksheets/CP0295-Electrical-installation-circuit-principles-level-3-images/page004-img006.png"
+    ]
+  },
+  {
+    "id": "lk4562_resistor_combinations",
+    "name": "Resistor Combinations and Network Theorems",
+    "subject": "Electrical Installation",
+    "domain": "Circuit Theory",
+    "level": "L3",
+    "estimated_minutes": 90,
+    "hardware_tags": [
+      "ac_theory",
+      "dc_measurement"
+    ],
+    "content": {
+      "outcomes_html": "<ul><li>Calculate equivalent resistance for complex series-parallel networks</li><li>Apply the voltage divider and current divider rules</li><li>Use Thevenin's theorem to simplify a two-terminal network</li></ul>",
+      "explain_html": "<p>For complex networks: simplify step by step — identify series and parallel groups, reduce progressively. Voltage divider: Vout = Vin x R2 / (R1 + R2). Current divider: I1 = Itotal x R2 / (R1 + R2). Thevenin's theorem: any linear two-terminal network can be replaced by a single voltage source (Vth) in series with a single resistance (Rth). Find Vth = open-circuit voltage; Rth = resistance seen from terminals with sources killed.</p>",
+      "practice_html": "<ul><li>Simplify a 3-resistor series-parallel network and calculate equivalent R</li><li>Apply voltage divider to find output voltage for given input</li><li>Find Thevenin equivalent for a given network (worksheet Q5-6)</li></ul>",
+      "assessment_html": "<p>Complex network problem: given a bridge circuit with 5 resistors and a supply, find the current through the central branch using an appropriate theorem. Mark against full worked solution.</p>"
+    },
+    "images": [
+      "assets/worksheets/CP0295-Electrical-installation-circuit-principles-level-3-images/page006-img011.png",
+      "assets/worksheets/CP0295-Electrical-installation-circuit-principles-level-3-images/page014-img029.png",
+      "assets/worksheets/CP0295-Electrical-installation-circuit-principles-level-3-images/page008-img015.png",
+      "assets/worksheets/CP0295-Electrical-installation-circuit-principles-level-3-images/page019-img039.png",
+      "assets/worksheets/CP0295-Electrical-installation-circuit-principles-level-3-images/page020-img042.png"
+    ]
+  },
+  {
+    "id": "lk4562_capacitors",
+    "name": "Capacitors: Charge, Energy, and Behaviour",
+    "subject": "Electrical Installation",
+    "domain": "AC Theory",
+    "level": "L3",
+    "estimated_minutes": 60,
+    "hardware_tags": [
+      "ac_theory",
+      "protection_devices"
+    ],
+    "content": {
+      "outcomes_html": "<ul><li>Explain how a capacitor stores charge and energy</li><li>Calculate capacitance, charge, and energy stored</li><li>Describe capacitor behaviour on DC and AC supplies</li></ul>",
+      "explain_html": "<p>A capacitor stores charge on two parallel plates separated by a dielectric. Q = C x V (charge = capacitance x voltage). Energy stored: W = 0.5 x C x V squared. On DC: capacitor charges to supply voltage then blocks current (acts as open circuit at steady state). On AC: capacitor continuously charges and discharges — current flows and XC = 1/(2 x pi x f x C). Current leads voltage by 90 degrees in a pure capacitor.</p>",
+      "practice_html": "<ul><li>Calculate charge stored in a 470 uF capacitor charged to 12 V</li><li>Calculate energy stored and compare to an equivalent inductor</li><li>Observe capacitor charging and discharging on the oscilloscope using a series RC circuit</li></ul>",
+      "assessment_html": "<p>Given C = 100 uF and V = 50 V, calculate Q and W. Explain in one paragraph why a capacitor blocks DC but passes AC. Mark against model answer.</p>"
+    },
+    "images": [
+      "assets/worksheets/CP0295-Electrical-installation-circuit-principles-level-3-images/page010-img020.png",
+      "assets/worksheets/CP0295-Electrical-installation-circuit-principles-level-3-images/page028-img052.png",
+      "assets/worksheets/CP0295-Electrical-installation-circuit-principles-level-3-images/page004-img006.png",
+      "assets/worksheets/CP0295-Electrical-installation-circuit-principles-level-3-images/page013-img026.png",
+      "assets/worksheets/CP0295-Electrical-installation-circuit-principles-level-3-images/page013-img027.png"
+    ]
+  },
+  {
+    "id": "lk4562_capacitor_resistor_series",
+    "name": "Series RC Circuits",
+    "subject": "Electrical Installation",
+    "domain": "AC Theory",
+    "level": "L3",
+    "estimated_minutes": 90,
+    "hardware_tags": [
+      "ac_theory",
+      "dc_measurement"
+    ],
+    "content": {
+      "outcomes_html": "<ul><li>Calculate XC, Z, I, VR, and VC for a series RC circuit</li><li>Draw the phasor diagram for a series RC circuit</li><li>Determine the phase angle and power factor</li></ul>",
+      "explain_html": "<p>In a series RC circuit: XC = 1/(2 x pi x f x C). Z = sqrt(R squared + XC squared). Current I = V/Z. Voltage across R: VR = I x R (in phase with I). Voltage across C: VC = I x XC (lags I by 90 degrees). Phase angle: theta = arctan(XC/R) — current leads supply voltage. Power factor = cos(theta) = R/Z. Power triangle: apparent power S = V x I, real power P = I squared x R, reactive power Q = I squared x XC.</p>",
+      "practice_html": "<ul><li>Build a series RC circuit (R = 100 ohms, C = 47 uF) at 50 Hz</li><li>Measure V, VR, VC, and I; calculate Z and compare to theoretical value</li><li>Draw the phasor diagram to scale</li></ul>",
+      "assessment_html": "<p>Given R = 150 ohms, C = 100 uF, V = 230 V, f = 50 Hz: calculate XC, Z, I, VR, VC, phase angle, and power factor. Full working required. Mark against answer.</p>"
+    },
+    "images": [
+      "assets/worksheets/CP0295-Electrical-installation-circuit-principles-level-3-images/page008-img015.png",
+      "assets/worksheets/CP0295-Electrical-installation-circuit-principles-level-3-images/page019-img039.png",
+      "assets/worksheets/CP0295-Electrical-installation-circuit-principles-level-3-images/page012-img025.png",
+      "assets/worksheets/CP0295-Electrical-installation-circuit-principles-level-3-images/page004-img006.png",
+      "assets/worksheets/CP0295-Electrical-installation-circuit-principles-level-3-images/page007-img013.png"
+    ]
+  },
+  {
+    "id": "lk4562_capacitor_resistor_parallel",
+    "name": "Parallel RC Circuits",
+    "subject": "Electrical Installation",
+    "domain": "AC Theory",
+    "level": "L3",
+    "estimated_minutes": 90,
+    "hardware_tags": [
+      "ac_theory",
+      "dc_measurement"
+    ],
+    "content": {
+      "outcomes_html": "<ul><li>Calculate branch currents, total current, and impedance for a parallel RC circuit</li><li>Draw the phasor diagram for a parallel RC circuit</li><li>Explain the concept of power factor correction using capacitors</li></ul>",
+      "explain_html": "<p>In a parallel RC circuit: voltage is the same across both branches. IR = V/R (in phase). IC = V/XC (leads V by 90 degrees). Total current: IT = sqrt(IR squared + IC squared). Phase angle: theta = arctan(IC/IR). Adding capacitance in parallel to an inductive load reduces the reactive current, bringing the phase angle closer to zero (power factor correction). This reduces current drawn from the supply and improves efficiency.</p>",
+      "practice_html": "<ul><li>Build a parallel RC circuit and measure branch currents and total current</li><li>Verify using phasor addition: IT = sqrt(IR squared + IC squared)</li><li>Demonstrate power factor correction: add a capacitor in parallel to an inductive load and measure the change in total current</li></ul>",
+      "assessment_html": "<p>A 230 V, 50 Hz supply feeds a parallel circuit: R = 100 ohms, C = 50 uF. Calculate IR, IC, IT, phase angle, and apparent power. Explain how adding more capacitance would affect the power factor.</p>"
+    },
+    "images": [
+      "assets/worksheets/CP0295-Electrical-installation-circuit-principles-level-3-images/page014-img029.png",
+      "assets/worksheets/CP0295-Electrical-installation-circuit-principles-level-3-images/page008-img015.png",
+      "assets/worksheets/CP0295-Electrical-installation-circuit-principles-level-3-images/page019-img039.png",
+      "assets/worksheets/CP0295-Electrical-installation-circuit-principles-level-3-images/page004-img006.png",
+      "assets/worksheets/CP0295-Electrical-installation-circuit-principles-level-3-images/page007-img013.png"
+    ]
+  },
+  {
+    "id": "lk4562_solenoids_relays",
+    "name": "Solenoids, Relays, and Contactors",
+    "subject": "Electrical Installation",
+    "domain": "Electromagnetism",
+    "level": "L3",
+    "estimated_minutes": 60,
+    "hardware_tags": [
+      "switching_logic",
+      "protection_devices"
+    ],
+    "content": {
+      "outcomes_html": "<ul><li>Explain the operating principle of a solenoid and relay</li><li>Describe the difference between a relay and a contactor</li><li>Build and test a relay-controlled circuit on the training board</li></ul>",
+      "explain_html": "<p>A solenoid is a coil of wire that creates a magnetic field when current flows — the field can be used to move a plunger (linear actuator). A relay uses a solenoid to open or close switch contacts, allowing a low-power control circuit to switch a high-power load circuit. Normally Open (NO) contacts close when energised; Normally Closed (NC) contacts open. A contactor is a heavy-duty relay designed for high-current motor control applications.</p>",
+      "practice_html": "<ul><li>Build a relay control circuit: low-voltage coil circuit switches a lamp via NO contacts</li><li>Test NO and NC contact operation by energising and de-energising the coil</li><li>Draw the circuit diagram with relay symbol and label all terminals</li></ul>",
+      "assessment_html": "<p>Explain with a diagram how a relay allows a 5 V control signal to switch a 230 V load safely. Label the control circuit and load circuit. Tutor assessment of diagram quality and accuracy.</p>"
+    },
+    "images": [
+      "assets/worksheets/CP0295-Electrical-installation-circuit-principles-level-3-images/page021-img043.png",
+      "assets/worksheets/CP0295-Electrical-installation-circuit-principles-level-3-images/page021-img044.png",
+      "assets/worksheets/CP0295-Electrical-installation-circuit-principles-level-3-images/page022-img047.png",
+      "assets/worksheets/CP0295-Electrical-installation-circuit-principles-level-3-images/page022-img046.png",
+      "assets/worksheets/CP0295-Electrical-installation-circuit-principles-level-3-images/page021-img045.png"
+    ]
+  },
+  {
+    "id": "lk4562_fuses_mcb_rcd_l3",
+    "name": "Protection Devices: Level 3 Analysis",
+    "subject": "Electrical Installation",
+    "domain": "Safety",
     "level": "L3",
     "estimated_minutes": 60,
     "hardware_tags": [
@@ -143,295 +653,791 @@
       "safety_practice"
     ],
     "content": {
-      "outcomes_html": "<p><strong>Introduction:</strong> Start with a 5-minute recap of prior knowledge, then introduce today's concept with one worked classroom example and one practical context from industry.</p><p>Clarify lesson success criteria in plain language so learners know exactly what a strong outcome looks like by the end of the session.</p><p><em>Lesson context:</em> Protective Devices (MCB, Fuse, RCD) (L3) in Electrical Engineering.</p>",
-      "explain_html": "<p><strong>Over To You:</strong> Run a guided activity first (teacher-led), then move to paired task work. Require learners to write their method before they measure or calculate.</p><ul><li>Step 1: Set up safely and predict the expected result.</li><li>Step 2: Complete the task and record values clearly.</li><li>Step 3: Compare expected vs actual and explain any differences.</li></ul><p>For speed and consistency, this activity pattern is intentionally reused across related electrical lessons.</p><p><em>Topic focus:</em> Protective Devices (MCB, Fuse, RCD).</p>",
-      "practice_html": "<p><strong>Key Takeaways:</strong></p><ul><li>Use the correct equation, unit, and symbol every time.</li><li>Check reasonableness of results before final answer.</li><li>Follow safe setup and isolation process during practical work.</li><li>Explain findings using evidence from measured values.</li></ul><p><em>Consolidation task:</em> Learners produce a short summary card and one worked example from memory.</p>",
-      "assessment_html": "<p><strong>Student Questions:</strong></p><ol><li>What is the key principle used in today's lesson, and where is it applied in practice?</li><li>Show your method step-by-step for one example from class.</li><li>Which value/measurement could introduce error, and how would you reduce that risk?</li><li>What safety check must be completed before practical setup?</li><li>How would you explain this topic to a Year 1 apprentice?</li><li>Extension: adapt today's method for a more complex circuit scenario.</li></ol><p><strong>Teacher check:</strong> Collect responses from at least 3 learners and address misconceptions before closing.</p>"
+      "outcomes_html": "<ul><li>Analyse the operating characteristics of fuses, MCBs, and RCDs at Level 3 depth</li><li>Interpret time-current characteristics for fuses and MCBs</li><li>Calculate prospective fault current and verify protection device suitability</li></ul>",
+      "explain_html": "<p>Time-current characteristics (TCC curves) show how quickly a protective device operates at various fault currents. BS 7671 specifies maximum disconnection times (0.4 s for 230 V socket circuits, 5 s for distribution circuits). Prospective fault current (PFC) = Vs / Zs, where Zs is the earth fault loop impedance. The device must disconnect within the specified time at the PFC. RCDs must trip at 30 mA within 40 ms for additional protection.</p>",
+      "practice_html": "<ul><li>Read TCC curves to determine operating time for given fault currents</li><li>Calculate PFC given supply voltage and earth fault loop impedance</li><li>Verify that a given MCB will operate within the required time using TCC curve data</li></ul>",
+      "assessment_html": "<p>Given Zs = 0.8 ohms and Vs = 230 V: calculate PFC, determine MCB type B operating time from the TCC curve, and confirm compliance with BS 7671 disconnection time requirements. Full working required.</p>"
     },
-    "image": "assets/placeholder.jpg"
+    "images": [
+      "assets/worksheets/CP0295-Electrical-installation-circuit-principles-level-3-images/page017-img034.png",
+      "assets/worksheets/CP0295-Electrical-installation-circuit-principles-level-3-images/page019-img039.png",
+      "assets/worksheets/CP0295-Electrical-installation-circuit-principles-level-3-images/page017-img033.png",
+      "assets/worksheets/CP0295-Electrical-installation-circuit-principles-level-3-images/page022-img047.png",
+      "assets/worksheets/CP0295-Electrical-installation-circuit-principles-level-3-images/page022-img046.png"
+    ]
   },
   {
-    "id": "t_troubleshooting",
-    "name": "Basic Fault Finding",
-    "subject": "Electrical Engineering",
-    "domain": "Maintenance",
-    "level": "L3",
-    "estimated_minutes": 90,
+    "id": "im3490_basic_outputs",
+    "name": "Basic Outputs: Transistor and Relay Outputs",
+    "subject": "Industrial Maintenance",
+    "domain": "Control Systems",
+    "level": "L2",
+    "estimated_minutes": 60,
     "hardware_tags": [
-      "fault_finding",
+      "industrial_control",
+      "switching_logic"
+    ],
+    "content": {
+      "outcomes_html": "<ul><li>Distinguish between transistor outputs and relay outputs on a PLC</li><li>Explain why external relays are used when a PLC cannot drive a load directly</li><li>Connect and test a basic output circuit on the Sense and Control trainer</li></ul>",
+      "explain_html": "<p>PLCs typically provide two types of outputs: low-current transistor outputs (fast, suitable for signalling other control devices) and high-current relay outputs (slower due to mechanical switching, but robust for driving loads like pumps, solenoids, or indicator beacons). When a transistor output cannot supply enough current for a load, an external relay is used. Relays also provide electrical isolation between the control circuit and the power circuit — critical during fault-finding and system upgrades. Note that not all PLCs include internal relays; always check the specification before connecting equipment.</p>",
+      "practice_html": "<ul><li>Assemble the Locktronics system and load Program 1 to cycle outputs 1–4 in sequence</li><li>Observe the LOGO! PLC screen displaying the status of each output</li><li>Identify which outputs are transistor type and which are relay type on the trainer</li><li>Worksheet: for each of 4 load types (motor, solenoid, lamp, beacon), decide whether a direct transistor output or an external relay is required</li></ul>",
+      "assessment_html": "<p>Short answer: explain two reasons why an external relay might be used instead of connecting a load directly to a PLC transistor output. Mark against model answer covering current rating and electrical isolation.</p>"
+    },
+    "images": [
+      "assets/worksheets/CP6211-Industrial-Maintenance-Sense-and-Control-09_2025-WEB-images/page002-img005.png",
+      "assets/worksheets/CP6211-Industrial-Maintenance-Sense-and-Control-09_2025-WEB-images/page002-img006.png",
+      "assets/worksheets/CP6211-Industrial-Maintenance-Sense-and-Control-09_2025-WEB-images/page003-img008.png",
+      "assets/worksheets/CP6211-Industrial-Maintenance-Sense-and-Control-09_2025-WEB-images/page003-img009.png",
+      "assets/worksheets/CP6211-Industrial-Maintenance-Sense-and-Control-09_2025-WEB-images/page008-img039.png"
+    ]
+  },
+  {
+    "id": "im3490_sequenced_outputs",
+    "name": "Sequenced Outputs and State Machines",
+    "subject": "Industrial Maintenance",
+    "domain": "Control Systems",
+    "level": "L2",
+    "estimated_minutes": 60,
+    "hardware_tags": [
+      "industrial_control",
+      "switching_logic"
+    ],
+    "content": {
+      "outcomes_html": "<ul><li>Describe the concept of a state machine in the context of PLC control</li><li>Trace a sequenced output program through its states</li><li>Explain how manually switching outputs aids commissioning and fault-finding</li></ul>",
+      "explain_html": "<p>Switching between system states is a key part of many control programmes. This is often called a state machine. In a basic traffic light example there are four distinct states; the system steps through them, assigning specific output values at each. A timer or counter tracks the current state and the programme modifies outputs accordingly. Manually stepping through outputs via the controller is a practical method for verifying correct wiring and device response during commissioning or fault diagnosis — without relying on full system operation.</p>",
+      "practice_html": "<ul><li>Build the traffic light circuit and load Program 2 to control the LED sequence</li><li>Trace through each state on the LOGO! screen and record the output pattern</li><li>Manually activate individual outputs and verify each LED responds correctly</li><li>Worksheet: draw the state diagram for the traffic light sequence, labelling output values per state</li></ul>",
+      "assessment_html": "<p>Exit ticket: draw a 4-state sequence table showing which outputs are HIGH in each state. Peer-check against the program logic on screen.</p>"
+    },
+    "images": [
+      "assets/worksheets/CP6211-Industrial-Maintenance-Sense-and-Control-09_2025-WEB-images/page003-img008.png",
+      "assets/worksheets/CP6211-Industrial-Maintenance-Sense-and-Control-09_2025-WEB-images/page003-img009.png",
+      "assets/worksheets/CP6211-Industrial-Maintenance-Sense-and-Control-09_2025-WEB-images/page002-img005.png",
+      "assets/worksheets/CP6211-Industrial-Maintenance-Sense-and-Control-09_2025-WEB-images/page002-img006.png",
+      "assets/worksheets/CP6211-Industrial-Maintenance-Sense-and-Control-09_2025-WEB-images/page008-img039.png"
+    ]
+  },
+  {
+    "id": "im3490_pwm",
+    "name": "Pulse Width Modulation for Motor Speed Control",
+    "subject": "Industrial Maintenance",
+    "domain": "Control Systems",
+    "level": "L2",
+    "estimated_minutes": 60,
+    "hardware_tags": [
+      "industrial_control",
       "instrumentation"
     ],
     "content": {
-      "outcomes_html": "<p><strong>Introduction:</strong> Start with a 5-minute recap of prior knowledge, then introduce today's concept with one worked classroom example and one practical context from industry.</p><p>Clarify lesson success criteria in plain language so learners know exactly what a strong outcome looks like by the end of the session.</p><p><em>Lesson context:</em> Basic Fault Finding (L3) in Electrical Engineering.</p>",
-      "explain_html": "<p><strong>Over To You:</strong> Run a guided activity first (teacher-led), then move to paired task work. Require learners to write their method before they measure or calculate.</p><ul><li>Step 1: Set up safely and predict the expected result.</li><li>Step 2: Complete the task and record values clearly.</li><li>Step 3: Compare expected vs actual and explain any differences.</li></ul><p>For speed and consistency, this activity pattern is intentionally reused across related electrical lessons.</p><p><em>Topic focus:</em> Basic Fault Finding.</p>",
-      "practice_html": "<p><strong>Key Takeaways:</strong></p><ul><li>Use the correct equation, unit, and symbol every time.</li><li>Check reasonableness of results before final answer.</li><li>Follow safe setup and isolation process during practical work.</li><li>Explain findings using evidence from measured values.</li></ul><p><em>Consolidation task:</em> Learners produce a short summary card and one worked example from memory.</p>",
-      "assessment_html": "<p><strong>Student Questions:</strong></p><ol><li>What is the key principle used in today's lesson, and where is it applied in practice?</li><li>Show your method step-by-step for one example from class.</li><li>Which value/measurement could introduce error, and how would you reduce that risk?</li><li>What safety check must be completed before practical setup?</li><li>How would you explain this topic to a Year 1 apprentice?</li><li>Extension: adapt today's method for a more complex circuit scenario.</li></ol><p><strong>Teacher check:</strong> Collect responses from at least 3 learners and address misconceptions before closing.</p>"
+      "outcomes_html": "<ul><li>Explain how PWM controls the speed of a motor by varying duty cycle</li><li>Differentiate between voltage-based and PWM-based speed control</li><li>Describe how a FET is used as a current amplifier for motor drive</li></ul>",
+      "explain_html": "<p>Motor speed is controlled by varying the power supplied to it. Two common methods: varying the applied voltage, or using Pulse Width Modulation (PWM) to vary the duty cycle — the ratio of on-time to off-time. PWM is efficient and widely used for motors, lighting, and variable loads. PWM signals are also used as control inputs to Variable Frequency Drives (VFDs), which regulate motor speed more precisely. FETs (field-effect transistors) act as fast-switching current amplifiers; where a controller cannot switch larger currents directly, external transistor drivers are used. Understanding the internal circuitry of your controller is essential to know its capabilities.</p>",
+      "practice_html": "<ul><li>Load Program 3 and ramp the duty cycle from 0% to 100% in steps over 10 seconds</li><li>Observe the LOGO! screen showing PWM percentage and output status for outputs 1 and 2</li><li>Modify the circuit to connect output 2 via a FET to a motor and compare motor behaviour</li><li>Record motor speed at 25%, 50%, 75%, and 100% duty cycle</li></ul>",
+      "assessment_html": "<p>Short answer: explain why PWM is preferred over simply reducing supply voltage for motor speed control in industrial systems. Mark against model answer covering efficiency, VFD compatibility, and heat dissipation.</p>"
     },
-    "image": "assets/placeholder1.jpg"
+    "images": [
+      "assets/worksheets/CP6211-Industrial-Maintenance-Sense-and-Control-09_2025-WEB-images/page002-img005.png",
+      "assets/worksheets/CP6211-Industrial-Maintenance-Sense-and-Control-09_2025-WEB-images/page002-img006.png",
+      "assets/worksheets/CP6211-Industrial-Maintenance-Sense-and-Control-09_2025-WEB-images/page003-img008.png",
+      "assets/worksheets/CP6211-Industrial-Maintenance-Sense-and-Control-09_2025-WEB-images/page003-img009.png",
+      "assets/worksheets/CP6211-Industrial-Maintenance-Sense-and-Control-09_2025-WEB-images/page001-img002.png"
+    ]
   },
   {
-    "id": "t_switching",
-    "name": "Switching and Control Basics",
-    "subject": "Electrical Engineering",
-    "domain": "Control",
-    "level": "L3",
+    "id": "im3490_basic_inputs",
+    "name": "Basic Inputs: Digital and Analogue Sensors",
+    "subject": "Industrial Maintenance",
+    "domain": "Sensors & Instrumentation",
+    "level": "L2",
     "estimated_minutes": 60,
     "hardware_tags": [
+      "sensors",
+      "instrumentation",
+      "industrial_control"
+    ],
+    "content": {
+      "outcomes_html": "<ul><li>Distinguish between digital and analogue sensor types and their output signals</li><li>Read and display digital input states using a PLC programme</li><li>Explain why checking the input type before connecting a sensor is essential</li></ul>",
+      "explain_html": "<p>Sensors in an industrial system fall into two types. Digital sensors have a two-state output — on (typically 24 V) or off (0 V) — determined by a threshold. Analogue sensors provide a continuous range of output voltages, usually 0–10 V, representing a variable quantity such as temperature, pressure, or light level. Some controllers have separate analogue and digital inputs; others have configurable inputs. Always verify the input type before connecting or replacing a sensor to avoid signal errors. Some controllers use opto-isolated inputs that only accept digital signals.</p>",
+      "practice_html": "<ul><li>Build the input circuit and load Program 4 to read the state of each switch</li><li>Observe the LOGO! screen displaying input states (pressed = ON)</li><li>Test three switches that operate differently and record their input behaviour</li><li>Worksheet: for 5 sensor types, classify each as digital or analogue and state its typical signal range</li></ul>",
+      "assessment_html": "<p>Short answer: a maintenance engineer connects a 0–10 V analogue pressure sensor to a digital-only input. Describe two problems that could result. Mark against model answer.</p>"
+    },
+    "images": [
+      "assets/worksheets/CP6211-Industrial-Maintenance-Sense-and-Control-09_2025-WEB-images/page002-img005.png",
+      "assets/worksheets/CP6211-Industrial-Maintenance-Sense-and-Control-09_2025-WEB-images/page002-img006.png",
+      "assets/worksheets/CP6211-Industrial-Maintenance-Sense-and-Control-09_2025-WEB-images/page003-img008.png",
+      "assets/worksheets/CP6211-Industrial-Maintenance-Sense-and-Control-09_2025-WEB-images/page003-img009.png",
+      "assets/worksheets/CP6211-Industrial-Maintenance-Sense-and-Control-09_2025-WEB-images/page005-img021.png"
+    ]
+  },
+  {
+    "id": "im3490_pedestrian_crossing",
+    "name": "Pedestrian Crossing: Combining Inputs, Outputs, and Timers",
+    "subject": "Industrial Maintenance",
+    "domain": "Control Systems",
+    "level": "L2",
+    "estimated_minutes": 75,
+    "hardware_tags": [
+      "industrial_control",
       "switching_logic",
+      "sensors"
+    ],
+    "content": {
+      "outcomes_html": "<ul><li>Design a multi-state control sequence combining inputs, outputs, and timers</li><li>Sketch a full flow chart for a pedestrian crossing programme</li><li>Explain the role of timers in ensuring safe and reliable system behaviour</li></ul>",
+      "explain_html": "<p>By combining inputs, outputs, and sequenced states, a fully functional road-crossing system can be created. A pedestrian presses a request switch; the controller transitions from green to amber (5 s warning), then red (stop traffic). A pedestrian walk signal flashes for 30 seconds, then the sequence returns to green. Timers are a core element in industrial control — they manage delays, enforce safety pauses, and coordinate event sequences. Whether handling traffic lights or machine operations, understanding timer behaviour is essential for reliable and safe maintenance.</p>",
+      "practice_html": "<ul><li>Build the full pedestrian crossing circuit and sketch a complete flow chart before loading the programme</li><li>Load Program 5 and verify each state transition matches the flow chart</li><li>Observe the LOGO! screen showing all light states including the pedestrian green man</li><li>Identify which timers control each delay and record their set values</li></ul>",
+      "assessment_html": "<p>Practical check: demonstrate the full crossing sequence to the trainer, naming each state and the timer value that controls the transition. Trainer marks against the expected sequence.</p>"
+    },
+    "images": [
+      "assets/worksheets/CP6211-Industrial-Maintenance-Sense-and-Control-09_2025-WEB-images/page002-img005.png",
+      "assets/worksheets/CP6211-Industrial-Maintenance-Sense-and-Control-09_2025-WEB-images/page002-img006.png",
+      "assets/worksheets/CP6211-Industrial-Maintenance-Sense-and-Control-09_2025-WEB-images/page005-img021.png",
+      "assets/worksheets/CP6211-Industrial-Maintenance-Sense-and-Control-09_2025-WEB-images/page005-img022.png",
+      "assets/worksheets/CP6211-Industrial-Maintenance-Sense-and-Control-09_2025-WEB-images/page005-img025.png"
+    ]
+  },
+  {
+    "id": "im3490_potentiometers",
+    "name": "Potentiometers as Variable Analogue Inputs",
+    "subject": "Industrial Maintenance",
+    "domain": "Sensors & Instrumentation",
+    "level": "L2",
+    "estimated_minutes": 60,
+    "hardware_tags": [
+      "sensors",
+      "instrumentation",
+      "industrial_control"
+    ],
+    "content": {
+      "outcomes_html": "<ul><li>Explain how a potentiometer provides a variable voltage signal to a PLC input</li><li>Configure a programme to switch outputs based on the analogue input voltage</li><li>State practical applications of potentiometers in industrial panels</li></ul>",
+      "explain_html": "<p>A switch sends either 24 V or 0 V to a controller input. A potentiometer provides a variable voltage between 0 V and 24 V, making it useful for setting values such as light level, conveyor speed, or room temperature. In industrial panels, potentiometers allow maintenance teams to adjust settings directly — motor speed limits, pressure thresholds, or temperature targets — without accessing software. When using the trainer: the analogue input value is displayed on the LOGO! screen alongside the status of indicator LEDs controlled by voltage thresholds.</p>",
+      "practice_html": "<ul><li>Build the circuit and measure the voltage range from the potentiometer at the controller input</li><li>Define an acceptable voltage range (e.g. 0–5 V = green LED on; above 5 V = red LED on)</li><li>Load Program 6 and verify the LED switching behaviour across the voltage range</li><li>Worksheet: list 3 industrial applications where a potentiometer is preferred over a fixed switch</li></ul>",
+      "assessment_html": "<p>Short answer: a maintenance engineer replaces a potentiometer with a fixed resistor. Describe the impact on system behaviour. Mark against model answer covering loss of variability and fixed setpoint.</p>"
+    },
+    "images": [
+      "assets/worksheets/CP6211-Industrial-Maintenance-Sense-and-Control-09_2025-WEB-images/page002-img005.png",
+      "assets/worksheets/CP6211-Industrial-Maintenance-Sense-and-Control-09_2025-WEB-images/page002-img006.png",
+      "assets/worksheets/CP6211-Industrial-Maintenance-Sense-and-Control-09_2025-WEB-images/page008-img039.png",
+      "assets/worksheets/CP6211-Industrial-Maintenance-Sense-and-Control-09_2025-WEB-images/page005-img021.png",
+      "assets/worksheets/CP6211-Industrial-Maintenance-Sense-and-Control-09_2025-WEB-images/page006-img031.png"
+    ]
+  },
+  {
+    "id": "im3490_using_sensors",
+    "name": "Using Sensors: Analogue Signal Monitoring and Alarm Control",
+    "subject": "Industrial Maintenance",
+    "domain": "Sensors & Instrumentation",
+    "level": "L2",
+    "estimated_minutes": 60,
+    "hardware_tags": [
+      "sensors",
+      "instrumentation",
+      "industrial_control"
+    ],
+    "content": {
+      "outcomes_html": "<ul><li>Distinguish between digital and analogue sensors and explain the advantage of analogue signals</li><li>Configure a programme to sample an analogue sensor and trigger an alarm on threshold change</li><li>Explain why reading and interpreting analogue signals is essential for industrial maintenance</li></ul>",
+      "explain_html": "<p>Most real-world values — temperature, pressure, flow — vary continuously. Digital sensors provide only two states; analogue sensors provide a continuous signal (typically 0–10 V) allowing the system to respond with greater accuracy. A thermistor is an analogue temperature sensor whose resistance changes with temperature. The programme samples the sensor, compares it to a baseline, and triggers an alarm (red LED) if the value changes by 1% or more. Understanding analogue signals helps maintenance teams troubleshoot faults, calibrate equipment, and ensure operation within safe limits.</p>",
+      "practice_html": "<ul><li>Build the thermistor circuit and load Program 7</li><li>Take a baseline temperature reading using the switch on input 1</li><li>Apply gentle heat to the thermistor with fingers and observe the alarm trigger at 1% change</li><li>Record the analogue input value at alarm activation on the LOGO! screen</li><li>Worksheet: describe 3 maintenance scenarios where an analogue sensor provides information a digital sensor cannot</li></ul>",
+      "assessment_html": "<p>Short answer: explain the difference between a digital and an analogue sensor output and give one advantage of each for industrial monitoring. Mark against model answer.</p>"
+    },
+    "images": [
+      "assets/worksheets/CP6211-Industrial-Maintenance-Sense-and-Control-09_2025-WEB-images/page002-img005.png",
+      "assets/worksheets/CP6211-Industrial-Maintenance-Sense-and-Control-09_2025-WEB-images/page002-img006.png",
+      "assets/worksheets/CP6211-Industrial-Maintenance-Sense-and-Control-09_2025-WEB-images/page005-img021.png",
+      "assets/worksheets/CP6211-Industrial-Maintenance-Sense-and-Control-09_2025-WEB-images/page006-img031.png",
+      "assets/worksheets/CP6211-Industrial-Maintenance-Sense-and-Control-09_2025-WEB-images/page006-img028.png"
+    ]
+  },
+  {
+    "id": "im3490_detecting_faults_1",
+    "name": "Detecting Faults 1: Current Monitoring with a Sense Resistor",
+    "subject": "Industrial Maintenance",
+    "domain": "Fault Diagnosis",
+    "level": "L2",
+    "estimated_minutes": 60,
+    "hardware_tags": [
+      "industrial_control",
+      "instrumentation",
+      "sensors"
+    ],
+    "content": {
+      "outcomes_html": "<ul><li>Explain how a series sense resistor is used to confirm current flow through an actuator</li><li>Build a broken-bulb detector circuit using analogue input monitoring</li><li>Describe how safety-critical systems verify actuator operation beyond just command status</li></ul>",
+      "explain_html": "<p>In safety-critical systems, extra circuitry confirms that devices are operating as expected — not just receiving a command. A common method places a small resistor in series with an actuator. By measuring the voltage across the resistor, the system can detect whether current is flowing, verifying the actuator is actually drawing power and likely operating correctly. This principle is used in aircraft landing gear systems, for example, where the controller detects whether locking gear is fully engaged. If the lamp is switched on but no current is detected, the system raises a fault.</p>",
+      "practice_html": "<ul><li>Build the circuit with the 10 Ω sense resistor in series with the incandescent warning bulb</li><li>Load Program 8 to switch the bulb via input I1 and sample the voltage across the resistor on I2</li><li>Configure the programme to switch on a red fault LED if the I2 signal is zero when the lamp is commanded on</li><li>Test the broken-bulb detector by removing the bulb and confirming the fault LED activates</li></ul>",
+      "assessment_html": "<p>Practical: demonstrate the broken-bulb detector to the trainer. Remove the bulb and confirm the fault LED activates. Reinstall the bulb and confirm the fault clears. Trainer marks on correct operation.</p>"
+    },
+    "images": [
+      "assets/worksheets/CP6211-Industrial-Maintenance-Sense-and-Control-09_2025-WEB-images/page002-img005.png",
+      "assets/worksheets/CP6211-Industrial-Maintenance-Sense-and-Control-09_2025-WEB-images/page002-img006.png",
+      "assets/worksheets/CP6211-Industrial-Maintenance-Sense-and-Control-09_2025-WEB-images/page008-img039.png",
+      "assets/worksheets/CP6211-Industrial-Maintenance-Sense-and-Control-09_2025-WEB-images/page006-img031.png",
+      "assets/worksheets/CP6211-Industrial-Maintenance-Sense-and-Control-09_2025-WEB-images/page006-img028.png"
+    ]
+  },
+  {
+    "id": "im3490_detecting_faults_2",
+    "name": "Detecting Faults 2: Analogue Signal Range Checking",
+    "subject": "Industrial Maintenance",
+    "domain": "Fault Diagnosis",
+    "level": "L2",
+    "estimated_minutes": 60,
+    "hardware_tags": [
+      "industrial_control",
+      "instrumentation",
+      "sensors"
+    ],
+    "content": {
+      "outcomes_html": "<ul><li>Configure a programme to detect out-of-range analogue signals as faults</li><li>Explain why a short-circuited sensor may still produce a signal that appears valid</li><li>Describe the importance of range checking in fault-critical systems</li></ul>",
+      "explain_html": "<p>In fault-critical systems, it is important to track all problems as they develop. When using analogue sensors, detecting a faulty reading can be difficult — if a sensor is short-circuited to a power supply rail, the input signal may still resemble a valid value. Range checking addresses this by defining acceptable limits: if the signal falls outside the expected range (e.g. below 50 or above 200 in raw counts), a fault is flagged. Well-designed control logic plays a key role in ensuring equipment operates safely, detecting faults early, and reducing unplanned downtime.</p>",
+      "practice_html": "<ul><li>Build the circuit with a potentiometer as the analogue sensor signal source</li><li>Load Program 9 to read the potentiometer and light the green LED for values 50–200, red LED outside that range</li><li>Short-circuit input I1 to +V and then to 0V in turn, verifying the fault detection responds correctly</li><li>Worksheet: for 3 different sensor fault scenarios, predict which LED will activate and explain why</li></ul>",
+      "assessment_html": "<p>Short answer: a sensor is short-circuited to 0V. Explain why the PLC might not detect this as a fault without range checking logic, and how the range check resolves this. Mark against model answer.</p>"
+    },
+    "images": [
+      "assets/worksheets/CP6211-Industrial-Maintenance-Sense-and-Control-09_2025-WEB-images/page002-img005.png",
+      "assets/worksheets/CP6211-Industrial-Maintenance-Sense-and-Control-09_2025-WEB-images/page002-img006.png",
+      "assets/worksheets/CP6211-Industrial-Maintenance-Sense-and-Control-09_2025-WEB-images/page008-img039.png",
+      "assets/worksheets/CP6211-Industrial-Maintenance-Sense-and-Control-09_2025-WEB-images/page006-img031.png",
+      "assets/worksheets/CP6211-Industrial-Maintenance-Sense-and-Control-09_2025-WEB-images/page006-img028.png"
+    ]
+  },
+  {
+    "id": "im3490_open_loop_control",
+    "name": "Open-Loop Control Systems",
+    "subject": "Industrial Maintenance",
+    "domain": "Control Systems",
+    "level": "L2",
+    "estimated_minutes": 60,
+    "hardware_tags": [
+      "industrial_control",
+      "instrumentation",
+      "sensors"
+    ],
+    "content": {
+      "outcomes_html": "<ul><li>Define open-loop control and explain its limitations in industrial maintenance</li><li>Use a potentiometer signal to control motor speed via PWM in an open-loop configuration</li><li>Identify where open-loop systems are used and what maintenance issues may arise</li></ul>",
+      "explain_html": "<p>An open-loop control system controls outputs without any feedback. The input (e.g. a potentiometer position) sets the output directly (e.g. motor PWM percentage) with no measurement of the actual result. Open-loop systems are simple but cannot detect faults such as a stuck valve or failed actuator — the controller assumes the output is correct. Over time, open-loop systems can drift if load conditions change or actuators begin to stick, so regular recalibration is important. Knowing where these systems are used helps maintenance teams identify potential drift issues during routine inspections.</p>",
+      "practice_html": "<ul><li>Build the circuit and load Program 10 to read the potentiometer and use it to set motor speed via PWM</li><li>Observe the LOGO! screen displaying analogue input value, PWM percentage, and output state</li><li>Vary the potentiometer and record motor speed at 0%, 25%, 50%, 75%, and 100% PWM</li><li>Worksheet: describe two real industrial examples of open-loop control and the maintenance risk each carries</li></ul>",
+      "assessment_html": "<p>Short answer: a pumping station uses open-loop speed control. Describe two maintenance problems that could develop undetected and how they would eventually manifest as visible faults. Mark against model answer.</p>"
+    },
+    "images": [
+      "assets/worksheets/CP6211-Industrial-Maintenance-Sense-and-Control-09_2025-WEB-images/page002-img005.png",
+      "assets/worksheets/CP6211-Industrial-Maintenance-Sense-and-Control-09_2025-WEB-images/page002-img006.png",
+      "assets/worksheets/CP6211-Industrial-Maintenance-Sense-and-Control-09_2025-WEB-images/page003-img008.png",
+      "assets/worksheets/CP6211-Industrial-Maintenance-Sense-and-Control-09_2025-WEB-images/page003-img009.png",
+      "assets/worksheets/CP6211-Industrial-Maintenance-Sense-and-Control-09_2025-WEB-images/page001-img002.png"
+    ]
+  },
+  {
+    "id": "im3490_closed_loop_control",
+    "name": "Closed-Loop Control Systems",
+    "subject": "Industrial Maintenance",
+    "domain": "Control Systems",
+    "level": "L2",
+    "estimated_minutes": 75,
+    "hardware_tags": [
+      "industrial_control",
+      "instrumentation",
+      "sensors"
+    ],
+    "content": {
+      "outcomes_html": "<ul><li>Define closed-loop control and explain how feedback improves system accuracy</li><li>Configure a light-level control loop using a sensor, potentiometer setpoint, and PWM output</li><li>Compare open-loop and closed-loop control in terms of stability and maintenance requirements</li></ul>",
+      "explain_html": "<p>A closed-loop control system measures the actual output and compares it to the desired setpoint, adjusting the control signal to minimise the error. In this system, a potentiometer sets the required light level (setpoint). The controller measures the actual light level via a light sensor, compares it to the setpoint, and adjusts the PWM output to the lamp accordingly. Closed-loop systems are more effective at achieving a required result but depend heavily on accurate sensors and well-tuned settings. If the system oscillates or misses its setpoint, check calibration and adjust PID values as needed.</p>",
+      "practice_html": "<ul><li>Build the circuit and use an A4 sheet to shield the light sensor from ambient light</li><li>Characterise the light sensor voltage at 0%, 25%, 50%, 75%, and 100% lamp output</li><li>Load Program 11 so the potentiometer sets a light level target (not a PWM value directly)</li><li>Shine a phone torch on the sensor and confirm the lamp output decreases to compensate</li><li>Worksheet: sketch the closed-loop block diagram labelling input, setpoint, error, controller, output, and feedback</li></ul>",
+      "assessment_html": "<p>Comparison question: describe one maintenance advantage of a closed-loop system over an open-loop system, and one additional maintenance requirement that closed-loop introduces. Mark against model answer.</p>"
+    },
+    "images": [
+      "assets/worksheets/CP6211-Industrial-Maintenance-Sense-and-Control-09_2025-WEB-images/page002-img005.png",
+      "assets/worksheets/CP6211-Industrial-Maintenance-Sense-and-Control-09_2025-WEB-images/page002-img006.png",
+      "assets/worksheets/CP6211-Industrial-Maintenance-Sense-and-Control-09_2025-WEB-images/page003-img008.png",
+      "assets/worksheets/CP6211-Industrial-Maintenance-Sense-and-Control-09_2025-WEB-images/page003-img009.png",
+      "assets/worksheets/CP6211-Industrial-Maintenance-Sense-and-Control-09_2025-WEB-images/page001-img002.png"
+    ]
+  },
+  {
+    "id": "im6930_simple_plc_systems",
+    "name": "Simple PLC Systems: Inputs, Outputs, and Basic Logic",
+    "subject": "Industrial Maintenance",
+    "domain": "PLC Fundamentals",
+    "level": "L2",
+    "estimated_minutes": 60,
+    "hardware_tags": [
+      "plc_programming",
+      "industrial_control"
+    ],
+    "content": {
+      "outcomes_html": "<ul><li>Describe the core concept of how a PLC processes inputs to control outputs</li><li>Observe and explain the relationship between a physical input button and a PLC output</li><li>Identify where simple PLC systems are used in industrial settings</li></ul>",
+      "explain_html": "<p>A PLC (Programmable Logic Controller) is the brain of an industrial control system. It reads inputs (buttons, sensors, switches), processes them according to its programme, and controls outputs (lights, motors, valves). In the simplest system, if a button at Input I0 is pressed, the PLC turns on a lamp at Output Q0 — and turns it off when released (momentary button). The PLC's status LEDs mirror the state of inputs and outputs in real time. Simple PLC systems are the building blocks for understanding more complex industrial processes and are used for basic on/off control of fans, alarms, and indicator lamps.</p>",
+      "practice_html": "<ul><li>Navigate to Worksheet 1 on the HMI and observe the simple PLC system diagram</li><li>Press and hold button I0 — observe the lamp turn red and the PLC status LEDs change</li><li>Press and release repeatedly, recording the input-output relationship</li><li>Complete Questions and Answers in the Student Handbook for Worksheet 1</li></ul>",
+      "assessment_html": "<p>Short answer: describe what happens inside the PLC when you press and hold I0 in this simple system. State whether the output is momentary or latched and explain the difference. Mark against model answer.</p>"
+    },
+    "images": [
+      "assets/worksheets/CP2388-PLC-Fundamentals-for-Maintenance-Engineers-09_2025-WEB-images/page002-img005.png",
+      "assets/worksheets/CP2388-PLC-Fundamentals-for-Maintenance-Engineers-09_2025-WEB-images/page002-img006.png",
+      "assets/worksheets/CP2388-PLC-Fundamentals-for-Maintenance-Engineers-09_2025-WEB-images/page002-img007.png",
+      "assets/worksheets/CP2388-PLC-Fundamentals-for-Maintenance-Engineers-09_2025-WEB-images/page002-img008.png",
+      "assets/worksheets/CP2388-PLC-Fundamentals-for-Maintenance-Engineers-09_2025-WEB-images/page002-img011.png"
+    ]
+  },
+  {
+    "id": "im6930_complex_plc_systems",
+    "name": "Complex PLC Systems: Sequences, Latching, and Interrupts",
+    "subject": "Industrial Maintenance",
+    "domain": "PLC Fundamentals",
+    "level": "L2",
+    "estimated_minutes": 75,
+    "hardware_tags": [
+      "plc_programming",
+      "industrial_control",
+      "switching_logic"
+    ],
+    "content": {
+      "outcomes_html": "<ul><li>Explain how a PLC latches a start command so the process continues without holding the button</li><li>Trace a sequenced output programme through its steps</li><li>Describe how an interrupt (stop or E-stop) breaks a latched sequence</li></ul>",
+      "explain_html": "<p>Complex PLC systems control multi-step processes using multiple inputs, outputs, and sequences. Although the physical wiring is unchanged from Worksheet 1, the programme now latches the start command — when I0 is pressed momentarily, the PLC stores (latches) the command and begins sequencing outputs Q0–Q5 one at a time. Releasing I0 has no effect because the command is held in software. The sequence can only be broken by pressing the red stop button at I2 or the Emergency Stop. Understanding latching and interrupts is essential for troubleshooting: you need to know what type of circuit you have and what the PLC code should be doing.</p>",
+      "practice_html": "<ul><li>Navigate to Worksheet 2 and press I0 briefly — observe outputs Q0–Q5 sequencing on</li><li>While the sequence runs, press I2 (red button) and confirm the sequence stops</li><li>Observe the HMI: I0 is not shown as active even though the process is running (it is latched, not held)</li><li>Complete Questions and Answers in the Student Handbook for Worksheet 2</li></ul>",
+      "assessment_html": "<p>Short answer: explain the difference between a momentary input and a latched command in a PLC programme. Give one industrial example where latching is essential for safe operation. Mark against model answer.</p>"
+    },
+    "images": [
+      "assets/worksheets/CP2388-PLC-Fundamentals-for-Maintenance-Engineers-09_2025-WEB-images/page002-img005.png",
+      "assets/worksheets/CP2388-PLC-Fundamentals-for-Maintenance-Engineers-09_2025-WEB-images/page002-img006.png",
+      "assets/worksheets/CP2388-PLC-Fundamentals-for-Maintenance-Engineers-09_2025-WEB-images/page002-img007.png",
+      "assets/worksheets/CP2388-PLC-Fundamentals-for-Maintenance-Engineers-09_2025-WEB-images/page002-img008.png",
+      "assets/worksheets/CP2388-PLC-Fundamentals-for-Maintenance-Engineers-09_2025-WEB-images/page002-img011.png"
+    ]
+  },
+  {
+    "id": "im6930_hmis",
+    "name": "HMIs: Human Machine Interfaces for Monitoring and Control",
+    "subject": "Industrial Maintenance",
+    "domain": "PLC Fundamentals",
+    "level": "L2",
+    "estimated_minutes": 60,
+    "hardware_tags": [
+      "plc_programming",
+      "industrial_control",
       "instrumentation"
     ],
     "content": {
-      "outcomes_html": "<p><strong>Introduction:</strong> Start with a 5-minute recap of prior knowledge, then introduce today's concept with one worked classroom example and one practical context from industry.</p><p>Clarify lesson success criteria in plain language so learners know exactly what a strong outcome looks like by the end of the session.</p><p><em>Lesson context:</em> Switching and Control Basics (L3) in Electrical Engineering.</p>",
-      "explain_html": "<p><strong>Over To You:</strong> Run a guided activity first (teacher-led), then move to paired task work. Require learners to write their method before they measure or calculate.</p><ul><li>Step 1: Set up safely and predict the expected result.</li><li>Step 2: Complete the task and record values clearly.</li><li>Step 3: Compare expected vs actual and explain any differences.</li></ul><p>For speed and consistency, this activity pattern is intentionally reused across related electrical lessons.</p><p><em>Topic focus:</em> Switching and Control Basics.</p>",
-      "practice_html": "<p><strong>Key Takeaways:</strong></p><ul><li>Use the correct equation, unit, and symbol every time.</li><li>Check reasonableness of results before final answer.</li><li>Follow safe setup and isolation process during practical work.</li><li>Explain findings using evidence from measured values.</li></ul><p><em>Consolidation task:</em> Learners produce a short summary card and one worked example from memory.</p>",
-      "assessment_html": "<p><strong>Student Questions:</strong></p><ol><li>What is the key principle used in today's lesson, and where is it applied in practice?</li><li>Show your method step-by-step for one example from class.</li><li>Which value/measurement could introduce error, and how would you reduce that risk?</li><li>What safety check must be completed before practical setup?</li><li>How would you explain this topic to a Year 1 apprentice?</li><li>Extension: adapt today's method for a more complex circuit scenario.</li></ol><p><strong>Teacher check:</strong> Collect responses from at least 3 learners and address misconceptions before closing.</p>"
+      "outcomes_html": "<ul><li>Describe the purpose of an HMI and how operators and maintenance engineers use it differently</li><li>Navigate an HMI to monitor tank levels, adjust process parameters, and initiate a batch mix</li><li>Explain why some HMI controls are display-only while others allow parameter changes</li></ul>",
+      "explain_html": "<p>An HMI (Human Machine Interface) is the touchscreen or control panel that lets operators monitor and control an industrial process. It displays real-time data (tank levels, alarms, process values) and allows parameter adjustments. Operators use HMIs daily; maintenance engineers use them during troubleshooting and testing. Not all HMI controls allow input — some are information-only. Always read the User Manual for your specific HMI before making adjustments. The batch mixing process shown is a typical example: four tanks, mixing ratios controlled by parameters, and a sequenced Mix operation.</p>",
+      "practice_html": "<ul><li>Navigate to Worksheet 3 and observe the three ingredient tank levels and the bottom mixing tank</li><li>Change the batch type from Lotion to another product and press Mix — observe the mixing sequence</li><li>Adjust Mix 1, 2, and 3 parameters and observe how they affect tank drain rates</li><li>Identify which on-screen controls are interactive and which are read-only</li><li>Complete Questions and Answers in the Student Handbook for Worksheet 3</li></ul>",
+      "assessment_html": "<p>Short answer: describe two ways a maintenance engineer would use an HMI differently from an operator during routine maintenance. Mark against model answer.</p>"
     },
-    "image": "assets/placeholder2.jpg"
+    "images": [
+      "assets/worksheets/CP2388-PLC-Fundamentals-for-Maintenance-Engineers-09_2025-WEB-images/page002-img005.png",
+      "assets/worksheets/CP2388-PLC-Fundamentals-for-Maintenance-Engineers-09_2025-WEB-images/page002-img006.png",
+      "assets/worksheets/CP2388-PLC-Fundamentals-for-Maintenance-Engineers-09_2025-WEB-images/page002-img007.png",
+      "assets/worksheets/CP2388-PLC-Fundamentals-for-Maintenance-Engineers-09_2025-WEB-images/page002-img008.png",
+      "assets/worksheets/CP2388-PLC-Fundamentals-for-Maintenance-Engineers-09_2025-WEB-images/page002-img011.png"
+    ]
   },
   {
-    "id": "t_mech_materials",
-    "name": "Engineering Materials and Properties",
-    "subject": "Mechanical Engineering",
-    "domain": "Fundamentals",
-    "level": "L2",
-    "estimated_minutes": 60,
-    "hardware_tags": [
-      "materials_testing",
-      "metrology_basics"
-    ],
-    "content": {
-      "outcomes_html": "<p><strong>Introduction:</strong> Start with a short recap and a real workshop scenario, then connect the lesson concept to how technicians plan, build, test, or maintain equipment.</p><p>Set clear success criteria and define the key terms learners must use correctly during practical discussion.</p><p><em>Lesson context:</em> Engineering Materials and Properties (L2) in Mechanical Engineering.</p>",
-      "explain_html": "<p><strong>Over To You:</strong> Run a guided practical setup first, then shift to independent or paired task completion. Learners should document method, tools used, and quality checks.</p><ul><li>Step 1: Plan and prepare tools/components.</li><li>Step 2: Execute the practical task against criteria.</li><li>Step 3: Review output quality and identify one improvement.</li></ul><p>To accelerate rollout, this core activity format is deliberately duplicated across several mechanical lessons.</p><p><em>Topic focus:</em> Engineering Materials and Properties.</p>",
-      "practice_html": "<p><strong>Key Takeaways:</strong></p><ul><li>Follow a clear method and record each step.</li><li>Use correct engineering terms and tolerances.</li><li>Verify quality/safety checks before sign-off.</li><li>Recommend one practical improvement based on evidence.</li></ul><p><em>Consolidation task:</em> Learners produce a short summary card and one worked example from memory.</p>",
-      "assessment_html": "<p><strong>Student Questions:</strong></p><ol><li>Which workshop task from today best demonstrates the core engineering principle?</li><li>Describe your method and justify each tool or setting selected.</li><li>What tolerance/quality check was most critical, and why?</li><li>Identify one common fault and how you would diagnose it quickly.</li><li>How would you improve your result if repeating the task tomorrow?</li><li>Extension: propose a higher-spec version of the same task for advanced learners.</li></ol><p><strong>Teacher check:</strong> Collect responses from at least 3 learners and address misconceptions before closing.</p>"
-    },
-    "image": "assets/placeholder4.jpg"
-  },
-  {
-    "id": "t_mech_measurement",
-    "name": "Mechanical Measurement and Tolerancing",
-    "subject": "Mechanical Engineering",
-    "domain": "Metrology",
-    "level": "L2",
-    "estimated_minutes": 60,
-    "hardware_tags": [
-      "metrology_basics",
-      "quality_inspection"
-    ],
-    "content": {
-      "outcomes_html": "<p><strong>Introduction:</strong> Start with a short recap and a real workshop scenario, then connect the lesson concept to how technicians plan, build, test, or maintain equipment.</p><p>Set clear success criteria and define the key terms learners must use correctly during practical discussion.</p><p><em>Lesson context:</em> Mechanical Measurement and Tolerancing (L2) in Mechanical Engineering.</p>",
-      "explain_html": "<p><strong>Over To You:</strong> Run a guided practical setup first, then shift to independent or paired task completion. Learners should document method, tools used, and quality checks.</p><ul><li>Step 1: Plan and prepare tools/components.</li><li>Step 2: Execute the practical task against criteria.</li><li>Step 3: Review output quality and identify one improvement.</li></ul><p>To accelerate rollout, this core activity format is deliberately duplicated across several mechanical lessons.</p><p><em>Topic focus:</em> Mechanical Measurement and Tolerancing.</p>",
-      "practice_html": "<p><strong>Key Takeaways:</strong></p><ul><li>Follow a clear method and record each step.</li><li>Use correct engineering terms and tolerances.</li><li>Verify quality/safety checks before sign-off.</li><li>Recommend one practical improvement based on evidence.</li></ul><p><em>Consolidation task:</em> Learners produce a short summary card and one worked example from memory.</p>",
-      "assessment_html": "<p><strong>Student Questions:</strong></p><ol><li>Which workshop task from today best demonstrates the core engineering principle?</li><li>Describe your method and justify each tool or setting selected.</li><li>What tolerance/quality check was most critical, and why?</li><li>Identify one common fault and how you would diagnose it quickly.</li><li>How would you improve your result if repeating the task tomorrow?</li><li>Extension: propose a higher-spec version of the same task for advanced learners.</li></ol><p><strong>Teacher check:</strong> Collect responses from at least 3 learners and address misconceptions before closing.</p>"
-    },
-    "image": "assets/placeholder5.jpg"
-  },
-  {
-    "id": "t_mech_fasteners",
-    "name": "Fasteners, Threads, and Torque",
-    "subject": "Mechanical Engineering",
-    "domain": "Assembly",
-    "level": "L2",
-    "estimated_minutes": 45,
-    "hardware_tags": [
-      "assembly_practice",
-      "torque_control"
-    ],
-    "content": {
-      "outcomes_html": "<p><strong>Introduction:</strong> Start with a short recap and a real workshop scenario, then connect the lesson concept to how technicians plan, build, test, or maintain equipment.</p><p>Set clear success criteria and define the key terms learners must use correctly during practical discussion.</p><p><em>Lesson context:</em> Fasteners, Threads, and Torque (L2) in Mechanical Engineering.</p>",
-      "explain_html": "<p><strong>Over To You:</strong> Run a guided practical setup first, then shift to independent or paired task completion. Learners should document method, tools used, and quality checks.</p><ul><li>Step 1: Plan and prepare tools/components.</li><li>Step 2: Execute the practical task against criteria.</li><li>Step 3: Review output quality and identify one improvement.</li></ul><p>To accelerate rollout, this core activity format is deliberately duplicated across several mechanical lessons.</p><p><em>Topic focus:</em> Fasteners, Threads, and Torque.</p>",
-      "practice_html": "<p><strong>Key Takeaways:</strong></p><ul><li>Follow a clear method and record each step.</li><li>Use correct engineering terms and tolerances.</li><li>Verify quality/safety checks before sign-off.</li><li>Recommend one practical improvement based on evidence.</li></ul><p><em>Consolidation task:</em> Learners produce a short summary card and one worked example from memory.</p>",
-      "assessment_html": "<p><strong>Student Questions:</strong></p><ol><li>Which workshop task from today best demonstrates the core engineering principle?</li><li>Describe your method and justify each tool or setting selected.</li><li>What tolerance/quality check was most critical, and why?</li><li>Identify one common fault and how you would diagnose it quickly.</li><li>How would you improve your result if repeating the task tomorrow?</li><li>Extension: propose a higher-spec version of the same task for advanced learners.</li></ol><p><strong>Teacher check:</strong> Collect responses from at least 3 learners and address misconceptions before closing.</p>"
-    },
-    "image": "assets/placeholder6.jpg"
-  },
-  {
-    "id": "t_mech_cad_intro",
-    "name": "2D/3D CAD Fundamentals",
-    "subject": "Mechanical Engineering",
-    "domain": "Design",
-    "level": "L3",
-    "estimated_minutes": 60,
-    "hardware_tags": [
-      "cad_modeling"
-    ],
-    "content": {
-      "outcomes_html": "<p><strong>Introduction:</strong> Start with a short recap and a real workshop scenario, then connect the lesson concept to how technicians plan, build, test, or maintain equipment.</p><p>Set clear success criteria and define the key terms learners must use correctly during practical discussion.</p><p><em>Lesson context:</em> 2D/3D CAD Fundamentals (L3) in Mechanical Engineering.</p>",
-      "explain_html": "<p><strong>Over To You:</strong> Run a guided practical setup first, then shift to independent or paired task completion. Learners should document method, tools used, and quality checks.</p><ul><li>Step 1: Plan and prepare tools/components.</li><li>Step 2: Execute the practical task against criteria.</li><li>Step 3: Review output quality and identify one improvement.</li></ul><p>To accelerate rollout, this core activity format is deliberately duplicated across several mechanical lessons.</p><p><em>Topic focus:</em> 2D/3D CAD Fundamentals.</p>",
-      "practice_html": "<p><strong>Key Takeaways:</strong></p><ul><li>Follow a clear method and record each step.</li><li>Use correct engineering terms and tolerances.</li><li>Verify quality/safety checks before sign-off.</li><li>Recommend one practical improvement based on evidence.</li></ul><p><em>Consolidation task:</em> Learners produce a short summary card and one worked example from memory.</p>",
-      "assessment_html": "<p><strong>Student Questions:</strong></p><ol><li>Which workshop task from today best demonstrates the core engineering principle?</li><li>Describe your method and justify each tool or setting selected.</li><li>What tolerance/quality check was most critical, and why?</li><li>Identify one common fault and how you would diagnose it quickly.</li><li>How would you improve your result if repeating the task tomorrow?</li><li>Extension: propose a higher-spec version of the same task for advanced learners.</li></ol><p><strong>Teacher check:</strong> Collect responses from at least 3 learners and address misconceptions before closing.</p>"
-    },
-    "image": "assets/placeholder7.jpg"
-  },
-  {
-    "id": "t_mech_drives",
-    "name": "Mechanical Power Transmission",
-    "subject": "Mechanical Engineering",
-    "domain": "Mechanisms",
-    "level": "L3",
-    "estimated_minutes": 60,
-    "hardware_tags": [
-      "mechanical_drives",
-      "alignment_setup"
-    ],
-    "content": {
-      "outcomes_html": "<p><strong>Introduction:</strong> Start with a short recap and a real workshop scenario, then connect the lesson concept to how technicians plan, build, test, or maintain equipment.</p><p>Set clear success criteria and define the key terms learners must use correctly during practical discussion.</p><p><em>Lesson context:</em> Mechanical Power Transmission (L3) in Mechanical Engineering.</p>",
-      "explain_html": "<p><strong>Over To You:</strong> Run a guided practical setup first, then shift to independent or paired task completion. Learners should document method, tools used, and quality checks.</p><ul><li>Step 1: Plan and prepare tools/components.</li><li>Step 2: Execute the practical task against criteria.</li><li>Step 3: Review output quality and identify one improvement.</li></ul><p>To accelerate rollout, this core activity format is deliberately duplicated across several mechanical lessons.</p><p><em>Topic focus:</em> Mechanical Power Transmission.</p>",
-      "practice_html": "<p><strong>Key Takeaways:</strong></p><ul><li>Follow a clear method and record each step.</li><li>Use correct engineering terms and tolerances.</li><li>Verify quality/safety checks before sign-off.</li><li>Recommend one practical improvement based on evidence.</li></ul><p><em>Consolidation task:</em> Learners produce a short summary card and one worked example from memory.</p>",
-      "assessment_html": "<p><strong>Student Questions:</strong></p><ol><li>Which workshop task from today best demonstrates the core engineering principle?</li><li>Describe your method and justify each tool or setting selected.</li><li>What tolerance/quality check was most critical, and why?</li><li>Identify one common fault and how you would diagnose it quickly.</li><li>How would you improve your result if repeating the task tomorrow?</li><li>Extension: propose a higher-spec version of the same task for advanced learners.</li></ol><p><strong>Teacher check:</strong> Collect responses from at least 3 learners and address misconceptions before closing.</p>"
-    },
-    "image": "assets/placeholder.jpg"
-  },
-  {
-    "id": "t_mech_fluids",
-    "name": "Hydraulics and Pneumatics Basics",
-    "subject": "Mechanical Engineering",
-    "domain": "Fluid Power",
-    "level": "L3",
-    "estimated_minutes": 60,
-    "hardware_tags": [
-      "fluid_power",
-      "fluid_mechanics",
-      "safety_practice"
-    ],
-    "content": {
-      "outcomes_html": "<p><strong>Introduction:</strong> Start with a short recap and a real workshop scenario, then connect the lesson concept to how technicians plan, build, test, or maintain equipment.</p><p>Set clear success criteria and define the key terms learners must use correctly during practical discussion.</p><p><em>Lesson context:</em> Hydraulics and Pneumatics Basics (L3) in Mechanical Engineering.</p>",
-      "explain_html": "<p><strong>Over To You:</strong> Run a guided practical setup first, then shift to independent or paired task completion. Learners should document method, tools used, and quality checks.</p><ul><li>Step 1: Plan and prepare tools/components.</li><li>Step 2: Execute the practical task against criteria.</li><li>Step 3: Review output quality and identify one improvement.</li></ul><p>To accelerate rollout, this core activity format is deliberately duplicated across several mechanical lessons.</p><p><em>Topic focus:</em> Hydraulics and Pneumatics Basics.</p>",
-      "practice_html": "<p><strong>Key Takeaways:</strong></p><ul><li>Follow a clear method and record each step.</li><li>Use correct engineering terms and tolerances.</li><li>Verify quality/safety checks before sign-off.</li><li>Recommend one practical improvement based on evidence.</li></ul><p><em>Consolidation task:</em> Learners produce a short summary card and one worked example from memory.</p>",
-      "assessment_html": "<p><strong>Student Questions:</strong></p><ol><li>Which workshop task from today best demonstrates the core engineering principle?</li><li>Describe your method and justify each tool or setting selected.</li><li>What tolerance/quality check was most critical, and why?</li><li>Identify one common fault and how you would diagnose it quickly.</li><li>How would you improve your result if repeating the task tomorrow?</li><li>Extension: propose a higher-spec version of the same task for advanced learners.</li></ol><p><strong>Teacher check:</strong> Collect responses from at least 3 learners and address misconceptions before closing.</p>"
-    },
-    "image": "assets/placeholder1.jpg"
-  },
-  {
-    "id": "t_mech_maintenance",
-    "name": "Planned Preventive Maintenance",
-    "subject": "Mechanical Engineering",
-    "domain": "Maintenance",
-    "level": "L3",
-    "estimated_minutes": 45,
-    "hardware_tags": [
-      "maintenance_planning",
-      "condition_monitoring"
-    ],
-    "content": {
-      "outcomes_html": "<p><strong>Introduction:</strong> Start with a short recap and a real workshop scenario, then connect the lesson concept to how technicians plan, build, test, or maintain equipment.</p><p>Set clear success criteria and define the key terms learners must use correctly during practical discussion.</p><p><em>Lesson context:</em> Planned Preventive Maintenance (L3) in Mechanical Engineering.</p>",
-      "explain_html": "<p><strong>Over To You:</strong> Run a guided practical setup first, then shift to independent or paired task completion. Learners should document method, tools used, and quality checks.</p><ul><li>Step 1: Plan and prepare tools/components.</li><li>Step 2: Execute the practical task against criteria.</li><li>Step 3: Review output quality and identify one improvement.</li></ul><p>To accelerate rollout, this core activity format is deliberately duplicated across several mechanical lessons.</p><p><em>Topic focus:</em> Planned Preventive Maintenance.</p>",
-      "practice_html": "<p><strong>Key Takeaways:</strong></p><ul><li>Follow a clear method and record each step.</li><li>Use correct engineering terms and tolerances.</li><li>Verify quality/safety checks before sign-off.</li><li>Recommend one practical improvement based on evidence.</li></ul><p><em>Consolidation task:</em> Learners produce a short summary card and one worked example from memory.</p>",
-      "assessment_html": "<p><strong>Student Questions:</strong></p><ol><li>Which workshop task from today best demonstrates the core engineering principle?</li><li>Describe your method and justify each tool or setting selected.</li><li>What tolerance/quality check was most critical, and why?</li><li>Identify one common fault and how you would diagnose it quickly.</li><li>How would you improve your result if repeating the task tomorrow?</li><li>Extension: propose a higher-spec version of the same task for advanced learners.</li></ol><p><strong>Teacher check:</strong> Collect responses from at least 3 learners and address misconceptions before closing.</p>"
-    },
-    "image": "assets/placeholder2.jpg"
-  },
-  {
-    "id": "t_mech_quality",
-    "name": "Quality Control in Manufacturing",
-    "subject": "Mechanical Engineering",
-    "domain": "Quality",
-    "level": "L3",
-    "estimated_minutes": 60,
-    "hardware_tags": [
-      "quality_inspection",
-      "metrology_basics"
-    ],
-    "content": {
-      "outcomes_html": "<p><strong>Introduction:</strong> Start with a short recap and a real workshop scenario, then connect the lesson concept to how technicians plan, build, test, or maintain equipment.</p><p>Set clear success criteria and define the key terms learners must use correctly during practical discussion.</p><p><em>Lesson context:</em> Quality Control in Manufacturing (L3) in Mechanical Engineering.</p>",
-      "explain_html": "<p><strong>Over To You:</strong> Run a guided practical setup first, then shift to independent or paired task completion. Learners should document method, tools used, and quality checks.</p><ul><li>Step 1: Plan and prepare tools/components.</li><li>Step 2: Execute the practical task against criteria.</li><li>Step 3: Review output quality and identify one improvement.</li></ul><p>To accelerate rollout, this core activity format is deliberately duplicated across several mechanical lessons.</p><p><em>Topic focus:</em> Quality Control in Manufacturing.</p>",
-      "practice_html": "<p><strong>Key Takeaways:</strong></p><ul><li>Follow a clear method and record each step.</li><li>Use correct engineering terms and tolerances.</li><li>Verify quality/safety checks before sign-off.</li><li>Recommend one practical improvement based on evidence.</li></ul><p><em>Consolidation task:</em> Learners produce a short summary card and one worked example from memory.</p>",
-      "assessment_html": "<p><strong>Student Questions:</strong></p><ol><li>Which workshop task from today best demonstrates the core engineering principle?</li><li>Describe your method and justify each tool or setting selected.</li><li>What tolerance/quality check was most critical, and why?</li><li>Identify one common fault and how you would diagnose it quickly.</li><li>How would you improve your result if repeating the task tomorrow?</li><li>Extension: propose a higher-spec version of the same task for advanced learners.</li></ol><p><strong>Teacher check:</strong> Collect responses from at least 3 learners and address misconceptions before closing.</p>"
-    },
-    "image": "assets/placeholder4.jpg"
-  },
-  {
-    "id": "t_mech_cnc_intro",
-    "name": "Introduction to CNC Machining",
-    "subject": "Mechanical Engineering",
-    "domain": "Manufacturing",
-    "level": "L3",
-    "estimated_minutes": 90,
-    "hardware_tags": [
-      "cnc_basics",
-      "safety_practice"
-    ],
-    "content": {
-      "outcomes_html": "<p><strong>Introduction:</strong> Start with a short recap and a real workshop scenario, then connect the lesson concept to how technicians plan, build, test, or maintain equipment.</p><p>Set clear success criteria and define the key terms learners must use correctly during practical discussion.</p><p><em>Lesson context:</em> Introduction to CNC Machining (L3) in Mechanical Engineering.</p>",
-      "explain_html": "<p><strong>Over To You:</strong> Run a guided practical setup first, then shift to independent or paired task completion. Learners should document method, tools used, and quality checks.</p><ul><li>Step 1: Plan and prepare tools/components.</li><li>Step 2: Execute the practical task against criteria.</li><li>Step 3: Review output quality and identify one improvement.</li></ul><p>To accelerate rollout, this core activity format is deliberately duplicated across several mechanical lessons.</p><p><em>Topic focus:</em> Introduction to CNC Machining.</p>",
-      "practice_html": "<p><strong>Key Takeaways:</strong></p><ul><li>Follow a clear method and record each step.</li><li>Use correct engineering terms and tolerances.</li><li>Verify quality/safety checks before sign-off.</li><li>Recommend one practical improvement based on evidence.</li></ul><p><em>Consolidation task:</em> Learners produce a short summary card and one worked example from memory.</p>",
-      "assessment_html": "<p><strong>Student Questions:</strong></p><ol><li>Which workshop task from today best demonstrates the core engineering principle?</li><li>Describe your method and justify each tool or setting selected.</li><li>What tolerance/quality check was most critical, and why?</li><li>Identify one common fault and how you would diagnose it quickly.</li><li>How would you improve your result if repeating the task tomorrow?</li><li>Extension: propose a higher-spec version of the same task for advanced learners.</li></ol><p><strong>Teacher check:</strong> Collect responses from at least 3 learners and address misconceptions before closing.</p>"
-    },
-    "image": "assets/placeholder5.jpg"
-  },
-  {
-    "id": "t_mech_health_safety",
-    "name": "Mechanical Workshop Safety",
-    "subject": "Mechanical Engineering",
+    "id": "im6930_emergency_stops",
+    "name": "Emergency Stops: Safety, Reset Procedures, and Dual-Channel Design",
+    "subject": "Industrial Maintenance",
     "domain": "Safety",
     "level": "L2",
-    "estimated_minutes": 45,
-    "hardware_tags": [
-      "safety_practice"
-    ],
-    "content": {
-      "outcomes_html": "<p><strong>Introduction:</strong> Start with a short recap and a real workshop scenario, then connect the lesson concept to how technicians plan, build, test, or maintain equipment.</p><p>Set clear success criteria and define the key terms learners must use correctly during practical discussion.</p><p><em>Lesson context:</em> Mechanical Workshop Safety (L2) in Mechanical Engineering.</p>",
-      "explain_html": "<p><strong>Over To You:</strong> Run a guided practical setup first, then shift to independent or paired task completion. Learners should document method, tools used, and quality checks.</p><ul><li>Step 1: Plan and prepare tools/components.</li><li>Step 2: Execute the practical task against criteria.</li><li>Step 3: Review output quality and identify one improvement.</li></ul><p>To accelerate rollout, this core activity format is deliberately duplicated across several mechanical lessons.</p><p><em>Topic focus:</em> Mechanical Workshop Safety.</p>",
-      "practice_html": "<p><strong>Key Takeaways:</strong></p><ul><li>Follow a clear method and record each step.</li><li>Use correct engineering terms and tolerances.</li><li>Verify quality/safety checks before sign-off.</li><li>Recommend one practical improvement based on evidence.</li></ul><p><em>Consolidation task:</em> Learners produce a short summary card and one worked example from memory.</p>",
-      "assessment_html": "<p><strong>Student Questions:</strong></p><ol><li>Which workshop task from today best demonstrates the core engineering principle?</li><li>Describe your method and justify each tool or setting selected.</li><li>What tolerance/quality check was most critical, and why?</li><li>Identify one common fault and how you would diagnose it quickly.</li><li>How would you improve your result if repeating the task tomorrow?</li><li>Extension: propose a higher-spec version of the same task for advanced learners.</li></ol><p><strong>Teacher check:</strong> Collect responses from at least 3 learners and address misconceptions before closing.</p>"
-    },
-    "image": "assets/placeholder6.jpg"
-  },
-  {
-    "id": "t_chem_process_flow",
-    "name": "Process Flow Diagrams and Plant Blocks",
-    "subject": "Chemical Engineering",
-    "domain": "Process Fundamentals",
-    "level": "L3",
     "estimated_minutes": 60,
     "hardware_tags": [
-      "fluid_mechanics",
+      "industrial_control",
+      "switching_logic"
+    ],
+    "content": {
+      "outcomes_html": "<ul><li>Explain the purpose of an E-Stop and how it differs from a normal stop button</li><li>Describe the dual-channel contact design and why it provides redundancy</li><li>Follow the correct reset procedure after an E-Stop event</li></ul>",
+      "explain_html": "<p>An Emergency Stop (E-Stop) immediately halts a machine or system in an emergency — it must never be used as a normal stop. E-Stops use dual-channel contacts: two sets of contacts must both be closed for the system to run. When pressed, both open and the system stops — even if only one opens, the system still stops (redundancy). After an E-Stop, the button must be physically reset (twist to release) and the reset button pressed before the system can restart. Regular inspection and testing of E-Stops during downtime is essential; never cover or tamper with one. An alarm banner appears on the HMI identifying the fault.</p>",
+      "practice_html": "<ul><li>Navigate to Worksheet 4, start the mix, and press the E-Stop when the tank is approximately half full</li><li>Read the alarm banner and navigate to the Alarm page to locate the emergency stop alarm</li><li>Reset: twist the E-Stop button to release, press the blue reset button, and confirm the alarm clears</li><li>Navigate to the Faults page and repeat the E-Stop test, this time resetting from the HMI Reset button</li><li>Complete Questions and Answers in the Student Handbook for Worksheet 4</li></ul>",
+      "assessment_html": "<p>Practical: demonstrate the full E-Stop cycle — trigger, alarm identification, reset procedure — to the trainer. Trainer marks on correct sequence and safety awareness.</p>"
+    },
+    "images": [
+      "assets/worksheets/CP2388-PLC-Fundamentals-for-Maintenance-Engineers-09_2025-WEB-images/page002-img005.png",
+      "assets/worksheets/CP2388-PLC-Fundamentals-for-Maintenance-Engineers-09_2025-WEB-images/page002-img006.png",
+      "assets/worksheets/CP2388-PLC-Fundamentals-for-Maintenance-Engineers-09_2025-WEB-images/page002-img007.png",
+      "assets/worksheets/CP2388-PLC-Fundamentals-for-Maintenance-Engineers-09_2025-WEB-images/page002-img008.png",
+      "assets/worksheets/CP2388-PLC-Fundamentals-for-Maintenance-Engineers-09_2025-WEB-images/page002-img011.png"
+    ]
+  },
+  {
+    "id": "im6930_status_led",
+    "name": "Status LEDs: Visual Fault Indication and System State",
+    "subject": "Industrial Maintenance",
+    "domain": "Fault Diagnosis",
+    "level": "L2",
+    "estimated_minutes": 60,
+    "hardware_tags": [
+      "industrial_control",
       "instrumentation"
     ],
     "content": {
-      "outcomes_html": "<p><strong>Introduction:</strong> Start with a short recap and an industry example of how a chemical plant is split into process units, then link symbols to real equipment learners may see in workshops or placements.</p><p>Define success criteria clearly: learners should identify core plant blocks and follow a simple process route from feed to product.</p><p><em>Lesson context:</em> Process Flow Diagrams and Plant Blocks (L3) in Chemical Engineering.</p>",
-      "explain_html": "<p><strong>Over To You:</strong> Begin with a guided walkthrough of one simple process flow diagram, then move to pair work where learners map each symbol to equipment function.</p><ul><li>Step 1: Identify feed, process, and output sections.</li><li>Step 2: Label major units and transfer lines.</li><li>Step 3: Explain how material moves through the plant safely.</li></ul><p>Use standard symbol language and direction arrows consistently to build technical communication habits.</p><p><em>Topic focus:</em> Process Flow Diagrams and Plant Blocks.</p>",
-      "practice_html": "<p><strong>Key Takeaways:</strong></p><ul><li>Read a basic process flow from left to right with confidence.</li><li>Use correct terms for vessels, pumps, heat exchangers, and lines.</li><li>Connect each process step to a physical plant function.</li><li>Describe one key safety check point on the process route.</li></ul><p><em>Consolidation task:</em> Learners annotate a blank process diagram and explain the flow sequence verbally.</p>",
-      "assessment_html": "<p><strong>Student Questions:</strong></p><ol><li>What does a process flow diagram communicate to engineers and operators?</li><li>Trace one full material path from feed entry to final product.</li><li>Which process block is most likely to need close monitoring, and why?</li><li>Where would you place a safety checkpoint in this flow?</li><li>What is one risk if symbols or arrows are misread?</li><li>Extension: propose one improvement to make the diagram clearer for new technicians.</li></ol><p><strong>Teacher check:</strong> Sample at least 3 learner explanations and correct terminology errors before close.</p>"
+      "outcomes_html": "<ul><li>Interpret status LED colours and flash patterns to determine system state</li><li>Trace LED behaviour across Basic, Enhanced, and Live Process operating modes</li><li>Explain that LED behaviour is defined in the PLC programme and may vary between machines</li></ul>",
+      "explain_html": "<p>Status LEDs provide at-a-glance system state information. Typical conventions: green = healthy, red = fault. However, these are not universal standards — every machine can be programmed differently. Flash rates and colours carry different meanings depending on the PLC logic. Reading the machine manual and understanding how the Status LED maps to PLC output logic is a core maintenance skill. This worksheet explores three modes: Basic (healthy/fault only), Enhanced (includes motor running state), and Live Process (responds to individual items on a conveyor including defective detection).</p>",
+      "practice_html": "<ul><li>Navigate to Worksheet 5, activate Basic Mode, and note the LED colour under normal and E-Stop conditions</li><li>Activate Enhanced Mode, start the motor, and observe how the LED changes during motor run</li><li>Activate Live Process Mode, start the process, and observe LED response to OK and defective bottles</li><li>Enable Fast Processing and record how the LED behaves under higher throughput</li><li>Complete Questions and Answers in the Student Handbook for Worksheet 5</li></ul>",
+      "assessment_html": "<p>Short answer: explain why a maintenance engineer cannot assume a flashing green LED always means normal operation on every machine they work on. Mark against model answer covering machine-specific PLC programming.</p>"
     },
-    "image": "assets/placeholder7.jpg"
+    "images": [
+      "assets/worksheets/CP2388-PLC-Fundamentals-for-Maintenance-Engineers-09_2025-WEB-images/page002-img005.png",
+      "assets/worksheets/CP2388-PLC-Fundamentals-for-Maintenance-Engineers-09_2025-WEB-images/page002-img006.png",
+      "assets/worksheets/CP2388-PLC-Fundamentals-for-Maintenance-Engineers-09_2025-WEB-images/page002-img007.png",
+      "assets/worksheets/CP2388-PLC-Fundamentals-for-Maintenance-Engineers-09_2025-WEB-images/page002-img008.png",
+      "assets/worksheets/CP2388-PLC-Fundamentals-for-Maintenance-Engineers-09_2025-WEB-images/page002-img011.png"
+    ]
   },
   {
-    "id": "t_chem_mass_energy",
-    "name": "Mass and Energy Balances",
-    "subject": "Chemical Engineering",
-    "domain": "Calculations",
+    "id": "im6930_no_vs_nc",
+    "name": "Normally Open vs Normally Closed Contacts",
+    "subject": "Industrial Maintenance",
+    "domain": "PLC Fundamentals",
+    "level": "L2",
+    "estimated_minutes": 60,
+    "hardware_tags": [
+      "plc_programming",
+      "industrial_control",
+      "switching_logic"
+    ],
+    "content": {
+      "outcomes_html": "<ul><li>Distinguish between Normally Open (NO) and Normally Closed (NC) contacts and their default states</li><li>Predict the expected HMI input state for NO and NC inputs when not operated</li><li>Explain how misinterpreting NO/NC states can lead to incorrect fault diagnosis</li></ul>",
+      "explain_html": "<p>An NO (Normally Open) contact is off until pressed — the circuit is open at rest. An NC (Normally Closed) contact is on until pressed — the circuit is closed at rest. On the HMI: green text = input ON, white = input OFF. Key input states: I0/I1 (NO) = off by default; I2 (NC) = on by default; I3 (NO latching) = toggles on each press; I4/I5 (NO, selector switch) = only one on at a time. In maintenance, misinterpreting these states can cause incorrect fault diagnosis — an NC input showing green when unpressed is behaving correctly, not faulting. Understanding expected default states is fundamental to safe I/O troubleshooting.</p>",
+      "practice_html": "<ul><li>Navigate to Worksheet 6 and record the default state of each input on the HMI before pressing anything</li><li>Press each input in turn and record the state change — pay particular attention to I2 (NC)</li><li>Toggle I3 and confirm it latches; change I4/I5 selector switch through all positions</li><li>Worksheet: for each input I0–I5, state whether NO or NC, and the expected HMI colour when at rest</li><li>Complete Questions and Answers in the Student Handbook for Worksheet 6</li></ul>",
+      "assessment_html": "<p>Scenario question: a maintenance engineer sees Input 2 showing green on the HMI when no one is pressing the button. They log it as a fault. Are they correct? Explain your answer with reference to NO and NC contact types. Mark against model answer.</p>"
+    },
+    "images": [
+      "assets/worksheets/CP2388-PLC-Fundamentals-for-Maintenance-Engineers-09_2025-WEB-images/page002-img005.png",
+      "assets/worksheets/CP2388-PLC-Fundamentals-for-Maintenance-Engineers-09_2025-WEB-images/page002-img006.png",
+      "assets/worksheets/CP2388-PLC-Fundamentals-for-Maintenance-Engineers-09_2025-WEB-images/page002-img007.png",
+      "assets/worksheets/CP2388-PLC-Fundamentals-for-Maintenance-Engineers-09_2025-WEB-images/page002-img008.png",
+      "assets/worksheets/CP2388-PLC-Fundamentals-for-Maintenance-Engineers-09_2025-WEB-images/page002-img011.png"
+    ]
+  },
+  {
+    "id": "im6930_proximity_switch",
+    "name": "Proximity Switches: Non-Contact Detection and Safety Interlocks",
+    "subject": "Industrial Maintenance",
+    "domain": "Sensors & Instrumentation",
+    "level": "L2",
+    "estimated_minutes": 60,
+    "hardware_tags": [
+      "sensors",
+      "industrial_control",
+      "instrumentation"
+    ],
+    "content": {
+      "outcomes_html": "<ul><li>Explain how an inductive proximity sensor detects metal objects without contact</li><li>Demonstrate sensor triggering in a safety interlock simulation</li><li>Diagnose common proximity sensor faults including misalignment and false signals</li></ul>",
+      "explain_html": "<p>A proximity switch detects an object's presence without physical contact, making it ideal for automation, positioning, and safety systems. Inductive sensors detect metal objects only; capacitive sensors detect both metal and non-metal; photoelectric sensors use light. In this simulation, the inductive proximity sensor at I6 confirms that locking pins on a forging press are properly engaged. If the sensor does not detect the pins, the system faults and stops — preventing an unsafe state. Maintenance engineers must diagnose faults such as misalignment, incorrect positioning, or false signals. Sensors are often manually triggered with a metal object during troubleshooting to verify operation.</p>",
+      "practice_html": "<ul><li>Navigate to Worksheet 7 and confirm the proximity sensor I6 is not triggered (white on HMI)</li><li>Click Raise and watch the press ascend to 15,000 mm; click Lock and observe the fault (no sensor signal)</li><li>Reset, restart, and this time place a metal object in front of I6 after clicking Lock</li><li>Confirm the locking pins engage on screen when the sensor is triggered</li><li>Complete Questions and Answers in the Student Handbook for Worksheet 7</li></ul>",
+      "assessment_html": "<p>Short answer: describe two different causes of a false-negative from a proximity sensor on a forging press interlock, and state the safety consequence of each if the fault is undetected. Mark against model answer.</p>"
+    },
+    "images": [
+      "assets/worksheets/CP2388-PLC-Fundamentals-for-Maintenance-Engineers-09_2025-WEB-images/page002-img005.png",
+      "assets/worksheets/CP2388-PLC-Fundamentals-for-Maintenance-Engineers-09_2025-WEB-images/page002-img006.png",
+      "assets/worksheets/CP2388-PLC-Fundamentals-for-Maintenance-Engineers-09_2025-WEB-images/page002-img007.png",
+      "assets/worksheets/CP2388-PLC-Fundamentals-for-Maintenance-Engineers-09_2025-WEB-images/page002-img008.png",
+      "assets/worksheets/CP2388-PLC-Fundamentals-for-Maintenance-Engineers-09_2025-WEB-images/page002-img011.png"
+    ]
+  },
+  {
+    "id": "im6930_potentiometer",
+    "name": "Potentiometer: Analogue Input Scaling and Offset",
+    "subject": "Industrial Maintenance",
+    "domain": "Sensors & Instrumentation",
+    "level": "L2",
+    "estimated_minutes": 60,
+    "hardware_tags": [
+      "instrumentation",
+      "plc_programming",
+      "industrial_control"
+    ],
+    "content": {
+      "outcomes_html": "<ul><li>Explain how a potentiometer produces a 0–10 V analogue signal and how the PLC reads it</li><li>Apply offset and scalar values to calibrate analogue input behaviour</li><li>Interpret analogue input scaling in the context of real industrial control systems</li></ul>",
+      "explain_html": "<p>A potentiometer is an adjustable resistor used to create a variable voltage signal (0–10 V). The PLC reads this signal on an analogue input and uses it to control motor speed via PWM logic. Two key calibration parameters: Offset — adds or subtracts a fixed number to the raw input (e.g. corrects sensor drift); Scalar — multiplies the input to convert raw values to real-world units (e.g. 0–10 V becomes 0–100% or 0–1000 RPM). Real industrial systems rarely use the full 0–10 V range, so correct scaling is critical. Miscalibrated scaling or offset can cause misdiagnosed faults or incorrect system adjustments.</p>",
+      "practice_html": "<ul><li>Navigate to Worksheet 8 and rotate the potentiometer fully anticlockwise (0%) — observe motor speed</li><li>Rotate clockwise to 100% and confirm full motor speed on the HMI</li><li>Apply an offset of +50, return the pot to 0, and observe the effect on motor start point</li><li>Apply an offset of -50 and repeat; then remove offset and change the scalar from 100 to 10</li><li>Complete Questions and Answers in the Student Handbook for Worksheet 8</li></ul>",
+      "assessment_html": "<p>Calculation: a potentiometer at 6 V feeds a PLC analogue input. The system applies a scalar of 10 and an offset of +5. Calculate the scaled value the PLC uses to set motor speed. Explain what would happen if the scalar were incorrectly set to 1. Mark against worked answer.</p>"
+    },
+    "images": [
+      "assets/worksheets/CP2388-PLC-Fundamentals-for-Maintenance-Engineers-09_2025-WEB-images/page002-img005.png",
+      "assets/worksheets/CP2388-PLC-Fundamentals-for-Maintenance-Engineers-09_2025-WEB-images/page002-img006.png",
+      "assets/worksheets/CP2388-PLC-Fundamentals-for-Maintenance-Engineers-09_2025-WEB-images/page002-img007.png",
+      "assets/worksheets/CP2388-PLC-Fundamentals-for-Maintenance-Engineers-09_2025-WEB-images/page002-img008.png",
+      "assets/worksheets/CP2388-PLC-Fundamentals-for-Maintenance-Engineers-09_2025-WEB-images/page002-img011.png"
+    ]
+  },
+  {
+    "id": "im6930_temperature_sensor",
+    "name": "Temperature Sensors: PT100 RTD, Signal Conversion, and Scaling",
+    "subject": "Industrial Maintenance",
+    "domain": "Sensors & Instrumentation",
+    "level": "L2",
+    "estimated_minutes": 75,
+    "hardware_tags": [
+      "sensors",
+      "instrumentation",
+      "plc_programming"
+    ],
+    "content": {
+      "outcomes_html": "<ul><li>Explain how a PT100 RTD sensor measures temperature and how its signal is converted for PLC input</li><li>Scale a raw analogue value to a real-world temperature reading</li><li>Diagnose a fault condition indicated by a raw value exceeding 27,648</li></ul>",
+      "explain_html": "<p>A PT100 is a Resistance Temperature Detector (RTD) whose resistance changes with temperature. A signal converter (IFM evaluation unit) converts this resistance into a 0–10 V analogue voltage that the PLC can read. In Siemens PLCs, 0 V = raw value 0 and 10 V = raw value 27,648. The programme multiplies the raw value by a scalar to produce a temperature in °C: e.g. raw 13,824 × 0.0055 ≈ 76 °C. A raw reading near 32,000 indicates a fault — sensor disconnected, overvoltage, wrong input type, or cable issue — since the maximum valid raw value is 27,648.</p>",
+      "practice_html": "<ul><li>Navigate to Worksheet 9 and place fingers on the temperature probe — observe the Temp Sensor Raw value change</li><li>Apply a scalar of 10 and observe the Scaled Value; then try scalar 1000 and note the result</li><li>Adjust the scalar until the displayed temperature matches a sensible ambient reading (20–40 °C)</li><li>Verify the correct scalar against the IO Screen in the Main Menu</li><li>Complete Questions and Answers in the Student Handbook for Worksheet 9</li></ul>",
+      "assessment_html": "<p>Calculation: a Siemens PLC reads a raw analogue value of 8,294 from a PT100 circuit. Using a scalar of 0.0055, calculate the displayed temperature. The reading then jumps to 31,500 — diagnose the likely fault. Mark against worked answer.</p>"
+    },
+    "images": [
+      "assets/worksheets/CP2388-PLC-Fundamentals-for-Maintenance-Engineers-09_2025-WEB-images/page002-img005.png",
+      "assets/worksheets/CP2388-PLC-Fundamentals-for-Maintenance-Engineers-09_2025-WEB-images/page002-img006.png",
+      "assets/worksheets/CP2388-PLC-Fundamentals-for-Maintenance-Engineers-09_2025-WEB-images/page002-img007.png",
+      "assets/worksheets/CP2388-PLC-Fundamentals-for-Maintenance-Engineers-09_2025-WEB-images/page002-img008.png",
+      "assets/worksheets/CP2388-PLC-Fundamentals-for-Maintenance-Engineers-09_2025-WEB-images/page002-img011.png"
+    ]
+  },
+  {
+    "id": "im6930_digital_outputs",
+    "name": "Digital Outputs: Controlling Devices from Buttons, Sensors, and HMI",
+    "subject": "Industrial Maintenance",
+    "domain": "PLC Fundamentals",
+    "level": "L2",
+    "estimated_minutes": 60,
+    "hardware_tags": [
+      "plc_programming",
+      "industrial_control",
+      "switching_logic"
+    ],
+    "content": {
+      "outcomes_html": "<ul><li>Demonstrate that PLC digital outputs can be triggered by buttons, switches, sensors, and analogue thresholds</li><li>Explain the difference between momentary, latched, and selector-switch-driven outputs</li><li>Identify correct and incorrect output sequences to aid fault-finding</li></ul>",
+      "explain_html": "<p>Digital outputs are how a PLC controls external devices: lights, motors, relays, solenoids. This worksheet demonstrates multiple output trigger types: I0 (momentary NO) controls Q0 only while pressed; I1 (momentary, latched) turns Q1 on and keeps it on until I2 (NC) is pressed; a latching button controls Q2 permanently; I4/I5 selector switch controls Q3 (on = steady, selector-right = flashing); proximity sensor I6 toggles Q4; potentiometer AI0 crosses a threshold to activate Q5. In industry, these same principles apply to starting motors, energising relays, activating solenoids, and opening valves.</p>",
+      "practice_html": "<ul><li>Navigate to Worksheet 10 and work through each output trigger type (I0–I5, proximity, potentiometer) as directed</li><li>Record the behaviour of Q0–Q5 for each input condition in a table</li><li>Reset all inputs to off state, then activate Dance Mode on the HMI and observe the timed LED sequence</li><li>Complete Questions and Answers in the Student Handbook for Worksheet 10</li></ul>",
+      "assessment_html": "<p>Fault scenario: Q1 remains on even after the stop button I2 is pressed. List three possible causes in order of likelihood (wiring, PLC logic, component failure) and describe how you would diagnose each. Mark against model answer.</p>"
+    },
+    "images": [
+      "assets/worksheets/CP2388-PLC-Fundamentals-for-Maintenance-Engineers-09_2025-WEB-images/page002-img005.png",
+      "assets/worksheets/CP2388-PLC-Fundamentals-for-Maintenance-Engineers-09_2025-WEB-images/page002-img006.png",
+      "assets/worksheets/CP2388-PLC-Fundamentals-for-Maintenance-Engineers-09_2025-WEB-images/page002-img007.png",
+      "assets/worksheets/CP2388-PLC-Fundamentals-for-Maintenance-Engineers-09_2025-WEB-images/page002-img008.png",
+      "assets/worksheets/CP2388-PLC-Fundamentals-for-Maintenance-Engineers-09_2025-WEB-images/page002-img011.png"
+    ]
+  },
+  {
+    "id": "im6930_motor_pwm",
+    "name": "Motor PWM: Duty Cycle and Variable Speed Control",
+    "subject": "Industrial Maintenance",
+    "domain": "Control Systems",
+    "level": "L2",
+    "estimated_minutes": 60,
+    "hardware_tags": [
+      "plc_programming",
+      "industrial_control",
+      "instrumentation"
+    ],
+    "content": {
+      "outcomes_html": "<ul><li>Explain how PWM controls DC motor speed via duty cycle</li><li>Use a potentiometer to set PWM level and observe the effect on motor speed</li><li>Read and interpret PWM values on an HMI to aid motor diagnostics</li></ul>",
+      "explain_html": "<p>Pulse Width Modulation (PWM) is a method used by PLCs to control motor speed by rapidly switching an output on and off. The duty cycle — the ratio of on-time to total period — determines the average power delivered to the motor: 100% = fully on, 0% = off. In this system, the potentiometer provides a 0–10 V analogue input which the PLC converts to a PWM duty cycle percentage. PWM is used across industry for fans, pumps, and conveyors. In HVAC for example, PWM controls fan speed in air handling units. Diagnosing speed control issues requires tracing the input (potentiometer) through to the output (motor) and verifying the duty cycle matches expectations.</p>",
+      "practice_html": "<ul><li>Navigate to Worksheet 11, set the potentiometer to 0, and start the programme</li><li>Rotate the potentiometer clockwise and observe motor speed increasing on the trainer</li><li>Sweep the potentiometer from 100% to 0% several times, observing the live graph of potentiometer value and PWM duty cycle on the HMI</li><li>Complete Questions and Answers in the Student Handbook for Worksheet 11</li></ul>",
+      "assessment_html": "<p>Diagnostic scenario: a conveyor motor runs at full speed regardless of the potentiometer position. List the steps you would take to diagnose whether the fault is in the potentiometer, the PLC analogue input, or the PWM output logic. Mark against model answer.</p>"
+    },
+    "images": [
+      "assets/worksheets/CP2388-PLC-Fundamentals-for-Maintenance-Engineers-09_2025-WEB-images/page002-img005.png",
+      "assets/worksheets/CP2388-PLC-Fundamentals-for-Maintenance-Engineers-09_2025-WEB-images/page002-img006.png",
+      "assets/worksheets/CP2388-PLC-Fundamentals-for-Maintenance-Engineers-09_2025-WEB-images/page002-img007.png",
+      "assets/worksheets/CP2388-PLC-Fundamentals-for-Maintenance-Engineers-09_2025-WEB-images/page002-img008.png",
+      "assets/worksheets/CP2388-PLC-Fundamentals-for-Maintenance-Engineers-09_2025-WEB-images/page002-img011.png"
+    ]
+  },
+  {
+    "id": "im6930_relays",
+    "name": "Relays: Electrically Operated Switches for High-Power Loads",
+    "subject": "Industrial Maintenance",
+    "domain": "PLC Fundamentals",
+    "level": "L2",
+    "estimated_minutes": 60,
+    "hardware_tags": [
+      "plc_programming",
+      "industrial_control",
+      "switching_logic"
+    ],
+    "content": {
+      "outcomes_html": "<ul><li>Explain how a relay uses a low-power coil to switch high-power contacts</li><li>Demonstrate relay activation and deactivation via PLC outputs and input conditions</li><li>Trace a relay circuit to diagnose common faults including stuck contacts and faulty coils</li></ul>",
+      "explain_html": "<p>Relays are electrically operated switches that allow a PLC to control higher-power devices safely. The PLC energises a low-power coil, creating a magnetic field that closes (or opens) the relay's internal contacts, which switch the load circuit. This provides electrical isolation between the PLC and the output device. PLC outputs cannot always drive motors or solenoids directly — relays bridge the gap between low-power control logic and high-power loads such as motors, heaters, and solenoids. Relay status is visible via LEDs on the relay itself and on the HMI. Common faults: stuck contacts (load stays on when commanded off), faulty coil (relay never activates), and incorrect wiring.</p>",
+      "practice_html": "<ul><li>Navigate to Worksheet 12 and press I0 to energise the relay — observe the relay LED and output device activate</li><li>Press I2 (red button) to confirm the relay deactivates and the output stops</li><li>Slowly rotate the potentiometer to ~50% and confirm the relay activates automatically at the threshold</li><li>Press the E-Stop and confirm the relay deactivates as a safety response</li><li>Complete Questions and Answers in the Student Handbook for Worksheet 12</li></ul>",
+      "assessment_html": "<p>Fault scenario: a relay is commanded on by the PLC (coil output active, LED on the relay lit) but the load motor does not run. List three possible causes and describe how you would test for each using basic tools. Mark against model answer covering contact resistance, load wiring, and motor faults.</p>"
+    },
+    "images": [
+      "assets/worksheets/CP2388-PLC-Fundamentals-for-Maintenance-Engineers-09_2025-WEB-images/page002-img005.png",
+      "assets/worksheets/CP2388-PLC-Fundamentals-for-Maintenance-Engineers-09_2025-WEB-images/page002-img006.png",
+      "assets/worksheets/CP2388-PLC-Fundamentals-for-Maintenance-Engineers-09_2025-WEB-images/page002-img007.png",
+      "assets/worksheets/CP2388-PLC-Fundamentals-for-Maintenance-Engineers-09_2025-WEB-images/page002-img008.png",
+      "assets/worksheets/CP2388-PLC-Fundamentals-for-Maintenance-Engineers-09_2025-WEB-images/page002-img011.png"
+    ]
+  },
+  {
+    "id": "av5289_pitot_static_tube",
+    "name": "Pitot-Static Tube: Measuring Air Speed with Bernoulli's Equation",
+    "subject": "Aerodynamics",
+    "domain": "Fluid Dynamics",
+    "level": "L3",
+    "estimated_minutes": 75,
+    "hardware_tags": [
+      "aerodynamics",
+      "fluid_dynamics",
+      "measurement"
+    ],
+    "content": {
+      "outcomes_html": "<ul><li>Explain how a pitot-static tube uses pressure difference to determine air speed</li><li>Apply Bernoulli's equation to calculate air speed from manometer readings</li><li>Measure and record water column heights at incremental fan speeds and tabulate results</li></ul>",
+      "explain_html": "<p>A pitot-static tube measures two pressures: the stagnation (total) pressure at the tube tip facing into the flow, and the static (ambient) pressure at ports along the tube side. The difference between them is the dynamic pressure, which depends on the air speed. Using Bernoulli's equation: V² = 2(ρ_w × g × h) / ρ_a, where ρ_w = 1000 kg/m³ (water density), g = 9.81 N/kg, h = manometer height difference in metres, and ρ_a = 1.20 kg/m³ (air density). As fan speed increases, the dynamic pressure — and therefore the height difference in the U-tube manometer — increases. This principle underpins airspeed indicators on all aircraft.</p>",
+      "practice_html": "<ul><li>Mount the pitot-static tube holder in the wind tunnel test section, pointing directly into the airflow</li><li>Fill the U-tube manometer to the 50 mm mark and record the initial column heights at 0% fan speed</li><li>Increase fan speed in 10% steps from 10% to 100%, recording water column heights at each step</li><li>Calculate the height difference h at each speed and use Bernoulli's equation to compute air speed V</li><li>Plot a graph of air speed versus fan speed percentage and comment on the relationship</li></ul>",
+      "assessment_html": "<p>Calculation: at a fan speed of 60%, the manometer height difference is 18 mm. Using Bernoulli's equation, calculate the air speed in the test section. Show all working with units. Mark against worked answer.</p>"
+    },
+    "images": [
+      "assets/worksheets/CP0704-Aerodynamics-images/page005-img015.png",
+      "assets/worksheets/CP0704-Aerodynamics-images/page005-img017.png",
+      "assets/worksheets/CP0704-Aerodynamics-images/page010-img022.png",
+      "assets/worksheets/CP0704-Aerodynamics-images/page004-img012.png",
+      "assets/worksheets/CP0704-Aerodynamics-images/page005-img016.png"
+    ]
+  },
+  {
+    "id": "av5289_flow_cylinder",
+    "name": "Flow Patterns Around a Cylinder: Pressure Distribution and Reynolds Number",
+    "subject": "Aerodynamics",
+    "domain": "Fluid Dynamics",
+    "level": "L3",
+    "estimated_minutes": 75,
+    "hardware_tags": [
+      "aerodynamics",
+      "fluid_dynamics",
+      "measurement"
+    ],
+    "content": {
+      "outcomes_html": "<ul><li>Measure the pressure distribution around a cylinder at different angles of attack</li><li>Calculate the pressure coefficient Cp at each measurement point</li><li>Construct a pressure distribution diagram and interpret the flow pattern</li></ul>",
+      "explain_html": "<p>The pressure distribution around a body immersed in fluid flow is characterised by the pressure coefficient: Cp = (P − P∞) / (½ρV²), where P is the local surface pressure, P∞ is the free-stream static pressure (from the pitot-static tube results), ρ is air density, and V is the free-stream air speed. The flow pattern — and therefore Cp — depends significantly on the Reynolds number (Re), which is a function of the object's diameter, flow velocity, and fluid properties. The tapped cylinder is mounted on a protractor allowing rotation in 5° steps from 0° to 180°, so the full pressure distribution can be mapped. The pattern is symmetrical, allowing the complete diagram to be constructed.</p>",
+      "practice_html": "<ul><li>Mount the tapped cylinder on the protractor holder in the wind tunnel; rotate to 0° angle of attack</li><li>Zero the pressure sensor and set fan speed to 50%; record pressure at each 5° step from 0° to 180°</li><li>Use the pitot-static results to determine P∞ and calculate Cp at each angle</li><li>Plot Cp versus angle on the polar pressure distribution template in the Student Handout</li><li>Challenge: repeat at 80% and 100% fan speed and compare the Cp distributions</li></ul>",
+      "assessment_html": "<p>Short answer: explain what a negative Cp value indicates about the local air pressure on the cylinder surface, and describe where on the cylinder you would expect to find the highest positive Cp value and why. Mark against model answer.</p>"
+    },
+    "images": [
+      "assets/worksheets/CP0704-Aerodynamics-images/page012-img026.png",
+      "assets/worksheets/CP0704-Aerodynamics-images/page003-img005.png",
+      "assets/worksheets/CP0704-Aerodynamics-images/page005-img015.png",
+      "assets/worksheets/CP0704-Aerodynamics-images/page015-img030.png",
+      "assets/worksheets/CP0704-Aerodynamics-images/page013-img027.png"
+    ]
+  },
+  {
+    "id": "av5289_flow_aerofoil",
+    "name": "Flow Patterns Around an Aerofoil: Pressure Distribution and Angle of Attack",
+    "subject": "Aerodynamics",
+    "domain": "Fluid Dynamics",
     "level": "L3",
     "estimated_minutes": 90,
     "hardware_tags": [
-      "fluid_mechanics",
-      "instrumentation"
+      "aerodynamics",
+      "fluid_dynamics",
+      "measurement"
     ],
     "content": {
-      "outcomes_html": "<p><strong>Introduction:</strong> Recap conservation principles, then connect them to process design and troubleshooting where flow rates and heat duties must balance across units.</p><p>Set measurable lesson goals so learners can complete one full input-output balance and check whether answers are physically realistic.</p><p><em>Lesson context:</em> Mass and Energy Balances (L3) in Chemical Engineering.</p>",
-      "explain_html": "<p><strong>Over To You:</strong> Model one worked example first, then assign paired problems with increasing complexity and a final independent check question.</p><ul><li>Step 1: Define system boundaries and known values.</li><li>Step 2: Apply conservation equations with units.</li><li>Step 3: Verify the result using reasonableness and units checks.</li></ul><p>Require full method layout to improve consistency and reduce sign or unit errors.</p><p><em>Topic focus:</em> Mass and Energy Balances.</p>",
-      "practice_html": "<p><strong>Key Takeaways:</strong></p><ul><li>Conservation of mass and energy underpins process calculations.</li><li>System boundaries must be stated before equations are applied.</li><li>Unit consistency is essential for valid results.</li><li>Balanced equations support safer and more efficient plant operation.</li></ul><p><em>Consolidation task:</em> Learners complete one balance problem from memory and peer-check the method.</p>",
-      "assessment_html": "<p><strong>Student Questions:</strong></p><ol><li>Why is boundary definition the first step in balance calculations?</li><li>Show your full method for a one-in, one-out mass balance.</li><li>How do you check if an energy balance result is realistic?</li><li>Which unit conversion error is most common in today's tasks?</li><li>How can poor balance calculations affect real plant performance?</li><li>Extension: adapt your method for a recycle stream process.</li></ol><p><strong>Teacher check:</strong> Collect at least 3 worked solutions and address recurring calculation errors before close.</p>"
+      "outcomes_html": "<ul><li>Map the static pressure distribution across the upper and lower surfaces of a NACA0015 aerofoil</li><li>Calculate the pressure coefficient Cp at each tapping position and plot results</li><li>Compare pressure distributions at 0°, 5°, and 12° angles of attack</li></ul>",
+      "explain_html": "<p>The NACA0015 aerofoil has 23 surface tappings connected to internal tubes, allowing static pressure measurements across the chord. Each tapping position is expressed as a fraction x of the chord length (60 mm). Paired tappings on the upper and lower surfaces (e.g. tappings 2 and 13) share the same chord position, enabling direct comparison of upper/lower pressure differences — the source of lift. As angle of attack increases, the upper-surface suction peak intensifies and moves towards the leading edge. At high angles, flow separation causes a sudden loss of suction — the onset of stall. The pressure coefficient Cp = (P − P∞) / (½ρV²) is calculated using the free-stream pressure from Worksheet 1.</p>",
+      "practice_html": "<ul><li>Mount the NACA0015 aerofoil holder and set angle of attack to 0°; set fan to 25%</li><li>Connect each of the 23 tappings in turn to the pressure port and record readings in the Student Handout table</li><li>Calculate Cp for each tapping and plot Cp versus x on the 0° template</li><li>Repeat at angles of 5° and 12°, plotting on the corresponding templates</li><li>Compare the three distributions and describe the effect of increasing angle of attack on upper-surface suction</li></ul>",
+      "assessment_html": "<p>Analysis question: sketch the expected Cp distribution for an aerofoil at a high angle of attack near stall. Explain what happens to upper-surface pressure and how this affects the lift force. Mark against model answer covering suction loss and flow separation.</p>"
     },
-    "image": "assets/placeholder.jpg"
+    "images": [
+      "assets/worksheets/CP0704-Aerodynamics-images/page012-img026.png",
+      "assets/worksheets/CP0704-Aerodynamics-images/page003-img005.png",
+      "assets/worksheets/CP0704-Aerodynamics-images/page005-img015.png",
+      "assets/worksheets/CP0704-Aerodynamics-images/page015-img030.png",
+      "assets/worksheets/CP0704-Aerodynamics-images/page013-img027.png"
+    ]
   },
   {
-    "id": "t_chem_distillation",
-    "name": "Distillation and Separation Basics",
-    "subject": "Chemical Engineering",
-    "domain": "Separation Processes",
+    "id": "av5289_lift_drag",
+    "name": "Lift and Drag on an Aerofoil: Force Measurement and Aerofoil Comparison",
+    "subject": "Aerodynamics",
+    "domain": "Forces",
+    "level": "L3",
+    "estimated_minutes": 90,
+    "hardware_tags": [
+      "aerodynamics",
+      "forces",
+      "measurement"
+    ],
+    "content": {
+      "outcomes_html": "<ul><li>Measure lift and drag forces on aerofoils using the two-force module at varying angles of attack</li><li>Plot lift and drag versus angle of attack for three air speeds on the same axes</li><li>Compare the aerodynamic performance of three different aerofoil profiles</li></ul>",
+      "explain_html": "<p>The two-force module contains two built-in load cells — one measuring lift (perpendicular to airflow) and one measuring drag (parallel to airflow) — and a stepper motor to set the angle of attack precisely. Three aerofoil profiles are investigated: NACA0015 (symmetric, general purpose), S1223 (high-lift, cambered), and NACA4415 (cambered, moderate lift). As angle of attack increases, lift increases to a maximum then drops sharply (stall). Drag increases more gradually at low angles but rises steeply near stall. Comparing aerofoils reveals trade-offs between maximum lift, stall angle, and drag penalty. These principles underpin wing design for aircraft, wind turbines, and racing cars.</p>",
+      "practice_html": "<ul><li>Attach the NACA0015 aerofoil to the two-force holder and place it in the wind tunnel</li><li>Set fan to 20% and sweep angle of attack; record lift and drag at each step in the Student Handout</li><li>Repeat at 50% and 80% fan speed; plot lift versus angle of attack for all three speeds on the same axes</li><li>Repeat the full procedure for S1223 and NACA4415 aerofoils</li><li>Plot a comparison graph of lift versus angle at 20% fan speed for all three aerofoils and describe the differences</li></ul>",
+      "assessment_html": "<p>Comparison question: from your graphs, identify which aerofoil produces the highest maximum lift and which stalls at the lowest angle of attack. Suggest one application where each characteristic would be advantageous. Mark against model answer.</p>"
+    },
+    "images": [
+      "assets/worksheets/CP0704-Aerodynamics-images/page012-img026.png",
+      "assets/worksheets/CP0704-Aerodynamics-images/page015-img030.png",
+      "assets/worksheets/CP0704-Aerodynamics-images/page013-img027.png",
+      "assets/worksheets/CP0704-Aerodynamics-images/page010-img022.png",
+      "assets/worksheets/CP0704-Aerodynamics-images/page007-img018.png"
+    ]
+  },
+  {
+    "id": "av5289_drag_coefficient",
+    "name": "Drag Coefficient: Calculating Cd for Different Shape Profiles",
+    "subject": "Aerodynamics",
+    "domain": "Forces",
+    "level": "L3",
+    "estimated_minutes": 75,
+    "hardware_tags": [
+      "aerodynamics",
+      "forces",
+      "measurement"
+    ],
+    "content": {
+      "outcomes_html": "<ul><li>Measure drag force on a set of standard shapes at varying air speeds</li><li>Calculate the drag coefficient Cd using the drag force formula</li><li>Compare measured Cd values to theoretical values and explain discrepancies</li></ul>",
+      "explain_html": "<p>The drag coefficient Cd quantifies the aerodynamic drag of an object relative to its size and the dynamic pressure of the flow. The formula is: Cd = D / (½ρV²A), where D is drag force in N, ρ = 1.20 kg/m³ (air density), V is air speed in m/s, and A is the frontal area of the shape (using diameter d = 44 mm = 0.044 m). For well-designed streamlined bodies, Cd is low and relatively constant with speed; for bluff bodies (flat plate, cylinder), Cd is higher and may vary with Reynolds number. Theoretical values are provided in the Student Handout for comparison. Understanding Cd is fundamental to designing vehicles, buildings, and structures to minimise aerodynamic drag.</p>",
+      "practice_html": "<ul><li>Attach the cone shape to the two-force holder; set angle of attack to 0°; zero the sensors</li><li>Increase fan speed from 10% to 100% in 10% steps, recording air speed and drag force at each step</li><li>Calculate Cd at each speed using the formula above; comment on how Cd varies with air speed</li><li>Repeat for each of the other drag shapes, completing the corresponding tables in the Student Handout</li><li>Compare measured Cd values to the theoretical table and account for any differences</li></ul>",
+      "assessment_html": "<p>Calculation: a shape with frontal diameter 44 mm experiences a drag force of 0.12 N at an air speed of 8 m/s. Calculate the drag coefficient Cd. If the same shape were scaled up to 88 mm diameter but tested at the same air speed, predict the new drag force (assuming Cd unchanged). Mark against worked answer.</p>"
+    },
+    "images": [
+      "assets/worksheets/CP0704-Aerodynamics-images/page015-img030.png",
+      "assets/worksheets/CP0704-Aerodynamics-images/page013-img027.png",
+      "assets/worksheets/CP0704-Aerodynamics-images/page007-img018.png",
+      "assets/worksheets/CP0704-Aerodynamics-images/page028-img038.png",
+      "assets/worksheets/CP0704-Aerodynamics-images/page013-img028.png"
+    ]
+  },
+  {
+    "id": "av5289_smoke_visualisation",
+    "name": "Streamlined? Smoke Flow Visualisation",
+    "subject": "Aerodynamics",
+    "domain": "Fluid Dynamics",
     "level": "L3",
     "estimated_minutes": 60,
     "hardware_tags": [
-      "fluid_mechanics",
-      "safety_practice"
+      "aerodynamics",
+      "fluid_dynamics"
     ],
     "content": {
-      "outcomes_html": "<p><strong>Introduction:</strong> Introduce separation as a core chemical engineering task, then use a simple distillation context to link boiling point differences to process design choices.</p><p>State success criteria so learners can explain basic column operation and identify the main factors influencing separation quality.</p><p><em>Lesson context:</em> Distillation and Separation Basics (L3) in Chemical Engineering.</p>",
-      "explain_html": "<p><strong>Over To You:</strong> Start with a teacher-led schematic walkthrough of a distillation setup, then move to group tasks identifying feed, overhead, bottoms, and control points.</p><ul><li>Step 1: Describe how volatility drives separation.</li><li>Step 2: Identify key column sections and flow directions.</li><li>Step 3: Discuss operating variables that affect purity and yield.</li></ul><p>Keep links to safety explicit, especially around temperature, pressure, and hazardous vapours.</p><p><em>Topic focus:</em> Distillation and Separation Basics.</p>",
-      "practice_html": "<p><strong>Key Takeaways:</strong></p><ul><li>Distillation separates components by relative volatility.</li><li>Column internals and reflux influence separation performance.</li><li>Operating conditions must be controlled for consistent output quality.</li><li>Safety controls are essential during thermal separation processes.</li></ul><p><em>Consolidation task:</em> Learners produce a labelled sketch of a basic distillation process and explain each stream.</p>",
-      "assessment_html": "<p><strong>Student Questions:</strong></p><ol><li>What physical property allows distillation to separate mixtures?</li><li>Label the main streams in a simple distillation system.</li><li>How does reflux change purity and throughput?</li><li>Which operating variable would you monitor most closely, and why?</li><li>What are two key safety risks in distillation operations?</li><li>Extension: suggest one alternative separation method for a heat-sensitive mixture.</li></ol><p><strong>Teacher check:</strong> Use quick verbal checks plus one diagram response from each group before close.</p>"
+      "outcomes_html": "<ul><li>Use smoke to visualise and describe airflow patterns around objects placed in the wind tunnel</li><li>Identify regions of laminar flow, turbulent flow, and flow separation (wake)</li><li>Describe the relationship between streamlined shape and reduced drag</li></ul>",
+      "explain_html": "<p>Smoke visualisation makes invisible airflow patterns visible. Streamlines show how air moves around an object. For streamlined shapes (e.g. teardrop or aerofoil), streamlines remain attached to the surface and reconverge smoothly downstream, resulting in a narrow wake and low drag. For bluff shapes (e.g. flat plate, cylinder), flow separates from the surface well before the rear of the object, creating a wide turbulent wake and high drag. The fan should start at low speed to allow smoke streams to be observed clearly; a slow-motion video can capture the rapidly changing patterns. Keep the test object frontal area below 10% of the tunnel cross-section (125 mm × 125 mm) to avoid blockage effects.</p>",
+      "practice_html": "<ul><li>Attach the chosen object to the two-force holder and place it in the test section at the desired angle</li><li>Start the fan at low speed and hold the smoke generator outlet near the upstream end of the test section</li><li>Observe and sketch the flow pattern — mark regions of attached flow, separation, and wake</li><li>Increase fan speed gradually and observe how the pattern changes</li><li>Record observations using slow-motion video on a mobile phone if available and describe what the smoke reveals about drag</li></ul>",
+      "assessment_html": "<p>Short answer: sketch and label the smoke flow pattern you would expect around (a) a streamlined teardrop shape and (b) a flat plate perpendicular to the flow. Explain why one produces much more drag than the other. Mark against model answer covering separation, wake width, and pressure recovery.</p>"
     },
-    "image": "assets/placeholder1.jpg"
+    "images": [
+      "assets/worksheets/CP0704-Aerodynamics-images/page012-img026.png",
+      "assets/worksheets/CP0704-Aerodynamics-images/page003-img005.png",
+      "assets/worksheets/CP0704-Aerodynamics-images/page005-img015.png",
+      "assets/worksheets/CP0704-Aerodynamics-images/page015-img030.png",
+      "assets/worksheets/CP0704-Aerodynamics-images/page013-img027.png"
+    ]
+  },
+  {
+    "id": "av5289_open_investigation",
+    "name": "Where Next? Open-Ended Aerodynamic Investigation",
+    "subject": "Aerodynamics",
+    "domain": "Fluid Dynamics",
+    "level": "L3",
+    "estimated_minutes": 90,
+    "hardware_tags": [
+      "aerodynamics",
+      "fluid_dynamics",
+      "forces",
+      "measurement"
+    ],
+    "content": {
+      "outcomes_html": "<ul><li>Plan and conduct an independent aerodynamic investigation using wind tunnel techniques from previous worksheets</li><li>Select an appropriate measurement method (pressure, force, or flow visualisation) for the chosen object</li><li>Analyse and present results, drawing conclusions about aerodynamic performance</li></ul>",
+      "explain_html": "<p>The wind tunnel supports open-ended investigation beyond the prescribed worksheets. Learners design their own test object (or use a 3D-printed shape) and select the appropriate measurement technique from previous worksheets. Key guideline: keep the frontal area of the test object below 10% of the tunnel cross-section (125 mm × 125 mm) to avoid flow blockage affecting results. Possible investigation themes include car body shape optimisation, aerofoil design for a specific application, ship hull forms, building cladding pressure loading, or wind turbine blade profiles. If the test object includes a pressure tapping, proceed as in Worksheet 2; for force measurements, use the two-force module as in Worksheets 4–5; for flow visualisation, use smoke as in Worksheet 6.</p>",
+      "practice_html": "<ul><li>Choose an investigation theme (car body, aerofoil, ship hull, wind turbine blade, or other)</li><li>Design or select a test shape — keep frontal area below 10% of the tunnel cross-section</li><li>Write a brief plan: what you will measure, which techniques you will use, and what you expect to find</li><li>Carry out the investigation, recording all data systematically</li><li>Analyse results, plot appropriate graphs, and write a conclusion comparing findings to expectations</li></ul>",
+      "assessment_html": "<p>Report: submit a brief written report including: investigation aim, method, results (with graph), and conclusion. Trainer marks against criteria: clarity of aim, correct application of measurement technique, quality of data, and validity of conclusion.</p>"
+    },
+    "images": [
+      "assets/worksheets/CP0704-Aerodynamics-images/page001-img002.png",
+      "assets/worksheets/CP0704-Aerodynamics-images/page003-img005.png",
+      "assets/worksheets/CP0704-Aerodynamics-images/page015-img030.png",
+      "assets/worksheets/CP0704-Aerodynamics-images/page010-img022.png",
+      "assets/worksheets/CP0704-Aerodynamics-images/page007-img018.png"
+    ]
   }
 ]
