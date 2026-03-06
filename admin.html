@@ -179,6 +179,17 @@
     textarea.tall { min-height: 120px; }
 
     .hint { font-size: 0.75rem; color: #9ca3af; }
+    .upload-row {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-top: 8px;
+    }
+    .upload-status {
+      font-size: 0.78rem;
+      color: #6b7280;
+    }
 
     .content-blocks { margin-top: 4px; }
     .content-blocks h4 {
@@ -331,7 +342,12 @@
       <div class="form-group full">
         <label for="f-image">Lesson Image URL</label>
         <input type="text" id="f-image" placeholder="e.g. assets/images/ohms-law.jpg">
-        <span class="hint">Optional. Displayed under the Introduction section. Leave blank for no image.</span>
+        <span class="hint">Optional. You can still paste a URL/path, or upload a JPG/PNG under 1 MB and the server will fill this field for you.</span>
+        <div class="upload-row">
+          <input type="file" id="f-image-file" accept="image/png,image/jpeg">
+          <button class="btn btn-ghost" id="btn-upload-image" type="button">Upload Image</button>
+          <span class="upload-status" id="image-upload-status">No file selected</span>
+        </div>
       </div>
     </div>
 
@@ -381,6 +397,10 @@
   const btnCancel = document.getElementById('btn-cancel');
   const btnConfirm = document.getElementById('btn-confirm');
   const toast = document.getElementById('toast');
+  const imageFileInput = document.getElementById('f-image-file');
+  const btnUploadImage = document.getElementById('btn-upload-image');
+  const imageUploadStatus = document.getElementById('image-upload-status');
+  const MAX_IMAGE_BYTES = 1024 * 1024;
 
   fetch('/api/topics')
     .then((r) => { if (!r.ok) throw new Error('fetch failed'); return r.json(); })
@@ -458,6 +478,94 @@
     modalTitle.textContent = 'Add Topic';
     clearForm();
     openModal();
+  });
+
+  imageFileInput.addEventListener('change', () => {
+    const file = imageFileInput.files && imageFileInput.files[0];
+    if (!file) {
+      imageUploadStatus.textContent = 'No file selected';
+      return;
+    }
+    imageUploadStatus.textContent = `${file.name} (${Math.round(file.size / 1024)} KB)`;
+  });
+
+  btnUploadImage.addEventListener('click', async () => {
+    const file = imageFileInput.files && imageFileInput.files[0];
+    if (!file) {
+      showToast('Choose a JPG or PNG image first', 'error');
+      return;
+    }
+
+    if (!['image/jpeg', 'image/png'].includes(file.type)) {
+      showToast('Only JPG and PNG images are allowed', 'error');
+      return;
+    }
+
+    if (file.size > MAX_IMAGE_BYTES) {
+      showToast('Image must be under 1 MB', 'error');
+      return;
+    }
+
+    const token = await resolveAdminToken();
+    if (!token) {
+      showToast('Matrix staff token required to upload images', 'error');
+      return;
+    }
+
+    btnUploadImage.disabled = true;
+    imageUploadStatus.textContent = 'Uploading...';
+
+    try {
+      const base64 = await fileToBase64(file);
+      let response = await fetch('/api/upload-image', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'x-admin-token': token
+        },
+        body: JSON.stringify({
+          filename: file.name,
+          contentType: file.type,
+          data: base64
+        })
+      });
+
+      if (response.status === 401 || response.status === 403) {
+        sessionStorage.removeItem(ADMIN_TOKEN_KEY);
+        const retryToken = await resolveAdminToken(true);
+        if (!retryToken) {
+          throw new Error('Upload cancelled');
+        }
+        response = await fetch('/api/upload-image', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'x-admin-token': retryToken
+          },
+          body: JSON.stringify({
+            filename: file.name,
+            contentType: file.type,
+            data: base64
+          })
+        });
+      }
+
+      if (!response.ok) {
+        const errorText = await response.text();
+        throw new Error(errorText || `Upload failed (${response.status})`);
+      }
+
+      const result = await response.json();
+      document.getElementById('f-image').value = result.path || '';
+      imageUploadStatus.textContent = `Uploaded to ${result.path}`;
+      imageFileInput.value = '';
+      showToast('Image uploaded', 'success');
+    } catch (error) {
+      imageUploadStatus.textContent = 'Upload failed';
+      showToast(normalizeUploadError(error), 'error');
+    } finally {
+      btnUploadImage.disabled = false;
+    }
   });
 
   window.editTopic = function(i) {
@@ -588,6 +696,8 @@
       document.getElementById(id).value = '';
     });
     document.getElementById('f-minutes').value = 60;
+    imageFileInput.value = '';
+    imageUploadStatus.textContent = 'No file selected';
   }
 
   function generateId(name) {
@@ -602,6 +712,32 @@
     return String(html).replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim();
   }
 
+  function fileToBase64(file) {
+    return new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.onload = () => {
+        const result = String(reader.result || '');
+        const base64 = result.includes(',') ? result.split(',')[1] : '';
+        if (!base64) {
+          reject(new Error('Could not read image file'));
+          return;
+        }
+        resolve(base64);
+      };
+      reader.onerror = () => reject(new Error('Could not read image file'));
+      reader.readAsDataURL(file);
+    });
+  }
+
+  function normalizeUploadError(error) {
+    const message = String(error && error.message ? error.message : error || 'Upload failed');
+    try {
+      const parsed = JSON.parse(message);
+      return parsed.error || 'Upload failed';
+    } catch (_) {
+      return message;
+    }
+  }
   async function resolveAdminToken(forcePrompt = false) {
     let token = sessionStorage.getItem(ADMIN_TOKEN_KEY) || '';
     if (!token || forcePrompt) {
