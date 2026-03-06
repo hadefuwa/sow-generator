@@ -41,6 +41,7 @@ Then open `http://localhost:3000`.
 - `GET /api/hardware`
 - `PUT /api/hardware` (requires staff token)
 - `GET /api/templates`
+- `POST /api/upload-image` (requires staff token, JPG/PNG only, max 1 MB)
 - `GET /api/health`
 
 Write endpoints require header `x-admin-token: <ADMIN_TOKEN>`.
@@ -50,6 +51,7 @@ Environment variables:
 - `PORT` (provided by Railway)
 - `ADMIN_TOKEN` (required for Topic/Hardware Editor saves)
 - `DATA_DIR` (optional path for JSON storage; for Railway persistent volume use `/data`)
+- `IMAGE_UPLOAD_DIR` (optional path for uploaded topic images; for Railway persistent volume use a mounted path such as `/data/uploads`)
 
 ## Content Editing Guide (JSON-Only)
 
@@ -101,9 +103,13 @@ Rules:
 
 What `admin.html` provides:
 - Add/edit topic fields (name, subject, level, duration, hardware tags, all 4 content blocks).
+- Upload a lesson image from the admin page and store the returned server path in the topic.
 - Expand/collapse topic cards for review.
 - Delete with confirmation.
 - Download a ready-to-use `topics.json`.
+
+Railway note:
+- Uploaded images only survive restarts/redeploys if `IMAGE_UPLOAD_DIR` points to persistent storage. If it uses the container filesystem, uploads are temporary.
 
 ## Hardware Editor Workflow (For Non-Developers)
 

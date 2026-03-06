@@ -5,7 +5,13 @@ const path = require("path");
 const PORT = Number(process.env.PORT || 3000);
 const ROOT_DIR = __dirname;
 const DATA_DIR = path.resolve(process.env.DATA_DIR || path.join(ROOT_DIR, "data"));
+const UPLOADS_DIR = path.resolve(process.env.IMAGE_UPLOAD_DIR || path.join(ROOT_DIR, "assets", "uploads"));
 const ADMIN_TOKEN = (process.env.ADMIN_TOKEN || "").trim();
+const MAX_IMAGE_BYTES = 1024 * 1024;
+const ALLOWED_IMAGE_TYPES = {
+  "image/jpeg": ".jpg",
+  "image/png": ".png"
+};
 
 const JSON_FILES = {
   topics: "topics.json",
@@ -36,9 +42,17 @@ const server = http.createServer(async (req, res) => {
         ok: true,
         env: {
           dataDir: DATA_DIR,
+          imageUploadDir: UPLOADS_DIR,
           adminTokenConfigured: Boolean(ADMIN_TOKEN)
         }
       });
+    }
+
+    if (pathname === "/api/upload-image") {
+      if (req.method === "POST") {
+        return handleImageUpload(req, res);
+      }
+      return sendJson(res, 405, { error: "Method not allowed" });
     }
 
     if (pathname.startsWith("/api/")) {
@@ -110,6 +124,66 @@ async function handlePutJson(req, res, key) {
   }
 }
 
+async function handleImageUpload(req, res) {
+  if (!ADMIN_TOKEN) {
+    return sendJson(res, 500, { error: "ADMIN_TOKEN is not configured on the server" });
+  }
+  if (!isAuthorized(req)) {
+    return sendJson(res, 401, { error: "Unauthorized" });
+  }
+
+  let body;
+  try {
+    body = await readJsonBody(req);
+  } catch (error) {
+    return sendJson(res, 400, { error: error.message || "Invalid JSON body" });
+  }
+
+  const filename = String(body.filename || "").trim();
+  const contentType = String(body.contentType || "").trim().toLowerCase();
+  const data = String(body.data || "");
+
+  if (!filename || !contentType || !data) {
+    return sendJson(res, 400, { error: "filename, contentType, and data are required" });
+  }
+
+  if (!Object.prototype.hasOwnProperty.call(ALLOWED_IMAGE_TYPES, contentType)) {
+    return sendJson(res, 400, { error: "Only PNG and JPEG images are allowed" });
+  }
+
+  let buffer;
+  try {
+    buffer = Buffer.from(data, "base64");
+  } catch (_) {
+    return sendJson(res, 400, { error: "Image payload could not be decoded" });
+  }
+
+  if (!buffer.length) {
+    return sendJson(res, 400, { error: "Image payload cannot be empty" });
+  }
+
+  if (buffer.length > MAX_IMAGE_BYTES) {
+    return sendJson(res, 400, { error: "Image must be under 1 MB" });
+  }
+
+  const baseName = path.basename(filename, path.extname(filename)) || "lesson-image";
+  const safeName = baseName.toLowerCase().replace(/[^a-z0-9-_]+/g, "-").replace(/^-+|-+$/g, "") || "lesson-image";
+  const storedName = `${safeName}-${Date.now()}${ALLOWED_IMAGE_TYPES[contentType]}`;
+  const outputPath = path.join(UPLOADS_DIR, storedName);
+
+  try {
+    await fs.mkdir(UPLOADS_DIR, { recursive: true });
+    await fs.writeFile(outputPath, buffer);
+    return sendJson(res, 200, {
+      ok: true,
+      path: `/assets/uploads/${storedName}`,
+      size: buffer.length
+    });
+  } catch (_) {
+    return sendJson(res, 500, { error: "Could not save uploaded image" });
+  }
+}
+
 function isAuthorized(req) {
   const tokenHeader = String(req.headers["x-admin-token"] || "").trim();
   const authHeader = String(req.headers.authorization || "").trim();
@@ -126,6 +200,9 @@ async function readJsonBody(req) {
   const raw = Buffer.concat(chunks).toString("utf8");
   if (!raw.trim()) {
     throw new Error("Request body cannot be empty");
+  }
+  if (raw.length > MAX_IMAGE_BYTES * 2) {
+    throw new Error("Request body is too large");
   }
   return JSON.parse(raw);
 }
