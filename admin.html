@@ -325,6 +325,11 @@
         <input type="text" id="f-tags" placeholder="e.g. dc_measurement, instrumentation">
         <span class="hint">Comma-separated</span>
       </div>
+      <div class="form-group full">
+        <label for="f-image">Lesson Image URL</label>
+        <input type="text" id="f-image" placeholder="e.g. assets/images/ohms-law.jpg">
+        <span class="hint">Optional. Displayed under the Introduction section. Leave blank for no image.</span>
+      </div>
     </div>
 
     <div class="content-blocks">
@@ -460,6 +465,7 @@
     document.getElementById('f-level').value = t.level || '';
     document.getElementById('f-minutes').value = t.estimated_minutes || 60;
     document.getElementById('f-tags').value = (t.hardware_tags || []).join(', ');
+    document.getElementById('f-image').value = t.image || '';
     document.getElementById('f-outcomes').value = stripTags(t.content?.outcomes_html || '');
     document.getElementById('f-explain').value = stripTags(t.content?.explain_html || '');
     document.getElementById('f-practice').value = stripTags(t.content?.practice_html || '');
@@ -494,6 +500,7 @@
       level: document.getElementById('f-level').value.trim(),
       estimated_minutes: parseInt(document.getElementById('f-minutes').value, 10),
       hardware_tags: tags,
+      image: document.getElementById('f-image').value.trim() || undefined,
       content: {
         outcomes_html: wrapHtml(document.getElementById('f-outcomes').value),
         explain_html: wrapHtml(document.getElementById('f-explain').value),
@@ -541,7 +548,7 @@
   }
 
   function clearForm() {
-    ['f-name','f-subject','f-domain','f-level','f-tags','f-outcomes','f-explain','f-practice','f-assessment'].forEach((id) => {
+    ['f-name','f-subject','f-domain','f-level','f-tags','f-image','f-outcomes','f-explain','f-practice','f-assessment'].forEach((id) => {
       document.getElementById(id).value = '';
     });
     document.getElementById('f-minutes').value = 60;

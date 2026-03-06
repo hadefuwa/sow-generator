@@ -638,6 +638,37 @@ tbody tr:hover {
   background: #fff;
 }
 
+.lesson-image-item {
+  border-top: 1px dashed #dde7ee;
+  padding: 0.6rem 0;
+}
+
+.lesson-image-lesson {
+  max-width: 100%;
+  max-height: 280px;
+  width: auto;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+  border: 1px solid #d3dfe8;
+  object-fit: contain;
+}
+
+.lesson-image-viewer-wrap {
+  margin-top: 0.75rem;
+}
+
+.lesson-image-viewer {
+  max-width: 100%;
+  max-height: 300px;
+  width: auto;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+  border: 1px solid #d3dfe8;
+  object-fit: contain;
+}
+
 .lecturer-checks .lesson-card {
   margin-bottom: 0.65rem;
 }
@@ -845,6 +876,14 @@ tbody tr:hover {
     margin-top: 0.3rem;
     font-size: 0.88rem;
     color: #000;
+  }
+
+  .lesson-image-item {
+    display: block !important;
+  }
+
+  .lesson-image-lesson {
+    max-height: 200px;
   }
 
   .block-item-header button {

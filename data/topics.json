@@ -15,7 +15,8 @@
       "explain_html": "<p><strong>Over To You:</strong> Run a guided activity first (teacher-led), then move to paired task work. Require learners to write their method before they measure or calculate.</p><ul><li>Step 1: Set up safely and predict the expected result.</li><li>Step 2: Complete the task and record values clearly.</li><li>Step 3: Compare expected vs actual and explain any differences.</li></ul><p>For speed and consistency, this activity pattern is intentionally reused across related electrical lessons.</p><p><em>Topic focus:</em> Ohm's Law.</p>",
       "practice_html": "<p><strong>Key Takeaways:</strong></p><ul><li>Use the correct equation, unit, and symbol every time.</li><li>Check reasonableness of results before final answer.</li><li>Follow safe setup and isolation process during practical work.</li><li>Explain findings using evidence from measured values.</li></ul><p><em>Consolidation task:</em> Learners produce a short summary card and one worked example from memory.</p>",
       "assessment_html": "<p><strong>Student Questions:</strong></p><ol><li>What is the key principle used in today's lesson, and where is it applied in practice?</li><li>Show your method step-by-step for one example from class.</li><li>Which value/measurement could introduce error, and how would you reduce that risk?</li><li>What safety check must be completed before practical setup?</li><li>How would you explain this topic to a Year 1 apprentice?</li><li>Extension: adapt today's method for a more complex circuit scenario.</li></ol><p><strong>Teacher check:</strong> Collect responses from at least 3 learners and address misconceptions before closing.</p>"
-    }
+    },
+    "image": "assets/placeholder.jpg"
   },
   {
     "id": "t_series_circuits",
@@ -33,7 +34,8 @@
       "explain_html": "<p><strong>Over To You:</strong> Run a guided activity first (teacher-led), then move to paired task work. Require learners to write their method before they measure or calculate.</p><ul><li>Step 1: Set up safely and predict the expected result.</li><li>Step 2: Complete the task and record values clearly.</li><li>Step 3: Compare expected vs actual and explain any differences.</li></ul><p>For speed and consistency, this activity pattern is intentionally reused across related electrical lessons.</p><p><em>Topic focus:</em> Series Circuits.</p>",
       "practice_html": "<p><strong>Key Takeaways:</strong></p><ul><li>Use the correct equation, unit, and symbol every time.</li><li>Check reasonableness of results before final answer.</li><li>Follow safe setup and isolation process during practical work.</li><li>Explain findings using evidence from measured values.</li></ul><p><em>Consolidation task:</em> Learners produce a short summary card and one worked example from memory.</p>",
       "assessment_html": "<p><strong>Student Questions:</strong></p><ol><li>What is the key principle used in today's lesson, and where is it applied in practice?</li><li>Show your method step-by-step for one example from class.</li><li>Which value/measurement could introduce error, and how would you reduce that risk?</li><li>What safety check must be completed before practical setup?</li><li>How would you explain this topic to a Year 1 apprentice?</li><li>Extension: adapt today's method for a more complex circuit scenario.</li></ol><p><strong>Teacher check:</strong> Collect responses from at least 3 learners and address misconceptions before closing.</p>"
-    }
+    },
+    "image": "assets/placeholder1.jpg"
   },
   {
     "id": "t_parallel_circuits",
@@ -51,7 +53,8 @@
       "explain_html": "<p><strong>Over To You:</strong> Run a guided activity first (teacher-led), then move to paired task work. Require learners to write their method before they measure or calculate.</p><ul><li>Step 1: Set up safely and predict the expected result.</li><li>Step 2: Complete the task and record values clearly.</li><li>Step 3: Compare expected vs actual and explain any differences.</li></ul><p>For speed and consistency, this activity pattern is intentionally reused across related electrical lessons.</p><p><em>Topic focus:</em> Parallel Circuits.</p>",
       "practice_html": "<p><strong>Key Takeaways:</strong></p><ul><li>Use the correct equation, unit, and symbol every time.</li><li>Check reasonableness of results before final answer.</li><li>Follow safe setup and isolation process during practical work.</li><li>Explain findings using evidence from measured values.</li></ul><p><em>Consolidation task:</em> Learners produce a short summary card and one worked example from memory.</p>",
       "assessment_html": "<p><strong>Student Questions:</strong></p><ol><li>What is the key principle used in today's lesson, and where is it applied in practice?</li><li>Show your method step-by-step for one example from class.</li><li>Which value/measurement could introduce error, and how would you reduce that risk?</li><li>What safety check must be completed before practical setup?</li><li>How would you explain this topic to a Year 1 apprentice?</li><li>Extension: adapt today's method for a more complex circuit scenario.</li></ol><p><strong>Teacher check:</strong> Collect responses from at least 3 learners and address misconceptions before closing.</p>"
-    }
+    },
+    "image": "assets/placeholder2.jpg"
   },
   {
     "id": "t_kirchhoff",
@@ -69,7 +72,8 @@
       "explain_html": "<p><strong>Over To You:</strong> Run a guided activity first (teacher-led), then move to paired task work. Require learners to write their method before they measure or calculate.</p><ul><li>Step 1: Set up safely and predict the expected result.</li><li>Step 2: Complete the task and record values clearly.</li><li>Step 3: Compare expected vs actual and explain any differences.</li></ul><p>For speed and consistency, this activity pattern is intentionally reused across related electrical lessons.</p><p><em>Topic focus:</em> Kirchhoff's Laws.</p>",
       "practice_html": "<p><strong>Key Takeaways:</strong></p><ul><li>Use the correct equation, unit, and symbol every time.</li><li>Check reasonableness of results before final answer.</li><li>Follow safe setup and isolation process during practical work.</li><li>Explain findings using evidence from measured values.</li></ul><p><em>Consolidation task:</em> Learners produce a short summary card and one worked example from memory.</p>",
       "assessment_html": "<p><strong>Student Questions:</strong></p><ol><li>What is the key principle used in today's lesson, and where is it applied in practice?</li><li>Show your method step-by-step for one example from class.</li><li>Which value/measurement could introduce error, and how would you reduce that risk?</li><li>What safety check must be completed before practical setup?</li><li>How would you explain this topic to a Year 1 apprentice?</li><li>Extension: adapt today's method for a more complex circuit scenario.</li></ol><p><strong>Teacher check:</strong> Collect responses from at least 3 learners and address misconceptions before closing.</p>"
-    }
+    },
+    "image": "assets/placeholder4.jpg"
   },
   {
     "id": "t_power",
@@ -87,7 +91,8 @@
       "explain_html": "<p><strong>Over To You:</strong> Run a guided activity first (teacher-led), then move to paired task work. Require learners to write their method before they measure or calculate.</p><ul><li>Step 1: Set up safely and predict the expected result.</li><li>Step 2: Complete the task and record values clearly.</li><li>Step 3: Compare expected vs actual and explain any differences.</li></ul><p>For speed and consistency, this activity pattern is intentionally reused across related electrical lessons.</p><p><em>Topic focus:</em> Electrical Power and Energy.</p>",
       "practice_html": "<p><strong>Key Takeaways:</strong></p><ul><li>Use the correct equation, unit, and symbol every time.</li><li>Check reasonableness of results before final answer.</li><li>Follow safe setup and isolation process during practical work.</li><li>Explain findings using evidence from measured values.</li></ul><p><em>Consolidation task:</em> Learners produce a short summary card and one worked example from memory.</p>",
       "assessment_html": "<p><strong>Student Questions:</strong></p><ol><li>What is the key principle used in today's lesson, and where is it applied in practice?</li><li>Show your method step-by-step for one example from class.</li><li>Which value/measurement could introduce error, and how would you reduce that risk?</li><li>What safety check must be completed before practical setup?</li><li>How would you explain this topic to a Year 1 apprentice?</li><li>Extension: adapt today's method for a more complex circuit scenario.</li></ol><p><strong>Teacher check:</strong> Collect responses from at least 3 learners and address misconceptions before closing.</p>"
-    }
+    },
+    "image": "assets/placeholder5.jpg"
   },
   {
     "id": "t_meters",
@@ -105,7 +110,8 @@
       "explain_html": "<p><strong>Over To You:</strong> Run a guided activity first (teacher-led), then move to paired task work. Require learners to write their method before they measure or calculate.</p><ul><li>Step 1: Set up safely and predict the expected result.</li><li>Step 2: Complete the task and record values clearly.</li><li>Step 3: Compare expected vs actual and explain any differences.</li></ul><p>For speed and consistency, this activity pattern is intentionally reused across related electrical lessons.</p><p><em>Topic focus:</em> Using a Digital Multimeter.</p>",
       "practice_html": "<p><strong>Key Takeaways:</strong></p><ul><li>Use the correct equation, unit, and symbol every time.</li><li>Check reasonableness of results before final answer.</li><li>Follow safe setup and isolation process during practical work.</li><li>Explain findings using evidence from measured values.</li></ul><p><em>Consolidation task:</em> Learners produce a short summary card and one worked example from memory.</p>",
       "assessment_html": "<p><strong>Student Questions:</strong></p><ol><li>What is the key principle used in today's lesson, and where is it applied in practice?</li><li>Show your method step-by-step for one example from class.</li><li>Which value/measurement could introduce error, and how would you reduce that risk?</li><li>What safety check must be completed before practical setup?</li><li>How would you explain this topic to a Year 1 apprentice?</li><li>Extension: adapt today's method for a more complex circuit scenario.</li></ol><p><strong>Teacher check:</strong> Collect responses from at least 3 learners and address misconceptions before closing.</p>"
-    }
+    },
+    "image": "assets/placeholder6.jpg"
   },
   {
     "id": "t_safety",
@@ -122,7 +128,8 @@
       "explain_html": "<p><strong>Over To You:</strong> Run a guided activity first (teacher-led), then move to paired task work. Require learners to write their method before they measure or calculate.</p><ul><li>Step 1: Set up safely and predict the expected result.</li><li>Step 2: Complete the task and record values clearly.</li><li>Step 3: Compare expected vs actual and explain any differences.</li></ul><p>For speed and consistency, this activity pattern is intentionally reused across related electrical lessons.</p><p><em>Topic focus:</em> Electrical Safety and Isolation.</p>",
       "practice_html": "<p><strong>Key Takeaways:</strong></p><ul><li>Use the correct equation, unit, and symbol every time.</li><li>Check reasonableness of results before final answer.</li><li>Follow safe setup and isolation process during practical work.</li><li>Explain findings using evidence from measured values.</li></ul><p><em>Consolidation task:</em> Learners produce a short summary card and one worked example from memory.</p>",
       "assessment_html": "<p><strong>Student Questions:</strong></p><ol><li>What is the key principle used in today's lesson, and where is it applied in practice?</li><li>Show your method step-by-step for one example from class.</li><li>Which value/measurement could introduce error, and how would you reduce that risk?</li><li>What safety check must be completed before practical setup?</li><li>How would you explain this topic to a Year 1 apprentice?</li><li>Extension: adapt today's method for a more complex circuit scenario.</li></ol><p><strong>Teacher check:</strong> Collect responses from at least 3 learners and address misconceptions before closing.</p>"
-    }
+    },
+    "image": "assets/placeholder7.jpg"
   },
   {
     "id": "t_mcb",
@@ -140,7 +147,8 @@
       "explain_html": "<p><strong>Over To You:</strong> Run a guided activity first (teacher-led), then move to paired task work. Require learners to write their method before they measure or calculate.</p><ul><li>Step 1: Set up safely and predict the expected result.</li><li>Step 2: Complete the task and record values clearly.</li><li>Step 3: Compare expected vs actual and explain any differences.</li></ul><p>For speed and consistency, this activity pattern is intentionally reused across related electrical lessons.</p><p><em>Topic focus:</em> Protective Devices (MCB, Fuse, RCD).</p>",
       "practice_html": "<p><strong>Key Takeaways:</strong></p><ul><li>Use the correct equation, unit, and symbol every time.</li><li>Check reasonableness of results before final answer.</li><li>Follow safe setup and isolation process during practical work.</li><li>Explain findings using evidence from measured values.</li></ul><p><em>Consolidation task:</em> Learners produce a short summary card and one worked example from memory.</p>",
       "assessment_html": "<p><strong>Student Questions:</strong></p><ol><li>What is the key principle used in today's lesson, and where is it applied in practice?</li><li>Show your method step-by-step for one example from class.</li><li>Which value/measurement could introduce error, and how would you reduce that risk?</li><li>What safety check must be completed before practical setup?</li><li>How would you explain this topic to a Year 1 apprentice?</li><li>Extension: adapt today's method for a more complex circuit scenario.</li></ol><p><strong>Teacher check:</strong> Collect responses from at least 3 learners and address misconceptions before closing.</p>"
-    }
+    },
+    "image": "assets/placeholder.jpg"
   },
   {
     "id": "t_troubleshooting",
@@ -158,7 +166,8 @@
       "explain_html": "<p><strong>Over To You:</strong> Run a guided activity first (teacher-led), then move to paired task work. Require learners to write their method before they measure or calculate.</p><ul><li>Step 1: Set up safely and predict the expected result.</li><li>Step 2: Complete the task and record values clearly.</li><li>Step 3: Compare expected vs actual and explain any differences.</li></ul><p>For speed and consistency, this activity pattern is intentionally reused across related electrical lessons.</p><p><em>Topic focus:</em> Basic Fault Finding.</p>",
       "practice_html": "<p><strong>Key Takeaways:</strong></p><ul><li>Use the correct equation, unit, and symbol every time.</li><li>Check reasonableness of results before final answer.</li><li>Follow safe setup and isolation process during practical work.</li><li>Explain findings using evidence from measured values.</li></ul><p><em>Consolidation task:</em> Learners produce a short summary card and one worked example from memory.</p>",
       "assessment_html": "<p><strong>Student Questions:</strong></p><ol><li>What is the key principle used in today's lesson, and where is it applied in practice?</li><li>Show your method step-by-step for one example from class.</li><li>Which value/measurement could introduce error, and how would you reduce that risk?</li><li>What safety check must be completed before practical setup?</li><li>How would you explain this topic to a Year 1 apprentice?</li><li>Extension: adapt today's method for a more complex circuit scenario.</li></ol><p><strong>Teacher check:</strong> Collect responses from at least 3 learners and address misconceptions before closing.</p>"
-    }
+    },
+    "image": "assets/placeholder1.jpg"
   },
   {
     "id": "t_switching",
@@ -176,7 +185,8 @@
       "explain_html": "<p><strong>Over To You:</strong> Run a guided activity first (teacher-led), then move to paired task work. Require learners to write their method before they measure or calculate.</p><ul><li>Step 1: Set up safely and predict the expected result.</li><li>Step 2: Complete the task and record values clearly.</li><li>Step 3: Compare expected vs actual and explain any differences.</li></ul><p>For speed and consistency, this activity pattern is intentionally reused across related electrical lessons.</p><p><em>Topic focus:</em> Switching and Control Basics.</p>",
       "practice_html": "<p><strong>Key Takeaways:</strong></p><ul><li>Use the correct equation, unit, and symbol every time.</li><li>Check reasonableness of results before final answer.</li><li>Follow safe setup and isolation process during practical work.</li><li>Explain findings using evidence from measured values.</li></ul><p><em>Consolidation task:</em> Learners produce a short summary card and one worked example from memory.</p>",
       "assessment_html": "<p><strong>Student Questions:</strong></p><ol><li>What is the key principle used in today's lesson, and where is it applied in practice?</li><li>Show your method step-by-step for one example from class.</li><li>Which value/measurement could introduce error, and how would you reduce that risk?</li><li>What safety check must be completed before practical setup?</li><li>How would you explain this topic to a Year 1 apprentice?</li><li>Extension: adapt today's method for a more complex circuit scenario.</li></ol><p><strong>Teacher check:</strong> Collect responses from at least 3 learners and address misconceptions before closing.</p>"
-    }
+    },
+    "image": "assets/placeholder2.jpg"
   },
   {
     "id": "t_mech_materials",
@@ -194,7 +204,8 @@
       "explain_html": "<p><strong>Over To You:</strong> Run a guided practical setup first, then shift to independent or paired task completion. Learners should document method, tools used, and quality checks.</p><ul><li>Step 1: Plan and prepare tools/components.</li><li>Step 2: Execute the practical task against criteria.</li><li>Step 3: Review output quality and identify one improvement.</li></ul><p>To accelerate rollout, this core activity format is deliberately duplicated across several mechanical lessons.</p><p><em>Topic focus:</em> Engineering Materials and Properties.</p>",
       "practice_html": "<p><strong>Key Takeaways:</strong></p><ul><li>Follow a clear method and record each step.</li><li>Use correct engineering terms and tolerances.</li><li>Verify quality/safety checks before sign-off.</li><li>Recommend one practical improvement based on evidence.</li></ul><p><em>Consolidation task:</em> Learners produce a short summary card and one worked example from memory.</p>",
       "assessment_html": "<p><strong>Student Questions:</strong></p><ol><li>Which workshop task from today best demonstrates the core engineering principle?</li><li>Describe your method and justify each tool or setting selected.</li><li>What tolerance/quality check was most critical, and why?</li><li>Identify one common fault and how you would diagnose it quickly.</li><li>How would you improve your result if repeating the task tomorrow?</li><li>Extension: propose a higher-spec version of the same task for advanced learners.</li></ol><p><strong>Teacher check:</strong> Collect responses from at least 3 learners and address misconceptions before closing.</p>"
-    }
+    },
+    "image": "assets/placeholder4.jpg"
   },
   {
     "id": "t_mech_measurement",
@@ -212,7 +223,8 @@
       "explain_html": "<p><strong>Over To You:</strong> Run a guided practical setup first, then shift to independent or paired task completion. Learners should document method, tools used, and quality checks.</p><ul><li>Step 1: Plan and prepare tools/components.</li><li>Step 2: Execute the practical task against criteria.</li><li>Step 3: Review output quality and identify one improvement.</li></ul><p>To accelerate rollout, this core activity format is deliberately duplicated across several mechanical lessons.</p><p><em>Topic focus:</em> Mechanical Measurement and Tolerancing.</p>",
       "practice_html": "<p><strong>Key Takeaways:</strong></p><ul><li>Follow a clear method and record each step.</li><li>Use correct engineering terms and tolerances.</li><li>Verify quality/safety checks before sign-off.</li><li>Recommend one practical improvement based on evidence.</li></ul><p><em>Consolidation task:</em> Learners produce a short summary card and one worked example from memory.</p>",
       "assessment_html": "<p><strong>Student Questions:</strong></p><ol><li>Which workshop task from today best demonstrates the core engineering principle?</li><li>Describe your method and justify each tool or setting selected.</li><li>What tolerance/quality check was most critical, and why?</li><li>Identify one common fault and how you would diagnose it quickly.</li><li>How would you improve your result if repeating the task tomorrow?</li><li>Extension: propose a higher-spec version of the same task for advanced learners.</li></ol><p><strong>Teacher check:</strong> Collect responses from at least 3 learners and address misconceptions before closing.</p>"
-    }
+    },
+    "image": "assets/placeholder5.jpg"
   },
   {
     "id": "t_mech_fasteners",
@@ -230,7 +242,8 @@
       "explain_html": "<p><strong>Over To You:</strong> Run a guided practical setup first, then shift to independent or paired task completion. Learners should document method, tools used, and quality checks.</p><ul><li>Step 1: Plan and prepare tools/components.</li><li>Step 2: Execute the practical task against criteria.</li><li>Step 3: Review output quality and identify one improvement.</li></ul><p>To accelerate rollout, this core activity format is deliberately duplicated across several mechanical lessons.</p><p><em>Topic focus:</em> Fasteners, Threads, and Torque.</p>",
       "practice_html": "<p><strong>Key Takeaways:</strong></p><ul><li>Follow a clear method and record each step.</li><li>Use correct engineering terms and tolerances.</li><li>Verify quality/safety checks before sign-off.</li><li>Recommend one practical improvement based on evidence.</li></ul><p><em>Consolidation task:</em> Learners produce a short summary card and one worked example from memory.</p>",
       "assessment_html": "<p><strong>Student Questions:</strong></p><ol><li>Which workshop task from today best demonstrates the core engineering principle?</li><li>Describe your method and justify each tool or setting selected.</li><li>What tolerance/quality check was most critical, and why?</li><li>Identify one common fault and how you would diagnose it quickly.</li><li>How would you improve your result if repeating the task tomorrow?</li><li>Extension: propose a higher-spec version of the same task for advanced learners.</li></ol><p><strong>Teacher check:</strong> Collect responses from at least 3 learners and address misconceptions before closing.</p>"
-    }
+    },
+    "image": "assets/placeholder6.jpg"
   },
   {
     "id": "t_mech_cad_intro",
@@ -247,7 +260,8 @@
       "explain_html": "<p><strong>Over To You:</strong> Run a guided practical setup first, then shift to independent or paired task completion. Learners should document method, tools used, and quality checks.</p><ul><li>Step 1: Plan and prepare tools/components.</li><li>Step 2: Execute the practical task against criteria.</li><li>Step 3: Review output quality and identify one improvement.</li></ul><p>To accelerate rollout, this core activity format is deliberately duplicated across several mechanical lessons.</p><p><em>Topic focus:</em> 2D/3D CAD Fundamentals.</p>",
       "practice_html": "<p><strong>Key Takeaways:</strong></p><ul><li>Follow a clear method and record each step.</li><li>Use correct engineering terms and tolerances.</li><li>Verify quality/safety checks before sign-off.</li><li>Recommend one practical improvement based on evidence.</li></ul><p><em>Consolidation task:</em> Learners produce a short summary card and one worked example from memory.</p>",
       "assessment_html": "<p><strong>Student Questions:</strong></p><ol><li>Which workshop task from today best demonstrates the core engineering principle?</li><li>Describe your method and justify each tool or setting selected.</li><li>What tolerance/quality check was most critical, and why?</li><li>Identify one common fault and how you would diagnose it quickly.</li><li>How would you improve your result if repeating the task tomorrow?</li><li>Extension: propose a higher-spec version of the same task for advanced learners.</li></ol><p><strong>Teacher check:</strong> Collect responses from at least 3 learners and address misconceptions before closing.</p>"
-    }
+    },
+    "image": "assets/placeholder7.jpg"
   },
   {
     "id": "t_mech_drives",
@@ -265,7 +279,8 @@
       "explain_html": "<p><strong>Over To You:</strong> Run a guided practical setup first, then shift to independent or paired task completion. Learners should document method, tools used, and quality checks.</p><ul><li>Step 1: Plan and prepare tools/components.</li><li>Step 2: Execute the practical task against criteria.</li><li>Step 3: Review output quality and identify one improvement.</li></ul><p>To accelerate rollout, this core activity format is deliberately duplicated across several mechanical lessons.</p><p><em>Topic focus:</em> Mechanical Power Transmission.</p>",
       "practice_html": "<p><strong>Key Takeaways:</strong></p><ul><li>Follow a clear method and record each step.</li><li>Use correct engineering terms and tolerances.</li><li>Verify quality/safety checks before sign-off.</li><li>Recommend one practical improvement based on evidence.</li></ul><p><em>Consolidation task:</em> Learners produce a short summary card and one worked example from memory.</p>",
       "assessment_html": "<p><strong>Student Questions:</strong></p><ol><li>Which workshop task from today best demonstrates the core engineering principle?</li><li>Describe your method and justify each tool or setting selected.</li><li>What tolerance/quality check was most critical, and why?</li><li>Identify one common fault and how you would diagnose it quickly.</li><li>How would you improve your result if repeating the task tomorrow?</li><li>Extension: propose a higher-spec version of the same task for advanced learners.</li></ol><p><strong>Teacher check:</strong> Collect responses from at least 3 learners and address misconceptions before closing.</p>"
-    }
+    },
+    "image": "assets/placeholder.jpg"
   },
   {
     "id": "t_mech_fluids",
@@ -284,7 +299,8 @@
       "explain_html": "<p><strong>Over To You:</strong> Run a guided practical setup first, then shift to independent or paired task completion. Learners should document method, tools used, and quality checks.</p><ul><li>Step 1: Plan and prepare tools/components.</li><li>Step 2: Execute the practical task against criteria.</li><li>Step 3: Review output quality and identify one improvement.</li></ul><p>To accelerate rollout, this core activity format is deliberately duplicated across several mechanical lessons.</p><p><em>Topic focus:</em> Hydraulics and Pneumatics Basics.</p>",
       "practice_html": "<p><strong>Key Takeaways:</strong></p><ul><li>Follow a clear method and record each step.</li><li>Use correct engineering terms and tolerances.</li><li>Verify quality/safety checks before sign-off.</li><li>Recommend one practical improvement based on evidence.</li></ul><p><em>Consolidation task:</em> Learners produce a short summary card and one worked example from memory.</p>",
       "assessment_html": "<p><strong>Student Questions:</strong></p><ol><li>Which workshop task from today best demonstrates the core engineering principle?</li><li>Describe your method and justify each tool or setting selected.</li><li>What tolerance/quality check was most critical, and why?</li><li>Identify one common fault and how you would diagnose it quickly.</li><li>How would you improve your result if repeating the task tomorrow?</li><li>Extension: propose a higher-spec version of the same task for advanced learners.</li></ol><p><strong>Teacher check:</strong> Collect responses from at least 3 learners and address misconceptions before closing.</p>"
-    }
+    },
+    "image": "assets/placeholder1.jpg"
   },
   {
     "id": "t_mech_maintenance",
@@ -302,7 +318,8 @@
       "explain_html": "<p><strong>Over To You:</strong> Run a guided practical setup first, then shift to independent or paired task completion. Learners should document method, tools used, and quality checks.</p><ul><li>Step 1: Plan and prepare tools/components.</li><li>Step 2: Execute the practical task against criteria.</li><li>Step 3: Review output quality and identify one improvement.</li></ul><p>To accelerate rollout, this core activity format is deliberately duplicated across several mechanical lessons.</p><p><em>Topic focus:</em> Planned Preventive Maintenance.</p>",
       "practice_html": "<p><strong>Key Takeaways:</strong></p><ul><li>Follow a clear method and record each step.</li><li>Use correct engineering terms and tolerances.</li><li>Verify quality/safety checks before sign-off.</li><li>Recommend one practical improvement based on evidence.</li></ul><p><em>Consolidation task:</em> Learners produce a short summary card and one worked example from memory.</p>",
       "assessment_html": "<p><strong>Student Questions:</strong></p><ol><li>Which workshop task from today best demonstrates the core engineering principle?</li><li>Describe your method and justify each tool or setting selected.</li><li>What tolerance/quality check was most critical, and why?</li><li>Identify one common fault and how you would diagnose it quickly.</li><li>How would you improve your result if repeating the task tomorrow?</li><li>Extension: propose a higher-spec version of the same task for advanced learners.</li></ol><p><strong>Teacher check:</strong> Collect responses from at least 3 learners and address misconceptions before closing.</p>"
-    }
+    },
+    "image": "assets/placeholder2.jpg"
   },
   {
     "id": "t_mech_quality",
@@ -320,7 +337,8 @@
       "explain_html": "<p><strong>Over To You:</strong> Run a guided practical setup first, then shift to independent or paired task completion. Learners should document method, tools used, and quality checks.</p><ul><li>Step 1: Plan and prepare tools/components.</li><li>Step 2: Execute the practical task against criteria.</li><li>Step 3: Review output quality and identify one improvement.</li></ul><p>To accelerate rollout, this core activity format is deliberately duplicated across several mechanical lessons.</p><p><em>Topic focus:</em> Quality Control in Manufacturing.</p>",
       "practice_html": "<p><strong>Key Takeaways:</strong></p><ul><li>Follow a clear method and record each step.</li><li>Use correct engineering terms and tolerances.</li><li>Verify quality/safety checks before sign-off.</li><li>Recommend one practical improvement based on evidence.</li></ul><p><em>Consolidation task:</em> Learners produce a short summary card and one worked example from memory.</p>",
       "assessment_html": "<p><strong>Student Questions:</strong></p><ol><li>Which workshop task from today best demonstrates the core engineering principle?</li><li>Describe your method and justify each tool or setting selected.</li><li>What tolerance/quality check was most critical, and why?</li><li>Identify one common fault and how you would diagnose it quickly.</li><li>How would you improve your result if repeating the task tomorrow?</li><li>Extension: propose a higher-spec version of the same task for advanced learners.</li></ol><p><strong>Teacher check:</strong> Collect responses from at least 3 learners and address misconceptions before closing.</p>"
-    }
+    },
+    "image": "assets/placeholder4.jpg"
   },
   {
     "id": "t_mech_cnc_intro",
@@ -338,7 +356,8 @@
       "explain_html": "<p><strong>Over To You:</strong> Run a guided practical setup first, then shift to independent or paired task completion. Learners should document method, tools used, and quality checks.</p><ul><li>Step 1: Plan and prepare tools/components.</li><li>Step 2: Execute the practical task against criteria.</li><li>Step 3: Review output quality and identify one improvement.</li></ul><p>To accelerate rollout, this core activity format is deliberately duplicated across several mechanical lessons.</p><p><em>Topic focus:</em> Introduction to CNC Machining.</p>",
       "practice_html": "<p><strong>Key Takeaways:</strong></p><ul><li>Follow a clear method and record each step.</li><li>Use correct engineering terms and tolerances.</li><li>Verify quality/safety checks before sign-off.</li><li>Recommend one practical improvement based on evidence.</li></ul><p><em>Consolidation task:</em> Learners produce a short summary card and one worked example from memory.</p>",
       "assessment_html": "<p><strong>Student Questions:</strong></p><ol><li>Which workshop task from today best demonstrates the core engineering principle?</li><li>Describe your method and justify each tool or setting selected.</li><li>What tolerance/quality check was most critical, and why?</li><li>Identify one common fault and how you would diagnose it quickly.</li><li>How would you improve your result if repeating the task tomorrow?</li><li>Extension: propose a higher-spec version of the same task for advanced learners.</li></ol><p><strong>Teacher check:</strong> Collect responses from at least 3 learners and address misconceptions before closing.</p>"
-    }
+    },
+    "image": "assets/placeholder5.jpg"
   },
   {
     "id": "t_mech_health_safety",
@@ -355,6 +374,64 @@
       "explain_html": "<p><strong>Over To You:</strong> Run a guided practical setup first, then shift to independent or paired task completion. Learners should document method, tools used, and quality checks.</p><ul><li>Step 1: Plan and prepare tools/components.</li><li>Step 2: Execute the practical task against criteria.</li><li>Step 3: Review output quality and identify one improvement.</li></ul><p>To accelerate rollout, this core activity format is deliberately duplicated across several mechanical lessons.</p><p><em>Topic focus:</em> Mechanical Workshop Safety.</p>",
       "practice_html": "<p><strong>Key Takeaways:</strong></p><ul><li>Follow a clear method and record each step.</li><li>Use correct engineering terms and tolerances.</li><li>Verify quality/safety checks before sign-off.</li><li>Recommend one practical improvement based on evidence.</li></ul><p><em>Consolidation task:</em> Learners produce a short summary card and one worked example from memory.</p>",
       "assessment_html": "<p><strong>Student Questions:</strong></p><ol><li>Which workshop task from today best demonstrates the core engineering principle?</li><li>Describe your method and justify each tool or setting selected.</li><li>What tolerance/quality check was most critical, and why?</li><li>Identify one common fault and how you would diagnose it quickly.</li><li>How would you improve your result if repeating the task tomorrow?</li><li>Extension: propose a higher-spec version of the same task for advanced learners.</li></ol><p><strong>Teacher check:</strong> Collect responses from at least 3 learners and address misconceptions before closing.</p>"
-    }
+    },
+    "image": "assets/placeholder6.jpg"
+  },
+  {
+    "id": "t_chem_process_flow",
+    "name": "Process Flow Diagrams and Plant Blocks",
+    "subject": "Chemical Engineering",
+    "domain": "Process Fundamentals",
+    "level": "L3",
+    "estimated_minutes": 60,
+    "hardware_tags": [
+      "fluid_mechanics",
+      "instrumentation"
+    ],
+    "content": {
+      "outcomes_html": "<p><strong>Introduction:</strong> Start with a short recap and an industry example of how a chemical plant is split into process units, then link symbols to real equipment learners may see in workshops or placements.</p><p>Define success criteria clearly: learners should identify core plant blocks and follow a simple process route from feed to product.</p><p><em>Lesson context:</em> Process Flow Diagrams and Plant Blocks (L3) in Chemical Engineering.</p>",
+      "explain_html": "<p><strong>Over To You:</strong> Begin with a guided walkthrough of one simple process flow diagram, then move to pair work where learners map each symbol to equipment function.</p><ul><li>Step 1: Identify feed, process, and output sections.</li><li>Step 2: Label major units and transfer lines.</li><li>Step 3: Explain how material moves through the plant safely.</li></ul><p>Use standard symbol language and direction arrows consistently to build technical communication habits.</p><p><em>Topic focus:</em> Process Flow Diagrams and Plant Blocks.</p>",
+      "practice_html": "<p><strong>Key Takeaways:</strong></p><ul><li>Read a basic process flow from left to right with confidence.</li><li>Use correct terms for vessels, pumps, heat exchangers, and lines.</li><li>Connect each process step to a physical plant function.</li><li>Describe one key safety check point on the process route.</li></ul><p><em>Consolidation task:</em> Learners annotate a blank process diagram and explain the flow sequence verbally.</p>",
+      "assessment_html": "<p><strong>Student Questions:</strong></p><ol><li>What does a process flow diagram communicate to engineers and operators?</li><li>Trace one full material path from feed entry to final product.</li><li>Which process block is most likely to need close monitoring, and why?</li><li>Where would you place a safety checkpoint in this flow?</li><li>What is one risk if symbols or arrows are misread?</li><li>Extension: propose one improvement to make the diagram clearer for new technicians.</li></ol><p><strong>Teacher check:</strong> Sample at least 3 learner explanations and correct terminology errors before close.</p>"
+    },
+    "image": "assets/placeholder7.jpg"
+  },
+  {
+    "id": "t_chem_mass_energy",
+    "name": "Mass and Energy Balances",
+    "subject": "Chemical Engineering",
+    "domain": "Calculations",
+    "level": "L3",
+    "estimated_minutes": 90,
+    "hardware_tags": [
+      "fluid_mechanics",
+      "instrumentation"
+    ],
+    "content": {
+      "outcomes_html": "<p><strong>Introduction:</strong> Recap conservation principles, then connect them to process design and troubleshooting where flow rates and heat duties must balance across units.</p><p>Set measurable lesson goals so learners can complete one full input-output balance and check whether answers are physically realistic.</p><p><em>Lesson context:</em> Mass and Energy Balances (L3) in Chemical Engineering.</p>",
+      "explain_html": "<p><strong>Over To You:</strong> Model one worked example first, then assign paired problems with increasing complexity and a final independent check question.</p><ul><li>Step 1: Define system boundaries and known values.</li><li>Step 2: Apply conservation equations with units.</li><li>Step 3: Verify the result using reasonableness and units checks.</li></ul><p>Require full method layout to improve consistency and reduce sign or unit errors.</p><p><em>Topic focus:</em> Mass and Energy Balances.</p>",
+      "practice_html": "<p><strong>Key Takeaways:</strong></p><ul><li>Conservation of mass and energy underpins process calculations.</li><li>System boundaries must be stated before equations are applied.</li><li>Unit consistency is essential for valid results.</li><li>Balanced equations support safer and more efficient plant operation.</li></ul><p><em>Consolidation task:</em> Learners complete one balance problem from memory and peer-check the method.</p>",
+      "assessment_html": "<p><strong>Student Questions:</strong></p><ol><li>Why is boundary definition the first step in balance calculations?</li><li>Show your full method for a one-in, one-out mass balance.</li><li>How do you check if an energy balance result is realistic?</li><li>Which unit conversion error is most common in today's tasks?</li><li>How can poor balance calculations affect real plant performance?</li><li>Extension: adapt your method for a recycle stream process.</li></ol><p><strong>Teacher check:</strong> Collect at least 3 worked solutions and address recurring calculation errors before close.</p>"
+    },
+    "image": "assets/placeholder.jpg"
+  },
+  {
+    "id": "t_chem_distillation",
+    "name": "Distillation and Separation Basics",
+    "subject": "Chemical Engineering",
+    "domain": "Separation Processes",
+    "level": "L3",
+    "estimated_minutes": 60,
+    "hardware_tags": [
+      "fluid_mechanics",
+      "safety_practice"
+    ],
+    "content": {
+      "outcomes_html": "<p><strong>Introduction:</strong> Introduce separation as a core chemical engineering task, then use a simple distillation context to link boiling point differences to process design choices.</p><p>State success criteria so learners can explain basic column operation and identify the main factors influencing separation quality.</p><p><em>Lesson context:</em> Distillation and Separation Basics (L3) in Chemical Engineering.</p>",
+      "explain_html": "<p><strong>Over To You:</strong> Start with a teacher-led schematic walkthrough of a distillation setup, then move to group tasks identifying feed, overhead, bottoms, and control points.</p><ul><li>Step 1: Describe how volatility drives separation.</li><li>Step 2: Identify key column sections and flow directions.</li><li>Step 3: Discuss operating variables that affect purity and yield.</li></ul><p>Keep links to safety explicit, especially around temperature, pressure, and hazardous vapours.</p><p><em>Topic focus:</em> Distillation and Separation Basics.</p>",
+      "practice_html": "<p><strong>Key Takeaways:</strong></p><ul><li>Distillation separates components by relative volatility.</li><li>Column internals and reflux influence separation performance.</li><li>Operating conditions must be controlled for consistent output quality.</li><li>Safety controls are essential during thermal separation processes.</li></ul><p><em>Consolidation task:</em> Learners produce a labelled sketch of a basic distillation process and explain each stream.</p>",
+      "assessment_html": "<p><strong>Student Questions:</strong></p><ol><li>What physical property allows distillation to separate mixtures?</li><li>Label the main streams in a simple distillation system.</li><li>How does reflux change purity and throughput?</li><li>Which operating variable would you monitor most closely, and why?</li><li>What are two key safety risks in distillation operations?</li><li>Extension: suggest one alternative separation method for a heat-sensitive mixture.</li></ol><p><strong>Teacher check:</strong> Use quick verbal checks plus one diagram response from each group before close.</p>"
+    },
+    "image": "assets/placeholder1.jpg"
   }
 ]

@@ -348,7 +348,7 @@ function renderLessonPacks() {
     const blockList = document.createElement("ul");
     blockList.className = "block-list";
 
-    lesson.blocks.forEach((block) => {
+    lesson.blocks.forEach((block, blockIndex) => {
       const li = document.createElement("li");
       li.className = "block-item";
 
@@ -373,6 +373,17 @@ function renderLessonPacks() {
       li.appendChild(header);
       li.appendChild(contentDiv);
       blockList.appendChild(li);
+
+      if (blockIndex === 0 && lesson.topic.image) {
+        const imgLi = document.createElement("li");
+        imgLi.className = "lesson-image-item";
+        const img = document.createElement("img");
+        img.src = lesson.topic.image;
+        img.alt = `${lesson.topic.name} illustration`;
+        img.className = "lesson-image-lesson";
+        imgLi.appendChild(img);
+        blockList.appendChild(imgLi);
+      }
     });
 
     card.appendChild(blockList);
@@ -415,10 +426,15 @@ function renderTeacherChecks() {
 }
 
 function renderViewer(lesson, block) {
+  const imageHtml =
+    block.key === "outcomes" && lesson.topic.image
+      ? `<div class="lesson-image-viewer-wrap"><img src="${escapeHtml(lesson.topic.image)}" alt="${escapeHtml(lesson.topic.name)} illustration" class="lesson-image-viewer"></div>`
+      : "";
   viewerEl.innerHTML = `
     <h4>Lesson ${lesson.lessonNumber}: ${escapeHtml(lesson.topic.name)}</h4>
     <p class="muted">${escapeHtml(block.name)}</p>
     <div class="content-render">${block.html}</div>
+    ${imageHtml}
   `;
   viewerEl.scrollIntoView({ behavior: "smooth", block: "nearest" });
 }
