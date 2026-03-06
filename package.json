@@ -1,0 +1,11 @@
+{
+  "scripts": {
+    "start": "serve . -p ${PORT:-3000}"
+  },
+  "dependencies": {
+    "serve": "^14.2.4"
+  },
+  "devDependencies": {
+    "sharp": "^0.34.5"
+  }
+}
