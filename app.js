@@ -7,7 +7,8 @@ const state = {
   generatedLessons: [],
   teacherChecks: [],
   hardwareRows: [],
-  classSize: 24
+  classSize: 24,
+  hasGeneratedScheme: false
 };
 
 const topicsTreeEl = document.getElementById("topics-tree");
@@ -29,7 +30,9 @@ const metricTopicsEl = document.getElementById("metric-topics");
 const metricHoursEl = document.getElementById("metric-hours");
 const metricReadinessEl = document.getElementById("metric-readiness");
 const metricHardwareEl = document.getElementById("metric-hardware");
+const outputActionsEl = document.querySelector(".output-actions");
 const STORAGE_KEY = "sow_generator_session_v2";
+let blockedPrintHovering = false;
 
 init().catch((error) => {
   console.error(error);
@@ -54,15 +57,48 @@ async function init() {
   renderSelectedLessons();
   renderTeacherChecks();
   renderKpis();
+  syncPrintButtonState();
 }
 
 function bindEvents() {
   topicSearchEl.addEventListener("input", renderTopicsTree);
   generateBtn.addEventListener("click", generateScheme);
-  printBtn.addEventListener("click", () => window.print());
+  printBtn.addEventListener("click", (event) => {
+    if (printBtn.disabled) {
+      event.preventDefault();
+      handleBlockedPrintAttempt(false);
+      return;
+    }
+    window.print();
+  });
+  if (outputActionsEl) {
+    outputActionsEl.addEventListener("mousemove", (event) => {
+      if (!printBtn.disabled) {
+        blockedPrintHovering = false;
+        return;
+      }
+      const hoveringPrint = isPointerInside(event, printBtn);
+      if (hoveringPrint && !blockedPrintHovering) {
+        handleBlockedPrintAttempt(true);
+      }
+      blockedPrintHovering = hoveringPrint;
+    });
+    outputActionsEl.addEventListener("mouseleave", () => {
+      blockedPrintHovering = false;
+    });
+    outputActionsEl.addEventListener("click", (event) => {
+      if (!printBtn.disabled || !isPointerInside(event, printBtn)) {
+        return;
+      }
+      event.preventDefault();
+      handleBlockedPrintAttempt(false);
+    });
+  }
   clearBtn.addEventListener("click", resetSession);
   classSizeEl.addEventListener("input", () => {
     state.classSize = Math.max(1, Number(classSizeEl.value) || 1);
+    state.hasGeneratedScheme = false;
+    syncPrintButtonState();
     persistSession();
     computeHardwareRows();
     renderHardware();
@@ -155,6 +191,8 @@ function toggleTopic(topicId, checked) {
   } else if (!checked && index >= 0) {
     state.selectedTopicIds.splice(index, 1);
   }
+  state.hasGeneratedScheme = false;
+  syncPrintButtonState();
   renderSelectedLessons();
   persistSession();
   renderKpis();
@@ -178,6 +216,8 @@ function renderSelectedLessons() {
 
     durationSelect.addEventListener("change", () => {
       state.durationsByTopicId[topicId] = Number(durationSelect.value);
+      state.hasGeneratedScheme = false;
+      syncPrintButtonState();
       persistSession();
       renderKpis();
     });
@@ -224,16 +264,25 @@ function attachDragHandlers(item) {
 
 function syncOrderFromDom() {
   state.selectedTopicIds = [...selectedLessonsEl.querySelectorAll(".lesson-item")].map((item) => item.dataset.topicId);
+  state.hasGeneratedScheme = false;
+  syncPrintButtonState();
   persistSession();
   renderKpis();
 }
 
 function generateScheme() {
+  if (state.selectedTopicIds.length === 0) {
+    state.hasGeneratedScheme = false;
+    syncPrintButtonState();
+    showToast("Select at least one lesson before generating.");
+    return;
+  }
   runGeneration(true);
 }
 
 function runGeneration(notify) {
   const selectedTopics = state.selectedTopicIds.map(findTopic).filter(Boolean);
+  state.hasGeneratedScheme = selectedTopics.length > 0;
   state.teacherChecks = [];
   state.generatedLessons = selectedTopics.map((topic, index) => generateLesson(topic, index));
 
@@ -244,6 +293,7 @@ function runGeneration(notify) {
   renderHardware();
   renderTeacherChecks();
   renderKpis();
+  syncPrintButtonState();
   persistSession();
   if (notify) {
     showToast("Scheme generated successfully.");
@@ -310,7 +360,7 @@ function renderCover(selectedTopics) {
   sowCoverEl.hidden = false;
   sowCoverEl.innerHTML = `
     <div class="cover-logo-row">
-      <img src="assets/matrix%20light.png" alt="Matrix TSL" class="cover-logo">
+      <a href="index.html"><img src="assets/matrix%20light.png" alt="Matrix TSL" class="cover-logo"></a>
     </div>
     <h1 class="cover-title">Scheme of Work</h1>
     <p class="cover-subject">${escapeHtml(subjects)}</p>
@@ -631,6 +681,7 @@ function resetSession() {
   state.generatedLessons = [];
   state.teacherChecks = [];
   state.hardwareRows = [];
+  state.hasGeneratedScheme = false;
   state.classSize = 24;
   classSizeEl.value = "24";
   lessonPacksEl.innerHTML = '<p class="muted">No lessons generated yet.</p>';
@@ -643,8 +694,53 @@ function resetSession() {
   renderTopicsTree();
   renderSelectedLessons();
   renderKpis();
+  syncPrintButtonState();
   localStorage.removeItem(STORAGE_KEY);
   showToast("Session reset complete.");
+}
+
+function syncPrintButtonState() {
+  if (!printBtn) {
+    return;
+  }
+  const hasGeneratedOutput = state.hasGeneratedScheme && state.generatedLessons.length > 0;
+  const shouldDisable = !hasGeneratedOutput;
+  printBtn.disabled = shouldDisable;
+  printBtn.setAttribute("aria-disabled", String(shouldDisable));
+  printBtn.title = shouldDisable ? "Generate scheme first" : "";
+}
+
+function handleBlockedPrintAttempt(fromHover) {
+  cueGenerateButton();
+  if (!fromHover) {
+    showToast("Generate Scheme first, then use Print / Save PDF.");
+  }
+}
+
+function cueGenerateButton() {
+  if (!generateBtn) {
+    return;
+  }
+  generateBtn.classList.remove("needs-attention");
+  // Restart animation consistently on repeat attempts.
+  void generateBtn.offsetWidth;
+  generateBtn.classList.add("needs-attention");
+  setTimeout(() => {
+    generateBtn.classList.remove("needs-attention");
+  }, 1300);
+}
+
+function isPointerInside(event, element) {
+  if (!element) {
+    return false;
+  }
+  const rect = element.getBoundingClientRect();
+  return (
+    event.clientX >= rect.left &&
+    event.clientX <= rect.right &&
+    event.clientY >= rect.top &&
+    event.clientY <= rect.bottom
+  );
 }
 
 let toastTimer;

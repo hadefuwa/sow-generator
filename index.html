@@ -13,7 +13,7 @@
 <body>
   <header class="app-header">
     <div class="hero">
-      <img src="assets/matrix%20light.png" alt="Matrix TSL" class="hero-logo">
+      <a href="index.html"><img src="assets/matrix%20light.png" alt="Matrix TSL" class="hero-logo"></a>
       <h1>Scheme of Work Generator</h1>
       <p class="hero-copy">Plan, sequence, and deliver your engineering courses with confidence. Select the topics you need, arrange your lessons, and generate a complete Scheme of Work &ndash; ready to print and take into the classroom.</p>
       <div class="hero-how">
@@ -26,7 +26,8 @@
 
   <nav class="site-nav" aria-label="Site navigation">
     <a href="index.html" class="site-nav-link site-nav-link--active">Scheme Generator</a>
-    <a href="admin.html" class="site-nav-link">Admin &ndash; Topic Editor</a>
+    <a href="admin.html" class="site-nav-link">Topic Editor</a>
+    <a href="hardware.html" class="site-nav-link">Hardware Editor</a>
   </nav>
 
   <section class="metrics" aria-label="Live platform metrics">
@@ -80,6 +81,12 @@
       <h3>Lecturer Checks (Staff Only)</h3>
       <div id="teacher-checks" class="lecturer-checks"></div>
 
+      <h3>Scheme of Work Summary</h3>
+      <div id="sow-summary"></div>
+
+      <h3>Hardware Recommendations</h3>
+      <div id="hardware-summary"></div>
+
       <h3>Lesson Packs</h3>
       <div id="lesson-packs" class="lesson-packs"></div>
 
@@ -87,12 +94,6 @@
       <div id="asset-viewer" class="asset-viewer">
         <p>Select a lesson block to preview its content here.</p>
       </div>
-
-      <h3>Scheme of Work Summary</h3>
-      <div id="sow-summary"></div>
-
-      <h3>Hardware Recommendations</h3>
-      <div id="hardware-summary"></div>
     </section>
   </main>
 

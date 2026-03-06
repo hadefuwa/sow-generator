@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Topic Editor &ndash; Matrix TSL Admin</title>
+  <title>Topic Editor &ndash; Matrix TSL</title>
   <link rel="icon" type="image/png" href="assets/favicon.png">
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -262,8 +262,11 @@
 
 <header>
   <img src="assets/matrix%20light.png" alt="Matrix TSL" style="height:32px;display:block;">
-  <h1>Topic Editor &ndash; Matrix TSL Admin</h1>
-  <a href="index.html" style="color:#a8cfe0;font-size:0.85rem;text-decoration:none;font-weight:600;">&larr; Back to Generator</a>
+  <h1>Topic Editor &ndash; Matrix TSL</h1>
+  <div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap;">
+    <a href="index.html" style="color:#a8cfe0;font-size:0.85rem;text-decoration:none;font-weight:600;">&larr; Back to Generator</a>
+    <a href="hardware.html" style="color:#a8cfe0;font-size:0.85rem;text-decoration:none;font-weight:600;">Hardware Editor</a>
+  </div>
 </header>
 
 <div class="toolbar">
@@ -285,7 +288,7 @@
 
   <div class="empty-state" id="empty-state">
     <h2>No topics loaded</h2>
-    <p>Click "Load topics.json" to open an existing file, or start fresh with "+ Add Topic".</p>
+    <p>Add your first topic using "+ Add Topic".</p>
   </div>
 
   <div class="topic-list" id="topic-list"></div>
@@ -577,4 +580,3 @@
 </script>
 </body>
 </html>
-

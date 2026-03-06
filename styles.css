@@ -404,6 +404,24 @@ button:active {
   transform: translateY(0);
 }
 
+#print-btn:disabled {
+  cursor: not-allowed;
+  color: #dce8f0;
+  background: linear-gradient(135deg, #7f95a4, #677c89);
+  box-shadow: none;
+  filter: grayscale(0.15);
+}
+
+#print-btn:disabled:hover {
+  transform: none;
+  box-shadow: none;
+  filter: grayscale(0.15);
+}
+
+#generate-btn.needs-attention {
+  animation: generate-attention 620ms ease-in-out 2;
+}
+
 .output-actions {
   display: flex;
   justify-content: flex-end;
@@ -697,6 +715,21 @@ tbody tr:hover {
   }
 }
 
+@keyframes generate-attention {
+  0% {
+    transform: translateY(0);
+    box-shadow: 0 8px 16px rgba(8, 65, 95, 0.2);
+  }
+  50% {
+    transform: translateY(-1px) scale(1.02);
+    box-shadow: 0 0 0 4px rgba(242, 159, 5, 0.22), 0 12px 24px rgba(8, 65, 95, 0.24);
+  }
+  100% {
+    transform: translateY(0);
+    box-shadow: 0 8px 16px rgba(8, 65, 95, 0.2);
+  }
+}
+
 @media (max-width: 1120px) {
   .layout {
     grid-template-columns: 1fr;
@@ -869,6 +902,17 @@ tbody tr:hover {
     page-break-inside: avoid;
     break-inside: avoid;
     margin-bottom: 0.35rem;
+  }
+
+  #sow-summary {
+    page-break-before: always;
+    break-before: page;
+  }
+
+  #sow-summary,
+  #hardware-summary {
+    page-break-inside: avoid;
+    break-inside: avoid;
   }
 
   .block-print-content {
