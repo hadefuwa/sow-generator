@@ -72,6 +72,13 @@ function bindEvents() {
     window.print();
   });
   if (outputActionsEl) {
+    outputActionsEl.addEventListener("pointerdown", (event) => {
+      if (!printBtn.disabled || !isPointerInside(event, printBtn)) {
+        return;
+      }
+      event.preventDefault();
+      handleBlockedPrintAttempt(false);
+    }, true);
     outputActionsEl.addEventListener("mousemove", (event) => {
       if (!printBtn.disabled) {
         blockedPrintHovering = false;
